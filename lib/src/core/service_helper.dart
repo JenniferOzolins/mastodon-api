@@ -314,6 +314,10 @@ class ServiceHelper implements Service {
       return parameters.isNotEmpty ? parameters : null;
     }
 
+    if (object is Serializable) {
+      return object.value;
+    }
+
     //! Just return it as is if it's neither Map nor List.
     return object;
   }
