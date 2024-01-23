@@ -8,11 +8,12 @@ part of 'status_context.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_StatusesContext _$$_StatusesContextFromJson(Map json) => $checkedCreate(
-      r'_$_StatusesContext',
+_$StatusesContextImpl _$$StatusesContextImplFromJson(Map json) =>
+    $checkedCreate(
+      r'_$StatusesContextImpl',
       json,
       ($checkedConvert) {
-        final val = _$_StatusesContext(
+        final val = _$StatusesContextImpl(
           ancestors: $checkedConvert(
               'ancestors',
               (v) => (v as List<dynamic>)
@@ -30,7 +31,8 @@ _$_StatusesContext _$$_StatusesContextFromJson(Map json) => $checkedCreate(
       },
     );
 
-Map<String, dynamic> _$$_StatusesContextToJson(_$_StatusesContext instance) =>
+Map<String, dynamic> _$$StatusesContextImplToJson(
+        _$StatusesContextImpl instance) =>
     <String, dynamic>{
       'ancestors': instance.ancestors.map((e) => e.toJson()).toList(),
       'descendants': instance.descendants.map((e) => e.toJson()).toList(),

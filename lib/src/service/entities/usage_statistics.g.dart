@@ -8,11 +8,12 @@ part of 'usage_statistics.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_UsageStatistics _$$_UsageStatisticsFromJson(Map json) => $checkedCreate(
-      r'_$_UsageStatistics',
+_$UsageStatisticsImpl _$$UsageStatisticsImplFromJson(Map json) =>
+    $checkedCreate(
+      r'_$UsageStatisticsImpl',
       json,
       ($checkedConvert) {
-        final val = _$_UsageStatistics(
+        final val = _$UsageStatisticsImpl(
           recordedAt: $checkedConvert('day',
               (v) => const UnixTimestampConverter().fromJson(v as String)),
           usedCount: $checkedConvert(
@@ -29,7 +30,8 @@ _$_UsageStatistics _$$_UsageStatisticsFromJson(Map json) => $checkedCreate(
       },
     );
 
-Map<String, dynamic> _$$_UsageStatisticsToJson(_$_UsageStatistics instance) =>
+Map<String, dynamic> _$$UsageStatisticsImplToJson(
+        _$UsageStatisticsImpl instance) =>
     <String, dynamic>{
       'day': const UnixTimestampConverter().toJson(instance.recordedAt),
       'uses': const IntConverter().toJson(instance.usedCount),

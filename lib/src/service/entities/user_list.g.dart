@@ -8,11 +8,11 @@ part of 'user_list.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_UserList _$$_UserListFromJson(Map json) => $checkedCreate(
-      r'_$_UserList',
+_$UserListImpl _$$UserListImplFromJson(Map json) => $checkedCreate(
+      r'_$UserListImpl',
       json,
       ($checkedConvert) {
-        final val = _$_UserList(
+        final val = _$UserListImpl(
           id: $checkedConvert('id', (v) => v as String),
           title: $checkedConvert('title', (v) => v as String),
           repliesPolicy: $checkedConvert('replies_policy',
@@ -23,7 +23,7 @@ _$_UserList _$$_UserListFromJson(Map json) => $checkedCreate(
       fieldKeyMap: const {'repliesPolicy': 'replies_policy'},
     );
 
-Map<String, dynamic> _$$_UserListToJson(_$_UserList instance) {
+Map<String, dynamic> _$$UserListImplToJson(_$UserListImpl instance) {
   final val = <String, dynamic>{
     'id': instance.id,
     'title': instance.title,

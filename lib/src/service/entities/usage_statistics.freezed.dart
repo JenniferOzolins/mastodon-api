@@ -88,11 +88,11 @@ class _$UsageStatisticsCopyWithImpl<$Res, $Val extends UsageStatistics>
 }
 
 /// @nodoc
-abstract class _$$_UsageStatisticsCopyWith<$Res>
+abstract class _$$UsageStatisticsImplCopyWith<$Res>
     implements $UsageStatisticsCopyWith<$Res> {
-  factory _$$_UsageStatisticsCopyWith(
-          _$_UsageStatistics value, $Res Function(_$_UsageStatistics) then) =
-      __$$_UsageStatisticsCopyWithImpl<$Res>;
+  factory _$$UsageStatisticsImplCopyWith(_$UsageStatisticsImpl value,
+          $Res Function(_$UsageStatisticsImpl) then) =
+      __$$UsageStatisticsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -102,11 +102,11 @@ abstract class _$$_UsageStatisticsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_UsageStatisticsCopyWithImpl<$Res>
-    extends _$UsageStatisticsCopyWithImpl<$Res, _$_UsageStatistics>
-    implements _$$_UsageStatisticsCopyWith<$Res> {
-  __$$_UsageStatisticsCopyWithImpl(
-      _$_UsageStatistics _value, $Res Function(_$_UsageStatistics) _then)
+class __$$UsageStatisticsImplCopyWithImpl<$Res>
+    extends _$UsageStatisticsCopyWithImpl<$Res, _$UsageStatisticsImpl>
+    implements _$$UsageStatisticsImplCopyWith<$Res> {
+  __$$UsageStatisticsImplCopyWithImpl(
+      _$UsageStatisticsImpl _value, $Res Function(_$UsageStatisticsImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -116,7 +116,7 @@ class __$$_UsageStatisticsCopyWithImpl<$Res>
     Object? usedCount = null,
     Object? accountCount = null,
   }) {
-    return _then(_$_UsageStatistics(
+    return _then(_$UsageStatisticsImpl(
       recordedAt: null == recordedAt
           ? _value.recordedAt
           : recordedAt // ignore: cast_nullable_to_non_nullable
@@ -135,14 +135,14 @@ class __$$_UsageStatisticsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_UsageStatistics implements _UsageStatistics {
-  const _$_UsageStatistics(
+class _$UsageStatisticsImpl implements _UsageStatistics {
+  const _$UsageStatisticsImpl(
       {@JsonKey(name: 'day') @UnixTimestampConverter() required this.recordedAt,
       @JsonKey(name: 'uses') @IntConverter() required this.usedCount,
       @JsonKey(name: 'accounts') @IntConverter() required this.accountCount});
 
-  factory _$_UsageStatistics.fromJson(Map<String, dynamic> json) =>
-      _$$_UsageStatisticsFromJson(json);
+  factory _$UsageStatisticsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$UsageStatisticsImplFromJson(json);
 
   /// The recorded date time of this history.
   @override
@@ -168,10 +168,10 @@ class _$_UsageStatistics implements _UsageStatistics {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_UsageStatistics &&
+            other is _$UsageStatisticsImpl &&
             (identical(other.recordedAt, recordedAt) ||
                 other.recordedAt == recordedAt) &&
             (identical(other.usedCount, usedCount) ||
@@ -188,12 +188,13 @@ class _$_UsageStatistics implements _UsageStatistics {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_UsageStatisticsCopyWith<_$_UsageStatistics> get copyWith =>
-      __$$_UsageStatisticsCopyWithImpl<_$_UsageStatistics>(this, _$identity);
+  _$$UsageStatisticsImplCopyWith<_$UsageStatisticsImpl> get copyWith =>
+      __$$UsageStatisticsImplCopyWithImpl<_$UsageStatisticsImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_UsageStatisticsToJson(
+    return _$$UsageStatisticsImplToJson(
       this,
     );
   }
@@ -203,16 +204,14 @@ abstract class _UsageStatistics implements UsageStatistics {
   const factory _UsageStatistics(
       {@JsonKey(name: 'day')
       @UnixTimestampConverter()
-          required final DateTime recordedAt,
-      @JsonKey(name: 'uses')
-      @IntConverter()
-          required final int usedCount,
+      required final DateTime recordedAt,
+      @JsonKey(name: 'uses') @IntConverter() required final int usedCount,
       @JsonKey(name: 'accounts')
       @IntConverter()
-          required final int accountCount}) = _$_UsageStatistics;
+      required final int accountCount}) = _$UsageStatisticsImpl;
 
   factory _UsageStatistics.fromJson(Map<String, dynamic> json) =
-      _$_UsageStatistics.fromJson;
+      _$UsageStatisticsImpl.fromJson;
 
   @override
 
@@ -234,6 +233,6 @@ abstract class _UsageStatistics implements UsageStatistics {
   int get accountCount;
   @override
   @JsonKey(ignore: true)
-  _$$_UsageStatisticsCopyWith<_$_UsageStatistics> get copyWith =>
+  _$$UsageStatisticsImplCopyWith<_$UsageStatisticsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

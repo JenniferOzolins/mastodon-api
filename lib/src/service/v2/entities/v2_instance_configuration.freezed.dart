@@ -173,11 +173,12 @@ class _$V2InstanceConfigurationCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_V2InstanceConfigurationCopyWith<$Res>
+abstract class _$$V2InstanceConfigurationImplCopyWith<$Res>
     implements $V2InstanceConfigurationCopyWith<$Res> {
-  factory _$$_V2InstanceConfigurationCopyWith(_$_V2InstanceConfiguration value,
-          $Res Function(_$_V2InstanceConfiguration) then) =
-      __$$_V2InstanceConfigurationCopyWithImpl<$Res>;
+  factory _$$V2InstanceConfigurationImplCopyWith(
+          _$V2InstanceConfigurationImpl value,
+          $Res Function(_$V2InstanceConfigurationImpl) then) =
+      __$$V2InstanceConfigurationImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -203,12 +204,13 @@ abstract class _$$_V2InstanceConfigurationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_V2InstanceConfigurationCopyWithImpl<$Res>
+class __$$V2InstanceConfigurationImplCopyWithImpl<$Res>
     extends _$V2InstanceConfigurationCopyWithImpl<$Res,
-        _$_V2InstanceConfiguration>
-    implements _$$_V2InstanceConfigurationCopyWith<$Res> {
-  __$$_V2InstanceConfigurationCopyWithImpl(_$_V2InstanceConfiguration _value,
-      $Res Function(_$_V2InstanceConfiguration) _then)
+        _$V2InstanceConfigurationImpl>
+    implements _$$V2InstanceConfigurationImplCopyWith<$Res> {
+  __$$V2InstanceConfigurationImplCopyWithImpl(
+      _$V2InstanceConfigurationImpl _value,
+      $Res Function(_$V2InstanceConfigurationImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -221,7 +223,7 @@ class __$$_V2InstanceConfigurationCopyWithImpl<$Res>
     Object? polls = null,
     Object? translation = null,
   }) {
-    return _then(_$_V2InstanceConfiguration(
+    return _then(_$V2InstanceConfigurationImpl(
       urls: null == urls
           ? _value.urls
           : urls // ignore: cast_nullable_to_non_nullable
@@ -253,8 +255,8 @@ class __$$_V2InstanceConfigurationCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(includeIfNull: false)
-class _$_V2InstanceConfiguration implements _V2InstanceConfiguration {
-  const _$_V2InstanceConfiguration(
+class _$V2InstanceConfigurationImpl implements _V2InstanceConfiguration {
+  const _$V2InstanceConfigurationImpl(
       {required this.urls,
       required this.accounts,
       required this.statuses,
@@ -262,8 +264,8 @@ class _$_V2InstanceConfiguration implements _V2InstanceConfiguration {
       required this.polls,
       required this.translation});
 
-  factory _$_V2InstanceConfiguration.fromJson(Map<String, dynamic> json) =>
-      _$$_V2InstanceConfigurationFromJson(json);
+  factory _$V2InstanceConfigurationImpl.fromJson(Map<String, dynamic> json) =>
+      _$$V2InstanceConfigurationImplFromJson(json);
 
   /// URLs of interest for clients apps.
   @override
@@ -296,10 +298,10 @@ class _$_V2InstanceConfiguration implements _V2InstanceConfiguration {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_V2InstanceConfiguration &&
+            other is _$V2InstanceConfigurationImpl &&
             (identical(other.urls, urls) || other.urls == urls) &&
             (identical(other.accounts, accounts) ||
                 other.accounts == accounts) &&
@@ -319,14 +321,13 @@ class _$_V2InstanceConfiguration implements _V2InstanceConfiguration {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_V2InstanceConfigurationCopyWith<_$_V2InstanceConfiguration>
-      get copyWith =>
-          __$$_V2InstanceConfigurationCopyWithImpl<_$_V2InstanceConfiguration>(
-              this, _$identity);
+  _$$V2InstanceConfigurationImplCopyWith<_$V2InstanceConfigurationImpl>
+      get copyWith => __$$V2InstanceConfigurationImplCopyWithImpl<
+          _$V2InstanceConfigurationImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_V2InstanceConfigurationToJson(
+    return _$$V2InstanceConfigurationImplToJson(
       this,
     );
   }
@@ -338,13 +339,13 @@ abstract class _V2InstanceConfiguration implements V2InstanceConfiguration {
           required final InstanceAccountsConfiguration accounts,
           required final InstanceStatusesConfiguration statuses,
           @JsonKey(name: 'media_attachments')
-              required final InstanceMediaConfiguration media,
+          required final InstanceMediaConfiguration media,
           required final InstancePollsConfiguration polls,
           required final InstanceTranslationConfiguration translation}) =
-      _$_V2InstanceConfiguration;
+      _$V2InstanceConfigurationImpl;
 
   factory _V2InstanceConfiguration.fromJson(Map<String, dynamic> json) =
-      _$_V2InstanceConfiguration.fromJson;
+      _$V2InstanceConfigurationImpl.fromJson;
 
   @override
 
@@ -373,6 +374,6 @@ abstract class _V2InstanceConfiguration implements V2InstanceConfiguration {
   InstanceTranslationConfiguration get translation;
   @override
   @JsonKey(ignore: true)
-  _$$_V2InstanceConfigurationCopyWith<_$_V2InstanceConfiguration>
+  _$$V2InstanceConfigurationImplCopyWith<_$V2InstanceConfigurationImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

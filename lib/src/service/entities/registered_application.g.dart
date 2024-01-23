@@ -8,12 +8,12 @@ part of 'registered_application.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_RegisteredApplication _$$_RegisteredApplicationFromJson(Map json) =>
+_$RegisteredApplicationImpl _$$RegisteredApplicationImplFromJson(Map json) =>
     $checkedCreate(
-      r'_$_RegisteredApplication',
+      r'_$RegisteredApplicationImpl',
       json,
       ($checkedConvert) {
-        final val = _$_RegisteredApplication(
+        final val = _$RegisteredApplicationImpl(
           id: $checkedConvert('id', (v) => v as String),
           name: $checkedConvert('name', (v) => v as String),
           clientId: $checkedConvert('client_id', (v) => v as String),
@@ -32,8 +32,8 @@ _$_RegisteredApplication _$$_RegisteredApplicationFromJson(Map json) =>
       },
     );
 
-Map<String, dynamic> _$$_RegisteredApplicationToJson(
-    _$_RegisteredApplication instance) {
+Map<String, dynamic> _$$RegisteredApplicationImplToJson(
+    _$RegisteredApplicationImpl instance) {
   final val = <String, dynamic>{
     'id': instance.id,
     'name': instance.name,

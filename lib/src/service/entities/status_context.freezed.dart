@@ -71,22 +71,22 @@ class _$StatusContextCopyWithImpl<$Res, $Val extends StatusContext>
 }
 
 /// @nodoc
-abstract class _$$_StatusesContextCopyWith<$Res>
+abstract class _$$StatusesContextImplCopyWith<$Res>
     implements $StatusContextCopyWith<$Res> {
-  factory _$$_StatusesContextCopyWith(
-          _$_StatusesContext value, $Res Function(_$_StatusesContext) then) =
-      __$$_StatusesContextCopyWithImpl<$Res>;
+  factory _$$StatusesContextImplCopyWith(_$StatusesContextImpl value,
+          $Res Function(_$StatusesContextImpl) then) =
+      __$$StatusesContextImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({List<Status> ancestors, List<Status> descendants});
 }
 
 /// @nodoc
-class __$$_StatusesContextCopyWithImpl<$Res>
-    extends _$StatusContextCopyWithImpl<$Res, _$_StatusesContext>
-    implements _$$_StatusesContextCopyWith<$Res> {
-  __$$_StatusesContextCopyWithImpl(
-      _$_StatusesContext _value, $Res Function(_$_StatusesContext) _then)
+class __$$StatusesContextImplCopyWithImpl<$Res>
+    extends _$StatusContextCopyWithImpl<$Res, _$StatusesContextImpl>
+    implements _$$StatusesContextImplCopyWith<$Res> {
+  __$$StatusesContextImplCopyWithImpl(
+      _$StatusesContextImpl _value, $Res Function(_$StatusesContextImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -95,7 +95,7 @@ class __$$_StatusesContextCopyWithImpl<$Res>
     Object? ancestors = null,
     Object? descendants = null,
   }) {
-    return _then(_$_StatusesContext(
+    return _then(_$StatusesContextImpl(
       ancestors: null == ancestors
           ? _value._ancestors
           : ancestors // ignore: cast_nullable_to_non_nullable
@@ -111,15 +111,15 @@ class __$$_StatusesContextCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(includeIfNull: false)
-class _$_StatusesContext implements _StatusesContext {
-  const _$_StatusesContext(
+class _$StatusesContextImpl implements _StatusesContext {
+  const _$StatusesContextImpl(
       {required final List<Status> ancestors,
       required final List<Status> descendants})
       : _ancestors = ancestors,
         _descendants = descendants;
 
-  factory _$_StatusesContext.fromJson(Map<String, dynamic> json) =>
-      _$$_StatusesContextFromJson(json);
+  factory _$StatusesContextImpl.fromJson(Map<String, dynamic> json) =>
+      _$$StatusesContextImplFromJson(json);
 
   /// Parents in the thread.
   final List<Status> _ancestors;
@@ -149,10 +149,10 @@ class _$_StatusesContext implements _StatusesContext {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_StatusesContext &&
+            other is _$StatusesContextImpl &&
             const DeepCollectionEquality()
                 .equals(other._ancestors, _ancestors) &&
             const DeepCollectionEquality()
@@ -169,12 +169,13 @@ class _$_StatusesContext implements _StatusesContext {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_StatusesContextCopyWith<_$_StatusesContext> get copyWith =>
-      __$$_StatusesContextCopyWithImpl<_$_StatusesContext>(this, _$identity);
+  _$$StatusesContextImplCopyWith<_$StatusesContextImpl> get copyWith =>
+      __$$StatusesContextImplCopyWithImpl<_$StatusesContextImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_StatusesContextToJson(
+    return _$$StatusesContextImplToJson(
       this,
     );
   }
@@ -183,10 +184,10 @@ class _$_StatusesContext implements _StatusesContext {
 abstract class _StatusesContext implements StatusContext {
   const factory _StatusesContext(
       {required final List<Status> ancestors,
-      required final List<Status> descendants}) = _$_StatusesContext;
+      required final List<Status> descendants}) = _$StatusesContextImpl;
 
   factory _StatusesContext.fromJson(Map<String, dynamic> json) =
-      _$_StatusesContext.fromJson;
+      _$StatusesContextImpl.fromJson;
 
   @override
 
@@ -198,6 +199,6 @@ abstract class _StatusesContext implements StatusContext {
   List<Status> get descendants;
   @override
   @JsonKey(ignore: true)
-  _$$_StatusesContextCopyWith<_$_StatusesContext> get copyWith =>
+  _$$StatusesContextImplCopyWith<_$StatusesContextImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

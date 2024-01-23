@@ -8,11 +8,11 @@ part of 'field.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Field _$$_FieldFromJson(Map json) => $checkedCreate(
-      r'_$_Field',
+_$FieldImpl _$$FieldImplFromJson(Map json) => $checkedCreate(
+      r'_$FieldImpl',
       json,
       ($checkedConvert) {
-        final val = _$_Field(
+        final val = _$FieldImpl(
           name: $checkedConvert('name', (v) => v as String),
           value: $checkedConvert('value', (v) => v as String),
           verifiedAt: $checkedConvert('verified_at',
@@ -23,7 +23,7 @@ _$_Field _$$_FieldFromJson(Map json) => $checkedCreate(
       fieldKeyMap: const {'verifiedAt': 'verified_at'},
     );
 
-Map<String, dynamic> _$$_FieldToJson(_$_Field instance) {
+Map<String, dynamic> _$$FieldImplToJson(_$FieldImpl instance) {
   final val = <String, dynamic>{
     'name': instance.name,
     'value': instance.value,

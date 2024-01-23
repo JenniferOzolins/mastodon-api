@@ -67,25 +67,25 @@ class _$InstanceAccountsConfigurationCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_InstanceAccountsConfigurationCopyWith<$Res>
+abstract class _$$InstanceAccountsConfigurationImplCopyWith<$Res>
     implements $InstanceAccountsConfigurationCopyWith<$Res> {
-  factory _$$_InstanceAccountsConfigurationCopyWith(
-          _$_InstanceAccountsConfiguration value,
-          $Res Function(_$_InstanceAccountsConfiguration) then) =
-      __$$_InstanceAccountsConfigurationCopyWithImpl<$Res>;
+  factory _$$InstanceAccountsConfigurationImplCopyWith(
+          _$InstanceAccountsConfigurationImpl value,
+          $Res Function(_$InstanceAccountsConfigurationImpl) then) =
+      __$$InstanceAccountsConfigurationImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int maxFeaturedTags});
 }
 
 /// @nodoc
-class __$$_InstanceAccountsConfigurationCopyWithImpl<$Res>
+class __$$InstanceAccountsConfigurationImplCopyWithImpl<$Res>
     extends _$InstanceAccountsConfigurationCopyWithImpl<$Res,
-        _$_InstanceAccountsConfiguration>
-    implements _$$_InstanceAccountsConfigurationCopyWith<$Res> {
-  __$$_InstanceAccountsConfigurationCopyWithImpl(
-      _$_InstanceAccountsConfiguration _value,
-      $Res Function(_$_InstanceAccountsConfiguration) _then)
+        _$InstanceAccountsConfigurationImpl>
+    implements _$$InstanceAccountsConfigurationImplCopyWith<$Res> {
+  __$$InstanceAccountsConfigurationImplCopyWithImpl(
+      _$InstanceAccountsConfigurationImpl _value,
+      $Res Function(_$InstanceAccountsConfigurationImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -93,7 +93,7 @@ class __$$_InstanceAccountsConfigurationCopyWithImpl<$Res>
   $Res call({
     Object? maxFeaturedTags = null,
   }) {
-    return _then(_$_InstanceAccountsConfiguration(
+    return _then(_$InstanceAccountsConfigurationImpl(
       maxFeaturedTags: null == maxFeaturedTags
           ? _value.maxFeaturedTags
           : maxFeaturedTags // ignore: cast_nullable_to_non_nullable
@@ -105,13 +105,13 @@ class __$$_InstanceAccountsConfigurationCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(includeIfNull: false)
-class _$_InstanceAccountsConfiguration
+class _$InstanceAccountsConfigurationImpl
     implements _InstanceAccountsConfiguration {
-  const _$_InstanceAccountsConfiguration({required this.maxFeaturedTags});
+  const _$InstanceAccountsConfigurationImpl({required this.maxFeaturedTags});
 
-  factory _$_InstanceAccountsConfiguration.fromJson(
+  factory _$InstanceAccountsConfigurationImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_InstanceAccountsConfigurationFromJson(json);
+      _$$InstanceAccountsConfigurationImplFromJson(json);
 
   /// The maximum number of featured tags allowed for each account.
   @override
@@ -123,10 +123,10 @@ class _$_InstanceAccountsConfiguration
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_InstanceAccountsConfiguration &&
+            other is _$InstanceAccountsConfigurationImpl &&
             (identical(other.maxFeaturedTags, maxFeaturedTags) ||
                 other.maxFeaturedTags == maxFeaturedTags));
   }
@@ -138,13 +138,14 @@ class _$_InstanceAccountsConfiguration
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_InstanceAccountsConfigurationCopyWith<_$_InstanceAccountsConfiguration>
-      get copyWith => __$$_InstanceAccountsConfigurationCopyWithImpl<
-          _$_InstanceAccountsConfiguration>(this, _$identity);
+  _$$InstanceAccountsConfigurationImplCopyWith<
+          _$InstanceAccountsConfigurationImpl>
+      get copyWith => __$$InstanceAccountsConfigurationImplCopyWithImpl<
+          _$InstanceAccountsConfigurationImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_InstanceAccountsConfigurationToJson(
+    return _$$InstanceAccountsConfigurationImplToJson(
       this,
     );
   }
@@ -153,10 +154,11 @@ class _$_InstanceAccountsConfiguration
 abstract class _InstanceAccountsConfiguration
     implements InstanceAccountsConfiguration {
   const factory _InstanceAccountsConfiguration(
-      {required final int maxFeaturedTags}) = _$_InstanceAccountsConfiguration;
+          {required final int maxFeaturedTags}) =
+      _$InstanceAccountsConfigurationImpl;
 
   factory _InstanceAccountsConfiguration.fromJson(Map<String, dynamic> json) =
-      _$_InstanceAccountsConfiguration.fromJson;
+      _$InstanceAccountsConfigurationImpl.fromJson;
 
   @override
 
@@ -164,6 +166,7 @@ abstract class _InstanceAccountsConfiguration
   int get maxFeaturedTags;
   @override
   @JsonKey(ignore: true)
-  _$$_InstanceAccountsConfigurationCopyWith<_$_InstanceAccountsConfiguration>
+  _$$InstanceAccountsConfigurationImplCopyWith<
+          _$InstanceAccountsConfigurationImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

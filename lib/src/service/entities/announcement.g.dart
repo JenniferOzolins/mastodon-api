@@ -8,11 +8,11 @@ part of 'announcement.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Announcement _$$_AnnouncementFromJson(Map json) => $checkedCreate(
-      r'_$_Announcement',
+_$AnnouncementImpl _$$AnnouncementImplFromJson(Map json) => $checkedCreate(
+      r'_$AnnouncementImpl',
       json,
       ($checkedConvert) {
-        final val = _$_Announcement(
+        final val = _$AnnouncementImpl(
           id: $checkedConvert('id', (v) => v as String),
           content: $checkedConvert('content', (v) => v as String),
           isPublished: $checkedConvert('published', (v) => v as bool?),
@@ -69,7 +69,7 @@ _$_Announcement _$$_AnnouncementFromJson(Map json) => $checkedCreate(
       },
     );
 
-Map<String, dynamic> _$$_AnnouncementToJson(_$_Announcement instance) {
+Map<String, dynamic> _$$AnnouncementImplToJson(_$AnnouncementImpl instance) {
   final val = <String, dynamic>{
     'id': instance.id,
     'content': instance.content,

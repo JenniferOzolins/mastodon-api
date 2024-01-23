@@ -120,11 +120,12 @@ class _$RegisteredApplicationCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_RegisteredApplicationCopyWith<$Res>
+abstract class _$$RegisteredApplicationImplCopyWith<$Res>
     implements $RegisteredApplicationCopyWith<$Res> {
-  factory _$$_RegisteredApplicationCopyWith(_$_RegisteredApplication value,
-          $Res Function(_$_RegisteredApplication) then) =
-      __$$_RegisteredApplicationCopyWithImpl<$Res>;
+  factory _$$RegisteredApplicationImplCopyWith(
+          _$RegisteredApplicationImpl value,
+          $Res Function(_$RegisteredApplicationImpl) then) =
+      __$$RegisteredApplicationImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -138,11 +139,12 @@ abstract class _$$_RegisteredApplicationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_RegisteredApplicationCopyWithImpl<$Res>
-    extends _$RegisteredApplicationCopyWithImpl<$Res, _$_RegisteredApplication>
-    implements _$$_RegisteredApplicationCopyWith<$Res> {
-  __$$_RegisteredApplicationCopyWithImpl(_$_RegisteredApplication _value,
-      $Res Function(_$_RegisteredApplication) _then)
+class __$$RegisteredApplicationImplCopyWithImpl<$Res>
+    extends _$RegisteredApplicationCopyWithImpl<$Res,
+        _$RegisteredApplicationImpl>
+    implements _$$RegisteredApplicationImplCopyWith<$Res> {
+  __$$RegisteredApplicationImplCopyWithImpl(_$RegisteredApplicationImpl _value,
+      $Res Function(_$RegisteredApplicationImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -156,7 +158,7 @@ class __$$_RegisteredApplicationCopyWithImpl<$Res>
     Object? vapidKey = null,
     Object? website = freezed,
   }) {
-    return _then(_$_RegisteredApplication(
+    return _then(_$RegisteredApplicationImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -192,8 +194,8 @@ class __$$_RegisteredApplicationCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(includeIfNull: false)
-class _$_RegisteredApplication implements _RegisteredApplication {
-  const _$_RegisteredApplication(
+class _$RegisteredApplicationImpl implements _RegisteredApplication {
+  const _$RegisteredApplicationImpl(
       {required this.id,
       required this.name,
       required this.clientId,
@@ -202,8 +204,8 @@ class _$_RegisteredApplication implements _RegisteredApplication {
       required this.vapidKey,
       this.website});
 
-  factory _$_RegisteredApplication.fromJson(Map<String, dynamic> json) =>
-      _$$_RegisteredApplicationFromJson(json);
+  factory _$RegisteredApplicationImpl.fromJson(Map<String, dynamic> json) =>
+      _$$RegisteredApplicationImplFromJson(json);
 
   /// The id of of this application.
   @override
@@ -239,10 +241,10 @@ class _$_RegisteredApplication implements _RegisteredApplication {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_RegisteredApplication &&
+            other is _$RegisteredApplicationImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.clientId, clientId) ||
@@ -264,13 +266,13 @@ class _$_RegisteredApplication implements _RegisteredApplication {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_RegisteredApplicationCopyWith<_$_RegisteredApplication> get copyWith =>
-      __$$_RegisteredApplicationCopyWithImpl<_$_RegisteredApplication>(
-          this, _$identity);
+  _$$RegisteredApplicationImplCopyWith<_$RegisteredApplicationImpl>
+      get copyWith => __$$RegisteredApplicationImplCopyWithImpl<
+          _$RegisteredApplicationImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_RegisteredApplicationToJson(
+    return _$$RegisteredApplicationImplToJson(
       this,
     );
   }
@@ -284,10 +286,10 @@ abstract class _RegisteredApplication implements RegisteredApplication {
       required final String clientSecret,
       required final String redirectUri,
       required final String vapidKey,
-      final String? website}) = _$_RegisteredApplication;
+      final String? website}) = _$RegisteredApplicationImpl;
 
   factory _RegisteredApplication.fromJson(Map<String, dynamic> json) =
-      _$_RegisteredApplication.fromJson;
+      _$RegisteredApplicationImpl.fromJson;
 
   @override
 
@@ -319,6 +321,6 @@ abstract class _RegisteredApplication implements RegisteredApplication {
   String? get website;
   @override
   @JsonKey(ignore: true)
-  _$$_RegisteredApplicationCopyWith<_$_RegisteredApplication> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$RegisteredApplicationImplCopyWith<_$RegisteredApplicationImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

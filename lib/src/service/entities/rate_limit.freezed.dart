@@ -84,10 +84,11 @@ class _$RateLimitCopyWithImpl<$Res, $Val extends RateLimit>
 }
 
 /// @nodoc
-abstract class _$$_RateLimitCopyWith<$Res> implements $RateLimitCopyWith<$Res> {
-  factory _$$_RateLimitCopyWith(
-          _$_RateLimit value, $Res Function(_$_RateLimit) then) =
-      __$$_RateLimitCopyWithImpl<$Res>;
+abstract class _$$RateLimitImplCopyWith<$Res>
+    implements $RateLimitCopyWith<$Res> {
+  factory _$$RateLimitImplCopyWith(
+          _$RateLimitImpl value, $Res Function(_$RateLimitImpl) then) =
+      __$$RateLimitImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -97,11 +98,11 @@ abstract class _$$_RateLimitCopyWith<$Res> implements $RateLimitCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_RateLimitCopyWithImpl<$Res>
-    extends _$RateLimitCopyWithImpl<$Res, _$_RateLimit>
-    implements _$$_RateLimitCopyWith<$Res> {
-  __$$_RateLimitCopyWithImpl(
-      _$_RateLimit _value, $Res Function(_$_RateLimit) _then)
+class __$$RateLimitImplCopyWithImpl<$Res>
+    extends _$RateLimitCopyWithImpl<$Res, _$RateLimitImpl>
+    implements _$$RateLimitImplCopyWith<$Res> {
+  __$$RateLimitImplCopyWithImpl(
+      _$RateLimitImpl _value, $Res Function(_$RateLimitImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -111,7 +112,7 @@ class __$$_RateLimitCopyWithImpl<$Res>
     Object? remainingCount = null,
     Object? resetAt = null,
   }) {
-    return _then(_$_RateLimit(
+    return _then(_$RateLimitImpl(
       limitCount: null == limitCount
           ? _value.limitCount
           : limitCount // ignore: cast_nullable_to_non_nullable
@@ -130,15 +131,15 @@ class __$$_RateLimitCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_RateLimit extends _RateLimit {
-  const _$_RateLimit(
+class _$RateLimitImpl extends _RateLimit {
+  const _$RateLimitImpl(
       {@JsonKey(name: 'x-ratelimit-limit') required this.limitCount,
       @JsonKey(name: 'x-ratelimit-remaining') required this.remainingCount,
       @JsonKey(name: 'x-ratelimit-reset') required this.resetAt})
       : super._();
 
-  factory _$_RateLimit.fromJson(Map<String, dynamic> json) =>
-      _$$_RateLimitFromJson(json);
+  factory _$RateLimitImpl.fromJson(Map<String, dynamic> json) =>
+      _$$RateLimitImplFromJson(json);
 
   /// The maximum number of calls allowed.
   @override
@@ -161,10 +162,10 @@ class _$_RateLimit extends _RateLimit {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_RateLimit &&
+            other is _$RateLimitImpl &&
             (identical(other.limitCount, limitCount) ||
                 other.limitCount == limitCount) &&
             (identical(other.remainingCount, remainingCount) ||
@@ -180,12 +181,12 @@ class _$_RateLimit extends _RateLimit {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_RateLimitCopyWith<_$_RateLimit> get copyWith =>
-      __$$_RateLimitCopyWithImpl<_$_RateLimit>(this, _$identity);
+  _$$RateLimitImplCopyWith<_$RateLimitImpl> get copyWith =>
+      __$$RateLimitImplCopyWithImpl<_$RateLimitImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_RateLimitToJson(
+    return _$$RateLimitImplToJson(
       this,
     );
   }
@@ -193,16 +194,14 @@ class _$_RateLimit extends _RateLimit {
 
 abstract class _RateLimit extends RateLimit {
   const factory _RateLimit(
-      {@JsonKey(name: 'x-ratelimit-limit')
-          required final int limitCount,
-      @JsonKey(name: 'x-ratelimit-remaining')
-          required final int remainingCount,
+      {@JsonKey(name: 'x-ratelimit-limit') required final int limitCount,
+      @JsonKey(name: 'x-ratelimit-remaining') required final int remainingCount,
       @JsonKey(name: 'x-ratelimit-reset')
-          required final DateTime resetAt}) = _$_RateLimit;
+      required final DateTime resetAt}) = _$RateLimitImpl;
   const _RateLimit._() : super._();
 
   factory _RateLimit.fromJson(Map<String, dynamic> json) =
-      _$_RateLimit.fromJson;
+      _$RateLimitImpl.fromJson;
 
   @override
 
@@ -221,6 +220,6 @@ abstract class _RateLimit extends RateLimit {
   DateTime get resetAt;
   @override
   @JsonKey(ignore: true)
-  _$$_RateLimitCopyWith<_$_RateLimit> get copyWith =>
+  _$$RateLimitImplCopyWith<_$RateLimitImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

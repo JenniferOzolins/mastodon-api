@@ -8,11 +8,11 @@ part of 'instance.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Instance _$$_InstanceFromJson(Map json) => $checkedCreate(
-      r'_$_Instance',
+_$InstanceImpl _$$InstanceImplFromJson(Map json) => $checkedCreate(
+      r'_$InstanceImpl',
       json,
       ($checkedConvert) {
-        final val = _$_Instance(
+        final val = _$InstanceImpl(
           uri: $checkedConvert('uri', (v) => v as String),
           title: $checkedConvert('title', (v) => v as String),
           shortDescription:
@@ -65,7 +65,7 @@ _$_Instance _$$_InstanceFromJson(Map json) => $checkedCreate(
       },
     );
 
-Map<String, dynamic> _$$_InstanceToJson(_$_Instance instance) {
+Map<String, dynamic> _$$InstanceImplToJson(_$InstanceImpl instance) {
   final val = <String, dynamic>{
     'uri': instance.uri,
     'title': instance.title,

@@ -96,12 +96,12 @@ class _$InstancePollsConfigurationCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_InstancePollsConfigurationCopyWith<$Res>
+abstract class _$$InstancePollsConfigurationImplCopyWith<$Res>
     implements $InstancePollsConfigurationCopyWith<$Res> {
-  factory _$$_InstancePollsConfigurationCopyWith(
-          _$_InstancePollsConfiguration value,
-          $Res Function(_$_InstancePollsConfiguration) then) =
-      __$$_InstancePollsConfigurationCopyWithImpl<$Res>;
+  factory _$$InstancePollsConfigurationImplCopyWith(
+          _$InstancePollsConfigurationImpl value,
+          $Res Function(_$InstancePollsConfigurationImpl) then) =
+      __$$InstancePollsConfigurationImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -112,13 +112,13 @@ abstract class _$$_InstancePollsConfigurationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_InstancePollsConfigurationCopyWithImpl<$Res>
+class __$$InstancePollsConfigurationImplCopyWithImpl<$Res>
     extends _$InstancePollsConfigurationCopyWithImpl<$Res,
-        _$_InstancePollsConfiguration>
-    implements _$$_InstancePollsConfigurationCopyWith<$Res> {
-  __$$_InstancePollsConfigurationCopyWithImpl(
-      _$_InstancePollsConfiguration _value,
-      $Res Function(_$_InstancePollsConfiguration) _then)
+        _$InstancePollsConfigurationImpl>
+    implements _$$InstancePollsConfigurationImplCopyWith<$Res> {
+  __$$InstancePollsConfigurationImplCopyWithImpl(
+      _$InstancePollsConfigurationImpl _value,
+      $Res Function(_$InstancePollsConfigurationImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -129,7 +129,7 @@ class __$$_InstancePollsConfigurationCopyWithImpl<$Res>
     Object? maxExpiration = null,
     Object? minExpiration = null,
   }) {
-    return _then(_$_InstancePollsConfiguration(
+    return _then(_$InstancePollsConfigurationImpl(
       maxOptions: null == maxOptions
           ? _value.maxOptions
           : maxOptions // ignore: cast_nullable_to_non_nullable
@@ -153,15 +153,16 @@ class __$$_InstancePollsConfigurationCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(includeIfNull: false)
-class _$_InstancePollsConfiguration implements _InstancePollsConfiguration {
-  const _$_InstancePollsConfiguration(
+class _$InstancePollsConfigurationImpl implements _InstancePollsConfiguration {
+  const _$InstancePollsConfigurationImpl(
       {required this.maxOptions,
       required this.maxCharactersPerOption,
       @DurationConverter() required this.maxExpiration,
       @DurationConverter() required this.minExpiration});
 
-  factory _$_InstancePollsConfiguration.fromJson(Map<String, dynamic> json) =>
-      _$$_InstancePollsConfigurationFromJson(json);
+  factory _$InstancePollsConfigurationImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$InstancePollsConfigurationImplFromJson(json);
 
   /// Each poll is allowed to have up to this many options.
   @override
@@ -187,10 +188,10 @@ class _$_InstancePollsConfiguration implements _InstancePollsConfiguration {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_InstancePollsConfiguration &&
+            other is _$InstancePollsConfigurationImpl &&
             (identical(other.maxOptions, maxOptions) ||
                 other.maxOptions == maxOptions) &&
             (identical(other.maxCharactersPerOption, maxCharactersPerOption) ||
@@ -209,13 +210,13 @@ class _$_InstancePollsConfiguration implements _InstancePollsConfiguration {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_InstancePollsConfigurationCopyWith<_$_InstancePollsConfiguration>
-      get copyWith => __$$_InstancePollsConfigurationCopyWithImpl<
-          _$_InstancePollsConfiguration>(this, _$identity);
+  _$$InstancePollsConfigurationImplCopyWith<_$InstancePollsConfigurationImpl>
+      get copyWith => __$$InstancePollsConfigurationImplCopyWithImpl<
+          _$InstancePollsConfigurationImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_InstancePollsConfigurationToJson(
+    return _$$InstancePollsConfigurationImplToJson(
       this,
     );
   }
@@ -228,10 +229,10 @@ abstract class _InstancePollsConfiguration
           required final int maxCharactersPerOption,
           @DurationConverter() required final Duration maxExpiration,
           @DurationConverter() required final Duration minExpiration}) =
-      _$_InstancePollsConfiguration;
+      _$InstancePollsConfigurationImpl;
 
   factory _InstancePollsConfiguration.fromJson(Map<String, dynamic> json) =
-      _$_InstancePollsConfiguration.fromJson;
+      _$InstancePollsConfigurationImpl.fromJson;
 
   @override
 
@@ -253,6 +254,6 @@ abstract class _InstancePollsConfiguration
   Duration get minExpiration;
   @override
   @JsonKey(ignore: true)
-  _$$_InstancePollsConfigurationCopyWith<_$_InstancePollsConfiguration>
+  _$$InstancePollsConfigurationImplCopyWith<_$InstancePollsConfigurationImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

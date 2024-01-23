@@ -8,11 +8,11 @@ part of 'relationship.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Relationship _$$_RelationshipFromJson(Map json) => $checkedCreate(
-      r'_$_Relationship',
+_$RelationshipImpl _$$RelationshipImplFromJson(Map json) => $checkedCreate(
+      r'_$RelationshipImpl',
       json,
       ($checkedConvert) {
-        final val = _$_Relationship(
+        final val = _$RelationshipImpl(
           id: $checkedConvert('id', (v) => v as String),
           bio: $checkedConvert('note', (v) => v as String),
           isFollowing: $checkedConvert('following', (v) => v as bool),
@@ -53,7 +53,7 @@ _$_Relationship _$$_RelationshipFromJson(Map json) => $checkedCreate(
       },
     );
 
-Map<String, dynamic> _$$_RelationshipToJson(_$_Relationship instance) {
+Map<String, dynamic> _$$RelationshipImplToJson(_$RelationshipImpl instance) {
   final val = <String, dynamic>{
     'id': instance.id,
     'note': instance.bio,

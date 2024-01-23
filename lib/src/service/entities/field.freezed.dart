@@ -77,18 +77,21 @@ class _$FieldCopyWithImpl<$Res, $Val extends Field>
 }
 
 /// @nodoc
-abstract class _$$_FieldCopyWith<$Res> implements $FieldCopyWith<$Res> {
-  factory _$$_FieldCopyWith(_$_Field value, $Res Function(_$_Field) then) =
-      __$$_FieldCopyWithImpl<$Res>;
+abstract class _$$FieldImplCopyWith<$Res> implements $FieldCopyWith<$Res> {
+  factory _$$FieldImplCopyWith(
+          _$FieldImpl value, $Res Function(_$FieldImpl) then) =
+      __$$FieldImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String name, String value, DateTime? verifiedAt});
 }
 
 /// @nodoc
-class __$$_FieldCopyWithImpl<$Res> extends _$FieldCopyWithImpl<$Res, _$_Field>
-    implements _$$_FieldCopyWith<$Res> {
-  __$$_FieldCopyWithImpl(_$_Field _value, $Res Function(_$_Field) _then)
+class __$$FieldImplCopyWithImpl<$Res>
+    extends _$FieldCopyWithImpl<$Res, _$FieldImpl>
+    implements _$$FieldImplCopyWith<$Res> {
+  __$$FieldImplCopyWithImpl(
+      _$FieldImpl _value, $Res Function(_$FieldImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -98,7 +101,7 @@ class __$$_FieldCopyWithImpl<$Res> extends _$FieldCopyWithImpl<$Res, _$_Field>
     Object? value = null,
     Object? verifiedAt = freezed,
   }) {
-    return _then(_$_Field(
+    return _then(_$FieldImpl(
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -118,11 +121,11 @@ class __$$_FieldCopyWithImpl<$Res> extends _$FieldCopyWithImpl<$Res, _$_Field>
 /// @nodoc
 
 @JsonSerializable(includeIfNull: false)
-class _$_Field implements _Field {
-  const _$_Field({required this.name, required this.value, this.verifiedAt});
+class _$FieldImpl implements _Field {
+  const _$FieldImpl({required this.name, required this.value, this.verifiedAt});
 
-  factory _$_Field.fromJson(Map<String, dynamic> json) =>
-      _$$_FieldFromJson(json);
+  factory _$FieldImpl.fromJson(Map<String, dynamic> json) =>
+      _$$FieldImplFromJson(json);
 
   /// The key of a given field's key-value pair.
   @override
@@ -142,10 +145,10 @@ class _$_Field implements _Field {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Field &&
+            other is _$FieldImpl &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.value, value) || other.value == value) &&
             (identical(other.verifiedAt, verifiedAt) ||
@@ -159,12 +162,12 @@ class _$_Field implements _Field {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_FieldCopyWith<_$_Field> get copyWith =>
-      __$$_FieldCopyWithImpl<_$_Field>(this, _$identity);
+  _$$FieldImplCopyWith<_$FieldImpl> get copyWith =>
+      __$$FieldImplCopyWithImpl<_$FieldImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_FieldToJson(
+    return _$$FieldImplToJson(
       this,
     );
   }
@@ -174,9 +177,9 @@ abstract class _Field implements Field {
   const factory _Field(
       {required final String name,
       required final String value,
-      final DateTime? verifiedAt}) = _$_Field;
+      final DateTime? verifiedAt}) = _$FieldImpl;
 
-  factory _Field.fromJson(Map<String, dynamic> json) = _$_Field.fromJson;
+  factory _Field.fromJson(Map<String, dynamic> json) = _$FieldImpl.fromJson;
 
   @override
 
@@ -192,6 +195,6 @@ abstract class _Field implements Field {
   DateTime? get verifiedAt;
   @override
   @JsonKey(ignore: true)
-  _$$_FieldCopyWith<_$_Field> get copyWith =>
+  _$$FieldImplCopyWith<_$FieldImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

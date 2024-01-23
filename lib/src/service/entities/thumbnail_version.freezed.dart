@@ -73,22 +73,22 @@ class _$ThumbnailVersionCopyWithImpl<$Res, $Val extends ThumbnailVersion>
 }
 
 /// @nodoc
-abstract class _$$_ThumbnailVersionCopyWith<$Res>
+abstract class _$$ThumbnailVersionImplCopyWith<$Res>
     implements $ThumbnailVersionCopyWith<$Res> {
-  factory _$$_ThumbnailVersionCopyWith(
-          _$_ThumbnailVersion value, $Res Function(_$_ThumbnailVersion) then) =
-      __$$_ThumbnailVersionCopyWithImpl<$Res>;
+  factory _$$ThumbnailVersionImplCopyWith(_$ThumbnailVersionImpl value,
+          $Res Function(_$ThumbnailVersionImpl) then) =
+      __$$ThumbnailVersionImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({@JsonKey(name: '@1x') String v1, @JsonKey(name: '@2x') String v2});
 }
 
 /// @nodoc
-class __$$_ThumbnailVersionCopyWithImpl<$Res>
-    extends _$ThumbnailVersionCopyWithImpl<$Res, _$_ThumbnailVersion>
-    implements _$$_ThumbnailVersionCopyWith<$Res> {
-  __$$_ThumbnailVersionCopyWithImpl(
-      _$_ThumbnailVersion _value, $Res Function(_$_ThumbnailVersion) _then)
+class __$$ThumbnailVersionImplCopyWithImpl<$Res>
+    extends _$ThumbnailVersionCopyWithImpl<$Res, _$ThumbnailVersionImpl>
+    implements _$$ThumbnailVersionImplCopyWith<$Res> {
+  __$$ThumbnailVersionImplCopyWithImpl(_$ThumbnailVersionImpl _value,
+      $Res Function(_$ThumbnailVersionImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -97,7 +97,7 @@ class __$$_ThumbnailVersionCopyWithImpl<$Res>
     Object? v1 = null,
     Object? v2 = null,
   }) {
-    return _then(_$_ThumbnailVersion(
+    return _then(_$ThumbnailVersionImpl(
       v1: null == v1
           ? _value.v1
           : v1 // ignore: cast_nullable_to_non_nullable
@@ -113,13 +113,13 @@ class __$$_ThumbnailVersionCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(includeIfNull: false)
-class _$_ThumbnailVersion implements _ThumbnailVersion {
-  const _$_ThumbnailVersion(
+class _$ThumbnailVersionImpl implements _ThumbnailVersion {
+  const _$ThumbnailVersionImpl(
       {@JsonKey(name: '@1x') required this.v1,
       @JsonKey(name: '@2x') required this.v2});
 
-  factory _$_ThumbnailVersion.fromJson(Map<String, dynamic> json) =>
-      _$$_ThumbnailVersionFromJson(json);
+  factory _$ThumbnailVersionImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ThumbnailVersionImplFromJson(json);
 
   /// The URL for the thumbnail image at 1x resolution.
   @override
@@ -137,10 +137,10 @@ class _$_ThumbnailVersion implements _ThumbnailVersion {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ThumbnailVersion &&
+            other is _$ThumbnailVersionImpl &&
             (identical(other.v1, v1) || other.v1 == v1) &&
             (identical(other.v2, v2) || other.v2 == v2));
   }
@@ -152,12 +152,13 @@ class _$_ThumbnailVersion implements _ThumbnailVersion {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ThumbnailVersionCopyWith<_$_ThumbnailVersion> get copyWith =>
-      __$$_ThumbnailVersionCopyWithImpl<_$_ThumbnailVersion>(this, _$identity);
+  _$$ThumbnailVersionImplCopyWith<_$ThumbnailVersionImpl> get copyWith =>
+      __$$ThumbnailVersionImplCopyWithImpl<_$ThumbnailVersionImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ThumbnailVersionToJson(
+    return _$$ThumbnailVersionImplToJson(
       this,
     );
   }
@@ -166,10 +167,10 @@ class _$_ThumbnailVersion implements _ThumbnailVersion {
 abstract class _ThumbnailVersion implements ThumbnailVersion {
   const factory _ThumbnailVersion(
       {@JsonKey(name: '@1x') required final String v1,
-      @JsonKey(name: '@2x') required final String v2}) = _$_ThumbnailVersion;
+      @JsonKey(name: '@2x') required final String v2}) = _$ThumbnailVersionImpl;
 
   factory _ThumbnailVersion.fromJson(Map<String, dynamic> json) =
-      _$_ThumbnailVersion.fromJson;
+      _$ThumbnailVersionImpl.fromJson;
 
   @override
 
@@ -183,6 +184,6 @@ abstract class _ThumbnailVersion implements ThumbnailVersion {
   String get v2;
   @override
   @JsonKey(ignore: true)
-  _$$_ThumbnailVersionCopyWith<_$_ThumbnailVersion> get copyWith =>
+  _$$ThumbnailVersionImplCopyWith<_$ThumbnailVersionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

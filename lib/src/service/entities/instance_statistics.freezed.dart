@@ -79,22 +79,22 @@ class _$InstanceStatisticsCopyWithImpl<$Res, $Val extends InstanceStatistics>
 }
 
 /// @nodoc
-abstract class _$$_InstanceStatisticsCopyWith<$Res>
+abstract class _$$InstanceStatisticsImplCopyWith<$Res>
     implements $InstanceStatisticsCopyWith<$Res> {
-  factory _$$_InstanceStatisticsCopyWith(_$_InstanceStatistics value,
-          $Res Function(_$_InstanceStatistics) then) =
-      __$$_InstanceStatisticsCopyWithImpl<$Res>;
+  factory _$$InstanceStatisticsImplCopyWith(_$InstanceStatisticsImpl value,
+          $Res Function(_$InstanceStatisticsImpl) then) =
+      __$$InstanceStatisticsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int userCount, int statusCount, int domainCount});
 }
 
 /// @nodoc
-class __$$_InstanceStatisticsCopyWithImpl<$Res>
-    extends _$InstanceStatisticsCopyWithImpl<$Res, _$_InstanceStatistics>
-    implements _$$_InstanceStatisticsCopyWith<$Res> {
-  __$$_InstanceStatisticsCopyWithImpl(
-      _$_InstanceStatistics _value, $Res Function(_$_InstanceStatistics) _then)
+class __$$InstanceStatisticsImplCopyWithImpl<$Res>
+    extends _$InstanceStatisticsCopyWithImpl<$Res, _$InstanceStatisticsImpl>
+    implements _$$InstanceStatisticsImplCopyWith<$Res> {
+  __$$InstanceStatisticsImplCopyWithImpl(_$InstanceStatisticsImpl _value,
+      $Res Function(_$InstanceStatisticsImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -104,7 +104,7 @@ class __$$_InstanceStatisticsCopyWithImpl<$Res>
     Object? statusCount = null,
     Object? domainCount = null,
   }) {
-    return _then(_$_InstanceStatistics(
+    return _then(_$InstanceStatisticsImpl(
       userCount: null == userCount
           ? _value.userCount
           : userCount // ignore: cast_nullable_to_non_nullable
@@ -123,14 +123,14 @@ class __$$_InstanceStatisticsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_InstanceStatistics implements _InstanceStatistics {
-  const _$_InstanceStatistics(
+class _$InstanceStatisticsImpl implements _InstanceStatistics {
+  const _$InstanceStatisticsImpl(
       {required this.userCount,
       required this.statusCount,
       required this.domainCount});
 
-  factory _$_InstanceStatistics.fromJson(Map<String, dynamic> json) =>
-      _$$_InstanceStatisticsFromJson(json);
+  factory _$InstanceStatisticsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$InstanceStatisticsImplFromJson(json);
 
   /// Users registered on this instance.
   @override
@@ -150,10 +150,10 @@ class _$_InstanceStatistics implements _InstanceStatistics {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_InstanceStatistics &&
+            other is _$InstanceStatisticsImpl &&
             (identical(other.userCount, userCount) ||
                 other.userCount == userCount) &&
             (identical(other.statusCount, statusCount) ||
@@ -170,13 +170,13 @@ class _$_InstanceStatistics implements _InstanceStatistics {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_InstanceStatisticsCopyWith<_$_InstanceStatistics> get copyWith =>
-      __$$_InstanceStatisticsCopyWithImpl<_$_InstanceStatistics>(
+  _$$InstanceStatisticsImplCopyWith<_$InstanceStatisticsImpl> get copyWith =>
+      __$$InstanceStatisticsImplCopyWithImpl<_$InstanceStatisticsImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_InstanceStatisticsToJson(
+    return _$$InstanceStatisticsImplToJson(
       this,
     );
   }
@@ -186,10 +186,10 @@ abstract class _InstanceStatistics implements InstanceStatistics {
   const factory _InstanceStatistics(
       {required final int userCount,
       required final int statusCount,
-      required final int domainCount}) = _$_InstanceStatistics;
+      required final int domainCount}) = _$InstanceStatisticsImpl;
 
   factory _InstanceStatistics.fromJson(Map<String, dynamic> json) =
-      _$_InstanceStatistics.fromJson;
+      _$InstanceStatisticsImpl.fromJson;
 
   @override
 
@@ -205,6 +205,6 @@ abstract class _InstanceStatistics implements InstanceStatistics {
   int get domainCount;
   @override
   @JsonKey(ignore: true)
-  _$$_InstanceStatisticsCopyWith<_$_InstanceStatistics> get copyWith =>
+  _$$InstanceStatisticsImplCopyWith<_$InstanceStatisticsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

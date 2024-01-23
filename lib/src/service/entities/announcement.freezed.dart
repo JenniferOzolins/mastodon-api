@@ -187,11 +187,11 @@ class _$AnnouncementCopyWithImpl<$Res, $Val extends Announcement>
 }
 
 /// @nodoc
-abstract class _$$_AnnouncementCopyWith<$Res>
+abstract class _$$AnnouncementImplCopyWith<$Res>
     implements $AnnouncementCopyWith<$Res> {
-  factory _$$_AnnouncementCopyWith(
-          _$_Announcement value, $Res Function(_$_Announcement) then) =
-      __$$_AnnouncementCopyWithImpl<$Res>;
+  factory _$$AnnouncementImplCopyWith(
+          _$AnnouncementImpl value, $Res Function(_$AnnouncementImpl) then) =
+      __$$AnnouncementImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -212,11 +212,11 @@ abstract class _$$_AnnouncementCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_AnnouncementCopyWithImpl<$Res>
-    extends _$AnnouncementCopyWithImpl<$Res, _$_Announcement>
-    implements _$$_AnnouncementCopyWith<$Res> {
-  __$$_AnnouncementCopyWithImpl(
-      _$_Announcement _value, $Res Function(_$_Announcement) _then)
+class __$$AnnouncementImplCopyWithImpl<$Res>
+    extends _$AnnouncementCopyWithImpl<$Res, _$AnnouncementImpl>
+    implements _$$AnnouncementImplCopyWith<$Res> {
+  __$$AnnouncementImplCopyWithImpl(
+      _$AnnouncementImpl _value, $Res Function(_$AnnouncementImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -237,7 +237,7 @@ class __$$_AnnouncementCopyWithImpl<$Res>
     Object? emojis = null,
     Object? reactions = null,
   }) {
-    return _then(_$_Announcement(
+    return _then(_$AnnouncementImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -301,8 +301,8 @@ class __$$_AnnouncementCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(includeIfNull: false)
-class _$_Announcement implements _Announcement {
-  const _$_Announcement(
+class _$AnnouncementImpl implements _Announcement {
+  const _$AnnouncementImpl(
       {required this.id,
       required this.content,
       @JsonKey(name: 'published') this.isPublished,
@@ -323,8 +323,8 @@ class _$_Announcement implements _Announcement {
         _emojis = emojis,
         _reactions = reactions;
 
-  factory _$_Announcement.fromJson(Map<String, dynamic> json) =>
-      _$$_AnnouncementFromJson(json);
+  factory _$AnnouncementImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AnnouncementImplFromJson(json);
 
   /// The ID of the announcement in the database.
   @override
@@ -429,10 +429,10 @@ class _$_Announcement implements _Announcement {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Announcement &&
+            other is _$AnnouncementImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.content, content) || other.content == content) &&
             (identical(other.isPublished, isPublished) ||
@@ -477,12 +477,12 @@ class _$_Announcement implements _Announcement {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AnnouncementCopyWith<_$_Announcement> get copyWith =>
-      __$$_AnnouncementCopyWithImpl<_$_Announcement>(this, _$identity);
+  _$$AnnouncementImplCopyWith<_$AnnouncementImpl> get copyWith =>
+      __$$AnnouncementImplCopyWithImpl<_$AnnouncementImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AnnouncementToJson(
+    return _$$AnnouncementImplToJson(
       this,
     );
   }
@@ -503,10 +503,10 @@ abstract class _Announcement implements Announcement {
       required final List<AnnouncementStatus> statuses,
       required final List<Tag> tags,
       required final List<Emoji> emojis,
-      required final List<EmojiReaction> reactions}) = _$_Announcement;
+      required final List<EmojiReaction> reactions}) = _$AnnouncementImpl;
 
   factory _Announcement.fromJson(Map<String, dynamic> json) =
-      _$_Announcement.fromJson;
+      _$AnnouncementImpl.fromJson;
 
   @override
 
@@ -572,6 +572,6 @@ abstract class _Announcement implements Announcement {
   List<EmojiReaction> get reactions;
   @override
   @JsonKey(ignore: true)
-  _$$_AnnouncementCopyWith<_$_Announcement> get copyWith =>
+  _$$AnnouncementImplCopyWith<_$AnnouncementImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

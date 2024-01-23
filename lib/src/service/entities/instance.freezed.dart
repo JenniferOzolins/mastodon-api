@@ -221,10 +221,11 @@ class _$InstanceCopyWithImpl<$Res, $Val extends Instance>
 }
 
 /// @nodoc
-abstract class _$$_InstanceCopyWith<$Res> implements $InstanceCopyWith<$Res> {
-  factory _$$_InstanceCopyWith(
-          _$_Instance value, $Res Function(_$_Instance) then) =
-      __$$_InstanceCopyWithImpl<$Res>;
+abstract class _$$InstanceImplCopyWith<$Res>
+    implements $InstanceCopyWith<$Res> {
+  factory _$$InstanceImplCopyWith(
+          _$InstanceImpl value, $Res Function(_$InstanceImpl) then) =
+      __$$InstanceImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -252,11 +253,11 @@ abstract class _$$_InstanceCopyWith<$Res> implements $InstanceCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_InstanceCopyWithImpl<$Res>
-    extends _$InstanceCopyWithImpl<$Res, _$_Instance>
-    implements _$$_InstanceCopyWith<$Res> {
-  __$$_InstanceCopyWithImpl(
-      _$_Instance _value, $Res Function(_$_Instance) _then)
+class __$$InstanceImplCopyWithImpl<$Res>
+    extends _$InstanceCopyWithImpl<$Res, _$InstanceImpl>
+    implements _$$InstanceImplCopyWith<$Res> {
+  __$$InstanceImplCopyWithImpl(
+      _$InstanceImpl _value, $Res Function(_$InstanceImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -277,7 +278,7 @@ class __$$_InstanceCopyWithImpl<$Res>
     Object? contactAccount = freezed,
     Object? rules = freezed,
   }) {
-    return _then(_$_Instance(
+    return _then(_$InstanceImpl(
       uri: null == uri
           ? _value.uri
           : uri // ignore: cast_nullable_to_non_nullable
@@ -341,8 +342,8 @@ class __$$_InstanceCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(includeIfNull: false)
-class _$_Instance implements _Instance {
-  const _$_Instance(
+class _$InstanceImpl implements _Instance {
+  const _$InstanceImpl(
       {required this.uri,
       required this.title,
       required this.shortDescription,
@@ -360,8 +361,8 @@ class _$_Instance implements _Instance {
       : _languages = languages,
         _rules = rules;
 
-  factory _$_Instance.fromJson(Map<String, dynamic> json) =>
-      _$$_InstanceFromJson(json);
+  factory _$InstanceImpl.fromJson(Map<String, dynamic> json) =>
+      _$$InstanceImplFromJson(json);
 
   /// The domain name of the instance.
   @override
@@ -445,10 +446,10 @@ class _$_Instance implements _Instance {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Instance &&
+            other is _$InstanceImpl &&
             (identical(other.uri, uri) || other.uri == uri) &&
             (identical(other.title, title) || other.title == title) &&
             (identical(other.shortDescription, shortDescription) ||
@@ -496,12 +497,12 @@ class _$_Instance implements _Instance {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_InstanceCopyWith<_$_Instance> get copyWith =>
-      __$$_InstanceCopyWithImpl<_$_Instance>(this, _$identity);
+  _$$InstanceImplCopyWith<_$InstanceImpl> get copyWith =>
+      __$$InstanceImplCopyWithImpl<_$InstanceImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_InstanceToJson(
+    return _$$InstanceImplToJson(
       this,
     );
   }
@@ -515,20 +516,19 @@ abstract class _Instance implements Instance {
       required final String email,
       required final String version,
       required final List<Language> languages,
-      @JsonKey(name: 'stats')
-          required final InstanceStatistics statistics,
+      @JsonKey(name: 'stats') required final InstanceStatistics statistics,
       final String? thumbnail,
       @JsonKey(name: 'registrations')
-          required final bool isRegistrationsEnabled,
+      required final bool isRegistrationsEnabled,
       @JsonKey(name: 'approval_required')
-          required final bool isApprovalRequired,
-      @JsonKey(name: 'invites_enabled')
-          required final bool isInvitesEnabled,
+      required final bool isApprovalRequired,
+      @JsonKey(name: 'invites_enabled') required final bool isInvitesEnabled,
       final InstanceConfiguration? configuration,
       final Account? contactAccount,
-      final List<Rule>? rules}) = _$_Instance;
+      final List<Rule>? rules}) = _$InstanceImpl;
 
-  factory _Instance.fromJson(Map<String, dynamic> json) = _$_Instance.fromJson;
+  factory _Instance.fromJson(Map<String, dynamic> json) =
+      _$InstanceImpl.fromJson;
 
   @override
 
@@ -592,6 +592,6 @@ abstract class _Instance implements Instance {
   List<Rule>? get rules;
   @override
   @JsonKey(ignore: true)
-  _$$_InstanceCopyWith<_$_Instance> get copyWith =>
+  _$$InstanceImplCopyWith<_$InstanceImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

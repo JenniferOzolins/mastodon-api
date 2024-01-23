@@ -8,12 +8,12 @@ part of 'instance_registrations.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_InstanceRegistrations _$$_InstanceRegistrationsFromJson(Map json) =>
+_$InstanceRegistrationsImpl _$$InstanceRegistrationsImplFromJson(Map json) =>
     $checkedCreate(
-      r'_$_InstanceRegistrations',
+      r'_$InstanceRegistrationsImpl',
       json,
       ($checkedConvert) {
-        final val = _$_InstanceRegistrations(
+        final val = _$InstanceRegistrationsImpl(
           isEnabled: $checkedConvert('enabled', (v) => v as bool),
           isApprovalRequired:
               $checkedConvert('approval_required', (v) => v as bool),
@@ -28,8 +28,8 @@ _$_InstanceRegistrations _$$_InstanceRegistrationsFromJson(Map json) =>
       },
     );
 
-Map<String, dynamic> _$$_InstanceRegistrationsToJson(
-    _$_InstanceRegistrations instance) {
+Map<String, dynamic> _$$InstanceRegistrationsImplToJson(
+    _$InstanceRegistrationsImpl instance) {
   final val = <String, dynamic>{
     'enabled': instance.isEnabled,
     'approval_required': instance.isApprovalRequired,

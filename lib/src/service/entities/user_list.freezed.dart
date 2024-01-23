@@ -78,21 +78,22 @@ class _$UserListCopyWithImpl<$Res, $Val extends UserList>
 }
 
 /// @nodoc
-abstract class _$$_UserListCopyWith<$Res> implements $UserListCopyWith<$Res> {
-  factory _$$_UserListCopyWith(
-          _$_UserList value, $Res Function(_$_UserList) then) =
-      __$$_UserListCopyWithImpl<$Res>;
+abstract class _$$UserListImplCopyWith<$Res>
+    implements $UserListCopyWith<$Res> {
+  factory _$$UserListImplCopyWith(
+          _$UserListImpl value, $Res Function(_$UserListImpl) then) =
+      __$$UserListImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String id, String title, ListRepliesPolicy? repliesPolicy});
 }
 
 /// @nodoc
-class __$$_UserListCopyWithImpl<$Res>
-    extends _$UserListCopyWithImpl<$Res, _$_UserList>
-    implements _$$_UserListCopyWith<$Res> {
-  __$$_UserListCopyWithImpl(
-      _$_UserList _value, $Res Function(_$_UserList) _then)
+class __$$UserListImplCopyWithImpl<$Res>
+    extends _$UserListCopyWithImpl<$Res, _$UserListImpl>
+    implements _$$UserListImplCopyWith<$Res> {
+  __$$UserListImplCopyWithImpl(
+      _$UserListImpl _value, $Res Function(_$UserListImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -102,7 +103,7 @@ class __$$_UserListCopyWithImpl<$Res>
     Object? title = null,
     Object? repliesPolicy = freezed,
   }) {
-    return _then(_$_UserList(
+    return _then(_$UserListImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -122,12 +123,12 @@ class __$$_UserListCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(includeIfNull: false)
-class _$_UserList implements _UserList {
-  const _$_UserList(
+class _$UserListImpl implements _UserList {
+  const _$UserListImpl(
       {required this.id, required this.title, this.repliesPolicy});
 
-  factory _$_UserList.fromJson(Map<String, dynamic> json) =>
-      _$$_UserListFromJson(json);
+  factory _$UserListImpl.fromJson(Map<String, dynamic> json) =>
+      _$$UserListImplFromJson(json);
 
   /// The internal database ID of the list.
   @override
@@ -147,10 +148,10 @@ class _$_UserList implements _UserList {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_UserList &&
+            other is _$UserListImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.title, title) || other.title == title) &&
             (identical(other.repliesPolicy, repliesPolicy) ||
@@ -164,12 +165,12 @@ class _$_UserList implements _UserList {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_UserListCopyWith<_$_UserList> get copyWith =>
-      __$$_UserListCopyWithImpl<_$_UserList>(this, _$identity);
+  _$$UserListImplCopyWith<_$UserListImpl> get copyWith =>
+      __$$UserListImplCopyWithImpl<_$UserListImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_UserListToJson(
+    return _$$UserListImplToJson(
       this,
     );
   }
@@ -179,9 +180,10 @@ abstract class _UserList implements UserList {
   const factory _UserList(
       {required final String id,
       required final String title,
-      final ListRepliesPolicy? repliesPolicy}) = _$_UserList;
+      final ListRepliesPolicy? repliesPolicy}) = _$UserListImpl;
 
-  factory _UserList.fromJson(Map<String, dynamic> json) = _$_UserList.fromJson;
+  factory _UserList.fromJson(Map<String, dynamic> json) =
+      _$UserListImpl.fromJson;
 
   @override
 
@@ -197,6 +199,6 @@ abstract class _UserList implements UserList {
   ListRepliesPolicy? get repliesPolicy;
   @override
   @JsonKey(ignore: true)
-  _$$_UserListCopyWith<_$_UserList> get copyWith =>
+  _$$UserListImplCopyWith<_$UserListImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

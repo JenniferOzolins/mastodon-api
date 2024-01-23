@@ -65,25 +65,25 @@ class _$InstanceUrlsConfigurationCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_InstanceUrlsConfigurationCopyWith<$Res>
+abstract class _$$InstanceUrlsConfigurationImplCopyWith<$Res>
     implements $InstanceUrlsConfigurationCopyWith<$Res> {
-  factory _$$_InstanceUrlsConfigurationCopyWith(
-          _$_InstanceUrlsConfiguration value,
-          $Res Function(_$_InstanceUrlsConfiguration) then) =
-      __$$_InstanceUrlsConfigurationCopyWithImpl<$Res>;
+  factory _$$InstanceUrlsConfigurationImplCopyWith(
+          _$InstanceUrlsConfigurationImpl value,
+          $Res Function(_$InstanceUrlsConfigurationImpl) then) =
+      __$$InstanceUrlsConfigurationImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String streaming});
 }
 
 /// @nodoc
-class __$$_InstanceUrlsConfigurationCopyWithImpl<$Res>
+class __$$InstanceUrlsConfigurationImplCopyWithImpl<$Res>
     extends _$InstanceUrlsConfigurationCopyWithImpl<$Res,
-        _$_InstanceUrlsConfiguration>
-    implements _$$_InstanceUrlsConfigurationCopyWith<$Res> {
-  __$$_InstanceUrlsConfigurationCopyWithImpl(
-      _$_InstanceUrlsConfiguration _value,
-      $Res Function(_$_InstanceUrlsConfiguration) _then)
+        _$InstanceUrlsConfigurationImpl>
+    implements _$$InstanceUrlsConfigurationImplCopyWith<$Res> {
+  __$$InstanceUrlsConfigurationImplCopyWithImpl(
+      _$InstanceUrlsConfigurationImpl _value,
+      $Res Function(_$InstanceUrlsConfigurationImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -91,7 +91,7 @@ class __$$_InstanceUrlsConfigurationCopyWithImpl<$Res>
   $Res call({
     Object? streaming = null,
   }) {
-    return _then(_$_InstanceUrlsConfiguration(
+    return _then(_$InstanceUrlsConfigurationImpl(
       streaming: null == streaming
           ? _value.streaming
           : streaming // ignore: cast_nullable_to_non_nullable
@@ -103,11 +103,11 @@ class __$$_InstanceUrlsConfigurationCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(includeIfNull: false)
-class _$_InstanceUrlsConfiguration implements _InstanceUrlsConfiguration {
-  const _$_InstanceUrlsConfiguration({required this.streaming});
+class _$InstanceUrlsConfigurationImpl implements _InstanceUrlsConfiguration {
+  const _$InstanceUrlsConfigurationImpl({required this.streaming});
 
-  factory _$_InstanceUrlsConfiguration.fromJson(Map<String, dynamic> json) =>
-      _$$_InstanceUrlsConfigurationFromJson(json);
+  factory _$InstanceUrlsConfigurationImpl.fromJson(Map<String, dynamic> json) =>
+      _$$InstanceUrlsConfigurationImplFromJson(json);
 
   /// The Web Sockets URL for connecting to the streaming API.
   @override
@@ -119,10 +119,10 @@ class _$_InstanceUrlsConfiguration implements _InstanceUrlsConfiguration {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_InstanceUrlsConfiguration &&
+            other is _$InstanceUrlsConfigurationImpl &&
             (identical(other.streaming, streaming) ||
                 other.streaming == streaming));
   }
@@ -134,13 +134,13 @@ class _$_InstanceUrlsConfiguration implements _InstanceUrlsConfiguration {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_InstanceUrlsConfigurationCopyWith<_$_InstanceUrlsConfiguration>
-      get copyWith => __$$_InstanceUrlsConfigurationCopyWithImpl<
-          _$_InstanceUrlsConfiguration>(this, _$identity);
+  _$$InstanceUrlsConfigurationImplCopyWith<_$InstanceUrlsConfigurationImpl>
+      get copyWith => __$$InstanceUrlsConfigurationImplCopyWithImpl<
+          _$InstanceUrlsConfigurationImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_InstanceUrlsConfigurationToJson(
+    return _$$InstanceUrlsConfigurationImplToJson(
       this,
     );
   }
@@ -148,10 +148,10 @@ class _$_InstanceUrlsConfiguration implements _InstanceUrlsConfiguration {
 
 abstract class _InstanceUrlsConfiguration implements InstanceUrlsConfiguration {
   const factory _InstanceUrlsConfiguration({required final String streaming}) =
-      _$_InstanceUrlsConfiguration;
+      _$InstanceUrlsConfigurationImpl;
 
   factory _InstanceUrlsConfiguration.fromJson(Map<String, dynamic> json) =
-      _$_InstanceUrlsConfiguration.fromJson;
+      _$InstanceUrlsConfigurationImpl.fromJson;
 
   @override
 
@@ -159,6 +159,6 @@ abstract class _InstanceUrlsConfiguration implements InstanceUrlsConfiguration {
   String get streaming;
   @override
   @JsonKey(ignore: true)
-  _$$_InstanceUrlsConfigurationCopyWith<_$_InstanceUrlsConfiguration>
+  _$$InstanceUrlsConfigurationImplCopyWith<_$InstanceUrlsConfigurationImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

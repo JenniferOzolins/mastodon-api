@@ -87,11 +87,12 @@ class _$InstanceRegistrationsCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_InstanceRegistrationsCopyWith<$Res>
+abstract class _$$InstanceRegistrationsImplCopyWith<$Res>
     implements $InstanceRegistrationsCopyWith<$Res> {
-  factory _$$_InstanceRegistrationsCopyWith(_$_InstanceRegistrations value,
-          $Res Function(_$_InstanceRegistrations) then) =
-      __$$_InstanceRegistrationsCopyWithImpl<$Res>;
+  factory _$$InstanceRegistrationsImplCopyWith(
+          _$InstanceRegistrationsImpl value,
+          $Res Function(_$InstanceRegistrationsImpl) then) =
+      __$$InstanceRegistrationsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -101,11 +102,12 @@ abstract class _$$_InstanceRegistrationsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_InstanceRegistrationsCopyWithImpl<$Res>
-    extends _$InstanceRegistrationsCopyWithImpl<$Res, _$_InstanceRegistrations>
-    implements _$$_InstanceRegistrationsCopyWith<$Res> {
-  __$$_InstanceRegistrationsCopyWithImpl(_$_InstanceRegistrations _value,
-      $Res Function(_$_InstanceRegistrations) _then)
+class __$$InstanceRegistrationsImplCopyWithImpl<$Res>
+    extends _$InstanceRegistrationsCopyWithImpl<$Res,
+        _$InstanceRegistrationsImpl>
+    implements _$$InstanceRegistrationsImplCopyWith<$Res> {
+  __$$InstanceRegistrationsImplCopyWithImpl(_$InstanceRegistrationsImpl _value,
+      $Res Function(_$InstanceRegistrationsImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -115,7 +117,7 @@ class __$$_InstanceRegistrationsCopyWithImpl<$Res>
     Object? isApprovalRequired = null,
     Object? closedMessage = freezed,
   }) {
-    return _then(_$_InstanceRegistrations(
+    return _then(_$InstanceRegistrationsImpl(
       isEnabled: null == isEnabled
           ? _value.isEnabled
           : isEnabled // ignore: cast_nullable_to_non_nullable
@@ -135,14 +137,14 @@ class __$$_InstanceRegistrationsCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(includeIfNull: false)
-class _$_InstanceRegistrations implements _InstanceRegistrations {
-  const _$_InstanceRegistrations(
+class _$InstanceRegistrationsImpl implements _InstanceRegistrations {
+  const _$InstanceRegistrationsImpl(
       {@JsonKey(name: 'enabled') required this.isEnabled,
       @JsonKey(name: 'approval_required') required this.isApprovalRequired,
       @JsonKey(name: 'message') this.closedMessage});
 
-  factory _$_InstanceRegistrations.fromJson(Map<String, dynamic> json) =>
-      _$$_InstanceRegistrationsFromJson(json);
+  factory _$InstanceRegistrationsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$InstanceRegistrationsImplFromJson(json);
 
   /// Whether registrations are enabled.
   @override
@@ -165,10 +167,10 @@ class _$_InstanceRegistrations implements _InstanceRegistrations {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_InstanceRegistrations &&
+            other is _$InstanceRegistrationsImpl &&
             (identical(other.isEnabled, isEnabled) ||
                 other.isEnabled == isEnabled) &&
             (identical(other.isApprovalRequired, isApprovalRequired) ||
@@ -185,13 +187,13 @@ class _$_InstanceRegistrations implements _InstanceRegistrations {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_InstanceRegistrationsCopyWith<_$_InstanceRegistrations> get copyWith =>
-      __$$_InstanceRegistrationsCopyWithImpl<_$_InstanceRegistrations>(
-          this, _$identity);
+  _$$InstanceRegistrationsImplCopyWith<_$InstanceRegistrationsImpl>
+      get copyWith => __$$InstanceRegistrationsImplCopyWithImpl<
+          _$InstanceRegistrationsImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_InstanceRegistrationsToJson(
+    return _$$InstanceRegistrationsImplToJson(
       this,
     );
   }
@@ -199,15 +201,14 @@ class _$_InstanceRegistrations implements _InstanceRegistrations {
 
 abstract class _InstanceRegistrations implements InstanceRegistrations {
   const factory _InstanceRegistrations(
-      {@JsonKey(name: 'enabled')
-          required final bool isEnabled,
-      @JsonKey(name: 'approval_required')
+          {@JsonKey(name: 'enabled') required final bool isEnabled,
+          @JsonKey(name: 'approval_required')
           required final bool isApprovalRequired,
-      @JsonKey(name: 'message')
-          final String? closedMessage}) = _$_InstanceRegistrations;
+          @JsonKey(name: 'message') final String? closedMessage}) =
+      _$InstanceRegistrationsImpl;
 
   factory _InstanceRegistrations.fromJson(Map<String, dynamic> json) =
-      _$_InstanceRegistrations.fromJson;
+      _$InstanceRegistrationsImpl.fromJson;
 
   @override
 
@@ -226,6 +227,6 @@ abstract class _InstanceRegistrations implements InstanceRegistrations {
   String? get closedMessage;
   @override
   @JsonKey(ignore: true)
-  _$$_InstanceRegistrationsCopyWith<_$_InstanceRegistrations> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$InstanceRegistrationsImplCopyWith<_$InstanceRegistrationsImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

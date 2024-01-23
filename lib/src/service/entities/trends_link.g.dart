@@ -8,11 +8,11 @@ part of 'trends_link.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_TrendsLink _$$_TrendsLinkFromJson(Map json) => $checkedCreate(
-      r'_$_TrendsLink',
+_$TrendsLinkImpl _$$TrendsLinkImplFromJson(Map json) => $checkedCreate(
+      r'_$TrendsLinkImpl',
       json,
       ($checkedConvert) {
-        final val = _$_TrendsLink(
+        final val = _$TrendsLinkImpl(
           url: $checkedConvert('url', (v) => v as String),
           title: $checkedConvert('title', (v) => v as String),
           description: $checkedConvert('description', (v) => v as String),
@@ -49,7 +49,7 @@ _$_TrendsLink _$$_TrendsLinkFromJson(Map json) => $checkedCreate(
       },
     );
 
-Map<String, dynamic> _$$_TrendsLinkToJson(_$_TrendsLink instance) =>
+Map<String, dynamic> _$$TrendsLinkImplToJson(_$TrendsLinkImpl instance) =>
     <String, dynamic>{
       'url': instance.url,
       'title': instance.title,

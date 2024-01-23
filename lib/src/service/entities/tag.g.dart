@@ -8,11 +8,11 @@ part of 'tag.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Tag _$$_TagFromJson(Map json) => $checkedCreate(
-      r'_$_Tag',
+_$TagImpl _$$TagImplFromJson(Map json) => $checkedCreate(
+      r'_$TagImpl',
       json,
       ($checkedConvert) {
-        final val = _$_Tag(
+        final val = _$TagImpl(
           name: $checkedConvert('name', (v) => v as String),
           url: $checkedConvert('url', (v) => v as String),
           usageHistory: $checkedConvert(
@@ -31,7 +31,7 @@ _$_Tag _$$_TagFromJson(Map json) => $checkedCreate(
       },
     );
 
-Map<String, dynamic> _$$_TagToJson(_$_Tag instance) {
+Map<String, dynamic> _$$TagImplToJson(_$TagImpl instance) {
   final val = <String, dynamic>{
     'name': instance.name,
     'url': instance.url,

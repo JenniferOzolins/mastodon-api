@@ -8,11 +8,11 @@ part of 'status_edit.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_StatusEdit _$$_StatusEditFromJson(Map json) => $checkedCreate(
-      r'_$_StatusEdit',
+_$StatusEditImpl _$$StatusEditImplFromJson(Map json) => $checkedCreate(
+      r'_$StatusEditImpl',
       json,
       ($checkedConvert) {
-        final val = _$_StatusEdit(
+        final val = _$StatusEditImpl(
           content: $checkedConvert('content', (v) => v as String),
           spoilerText: $checkedConvert('spoiler_text', (v) => v as String),
           account: $checkedConvert('account',
@@ -48,7 +48,7 @@ _$_StatusEdit _$$_StatusEditFromJson(Map json) => $checkedCreate(
       },
     );
 
-Map<String, dynamic> _$$_StatusEditToJson(_$_StatusEdit instance) {
+Map<String, dynamic> _$$StatusEditImplToJson(_$StatusEditImpl instance) {
   final val = <String, dynamic>{
     'content': instance.content,
     'spoiler_text': instance.spoilerText,

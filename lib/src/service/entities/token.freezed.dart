@@ -92,9 +92,10 @@ class _$TokenCopyWithImpl<$Res, $Val extends Token>
 }
 
 /// @nodoc
-abstract class _$$_TokenCopyWith<$Res> implements $TokenCopyWith<$Res> {
-  factory _$$_TokenCopyWith(_$_Token value, $Res Function(_$_Token) then) =
-      __$$_TokenCopyWithImpl<$Res>;
+abstract class _$$TokenImplCopyWith<$Res> implements $TokenCopyWith<$Res> {
+  factory _$$TokenImplCopyWith(
+          _$TokenImpl value, $Res Function(_$TokenImpl) then) =
+      __$$TokenImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -105,9 +106,11 @@ abstract class _$$_TokenCopyWith<$Res> implements $TokenCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_TokenCopyWithImpl<$Res> extends _$TokenCopyWithImpl<$Res, _$_Token>
-    implements _$$_TokenCopyWith<$Res> {
-  __$$_TokenCopyWithImpl(_$_Token _value, $Res Function(_$_Token) _then)
+class __$$TokenImplCopyWithImpl<$Res>
+    extends _$TokenCopyWithImpl<$Res, _$TokenImpl>
+    implements _$$TokenImplCopyWith<$Res> {
+  __$$TokenImplCopyWithImpl(
+      _$TokenImpl _value, $Res Function(_$TokenImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -118,7 +121,7 @@ class __$$_TokenCopyWithImpl<$Res> extends _$TokenCopyWithImpl<$Res, _$_Token>
     Object? scopes = null,
     Object? createdAt = null,
   }) {
-    return _then(_$_Token(
+    return _then(_$TokenImpl(
       accessToken: null == accessToken
           ? _value.accessToken
           : accessToken // ignore: cast_nullable_to_non_nullable
@@ -141,19 +144,18 @@ class __$$_TokenCopyWithImpl<$Res> extends _$TokenCopyWithImpl<$Res, _$_Token>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Token implements _Token {
-  const _$_Token(
+class _$TokenImpl implements _Token {
+  const _$TokenImpl(
       {required this.accessToken,
       required this.tokenType,
       @JsonKey(name: 'scope')
       @ScopeConverter()
-          required final List<Scope> scopes,
-      @IntDateTimeConverter()
-          required this.createdAt})
+      required final List<Scope> scopes,
+      @IntDateTimeConverter() required this.createdAt})
       : _scopes = scopes;
 
-  factory _$_Token.fromJson(Map<String, dynamic> json) =>
-      _$$_TokenFromJson(json);
+  factory _$TokenImpl.fromJson(Map<String, dynamic> json) =>
+      _$$TokenImplFromJson(json);
 
   /// An OAuth token to be used for authorization.
   @override
@@ -187,10 +189,10 @@ class _$_Token implements _Token {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Token &&
+            other is _$TokenImpl &&
             (identical(other.accessToken, accessToken) ||
                 other.accessToken == accessToken) &&
             (identical(other.tokenType, tokenType) ||
@@ -208,12 +210,12 @@ class _$_Token implements _Token {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_TokenCopyWith<_$_Token> get copyWith =>
-      __$$_TokenCopyWithImpl<_$_Token>(this, _$identity);
+  _$$TokenImplCopyWith<_$TokenImpl> get copyWith =>
+      __$$TokenImplCopyWithImpl<_$TokenImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TokenToJson(
+    return _$$TokenImplToJson(
       this,
     );
   }
@@ -225,11 +227,10 @@ abstract class _Token implements Token {
       required final String tokenType,
       @JsonKey(name: 'scope')
       @ScopeConverter()
-          required final List<Scope> scopes,
-      @IntDateTimeConverter()
-          required final DateTime createdAt}) = _$_Token;
+      required final List<Scope> scopes,
+      @IntDateTimeConverter() required final DateTime createdAt}) = _$TokenImpl;
 
-  factory _Token.fromJson(Map<String, dynamic> json) = _$_Token.fromJson;
+  factory _Token.fromJson(Map<String, dynamic> json) = _$TokenImpl.fromJson;
 
   @override
 
@@ -252,6 +253,6 @@ abstract class _Token implements Token {
   DateTime get createdAt;
   @override
   @JsonKey(ignore: true)
-  _$$_TokenCopyWith<_$_Token> get copyWith =>
+  _$$TokenImplCopyWith<_$TokenImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

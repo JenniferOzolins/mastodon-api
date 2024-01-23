@@ -8,11 +8,11 @@ part of 'application.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Application _$$_ApplicationFromJson(Map json) => $checkedCreate(
-      r'_$_Application',
+_$ApplicationImpl _$$ApplicationImplFromJson(Map json) => $checkedCreate(
+      r'_$ApplicationImpl',
       json,
       ($checkedConvert) {
-        final val = _$_Application(
+        final val = _$ApplicationImpl(
           name: $checkedConvert('name', (v) => v as String),
           vapidKey: $checkedConvert('vapid_key', (v) => v as String?),
           website: $checkedConvert('website', (v) => v as String?),
@@ -22,7 +22,7 @@ _$_Application _$$_ApplicationFromJson(Map json) => $checkedCreate(
       fieldKeyMap: const {'vapidKey': 'vapid_key'},
     );
 
-Map<String, dynamic> _$$_ApplicationToJson(_$_Application instance) {
+Map<String, dynamic> _$$ApplicationImplToJson(_$ApplicationImpl instance) {
   final val = <String, dynamic>{
     'name': instance.name,
   };

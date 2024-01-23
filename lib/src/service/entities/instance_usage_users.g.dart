@@ -8,12 +8,12 @@ part of 'instance_usage_users.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_InstanceUsageUsers _$$_InstanceUsageUsersFromJson(Map json) =>
+_$InstanceUsageUsersImpl _$$InstanceUsageUsersImplFromJson(Map json) =>
     $checkedCreate(
-      r'_$_InstanceUsageUsers',
+      r'_$InstanceUsageUsersImpl',
       json,
       ($checkedConvert) {
-        final val = _$_InstanceUsageUsers(
+        final val = _$InstanceUsageUsersImpl(
           activeMonth: $checkedConvert('active_month', (v) => v as int),
         );
         return val;
@@ -21,8 +21,8 @@ _$_InstanceUsageUsers _$$_InstanceUsageUsersFromJson(Map json) =>
       fieldKeyMap: const {'activeMonth': 'active_month'},
     );
 
-Map<String, dynamic> _$$_InstanceUsageUsersToJson(
-        _$_InstanceUsageUsers instance) =>
+Map<String, dynamic> _$$InstanceUsageUsersImplToJson(
+        _$InstanceUsageUsersImpl instance) =>
     <String, dynamic>{
       'active_month': instance.activeMonth,
     };

@@ -8,12 +8,12 @@ part of 'instance_configuration.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_InstanceConfiguration _$$_InstanceConfigurationFromJson(Map json) =>
+_$InstanceConfigurationImpl _$$InstanceConfigurationImplFromJson(Map json) =>
     $checkedCreate(
-      r'_$_InstanceConfiguration',
+      r'_$InstanceConfigurationImpl',
       json,
       ($checkedConvert) {
-        final val = _$_InstanceConfiguration(
+        final val = _$InstanceConfigurationImpl(
           accounts: $checkedConvert(
               'accounts',
               (v) => InstanceAccountsConfiguration.fromJson(
@@ -36,8 +36,8 @@ _$_InstanceConfiguration _$$_InstanceConfigurationFromJson(Map json) =>
       fieldKeyMap: const {'media': 'media_attachments'},
     );
 
-Map<String, dynamic> _$$_InstanceConfigurationToJson(
-        _$_InstanceConfiguration instance) =>
+Map<String, dynamic> _$$InstanceConfigurationImplToJson(
+        _$InstanceConfigurationImpl instance) =>
     <String, dynamic>{
       'accounts': instance.accounts.toJson(),
       'statuses': instance.statuses.toJson(),

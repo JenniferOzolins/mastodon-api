@@ -68,22 +68,22 @@ class _$MediaFocalPointsCopyWithImpl<$Res, $Val extends MediaFocalPoints>
 }
 
 /// @nodoc
-abstract class _$$_MediaFocalPointsCopyWith<$Res>
+abstract class _$$MediaFocalPointsImplCopyWith<$Res>
     implements $MediaFocalPointsCopyWith<$Res> {
-  factory _$$_MediaFocalPointsCopyWith(
-          _$_MediaFocalPoints value, $Res Function(_$_MediaFocalPoints) then) =
-      __$$_MediaFocalPointsCopyWithImpl<$Res>;
+  factory _$$MediaFocalPointsImplCopyWith(_$MediaFocalPointsImpl value,
+          $Res Function(_$MediaFocalPointsImpl) then) =
+      __$$MediaFocalPointsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({double x, double y});
 }
 
 /// @nodoc
-class __$$_MediaFocalPointsCopyWithImpl<$Res>
-    extends _$MediaFocalPointsCopyWithImpl<$Res, _$_MediaFocalPoints>
-    implements _$$_MediaFocalPointsCopyWith<$Res> {
-  __$$_MediaFocalPointsCopyWithImpl(
-      _$_MediaFocalPoints _value, $Res Function(_$_MediaFocalPoints) _then)
+class __$$MediaFocalPointsImplCopyWithImpl<$Res>
+    extends _$MediaFocalPointsCopyWithImpl<$Res, _$MediaFocalPointsImpl>
+    implements _$$MediaFocalPointsImplCopyWith<$Res> {
+  __$$MediaFocalPointsImplCopyWithImpl(_$MediaFocalPointsImpl _value,
+      $Res Function(_$MediaFocalPointsImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -92,7 +92,7 @@ class __$$_MediaFocalPointsCopyWithImpl<$Res>
     Object? x = null,
     Object? y = null,
   }) {
-    return _then(_$_MediaFocalPoints(
+    return _then(_$MediaFocalPointsImpl(
       x: null == x
           ? _value.x
           : x // ignore: cast_nullable_to_non_nullable
@@ -107,13 +107,13 @@ class __$$_MediaFocalPointsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MediaFocalPoints implements _MediaFocalPoints {
-  const _$_MediaFocalPoints({required this.x, required this.y})
+class _$MediaFocalPointsImpl implements _MediaFocalPoints {
+  const _$MediaFocalPointsImpl({required this.x, required this.y})
       : assert(-1.0 <= x && x <= 1.0),
         assert(-1.0 <= y && y <= 1.0);
 
-  factory _$_MediaFocalPoints.fromJson(Map<String, dynamic> json) =>
-      _$$_MediaFocalPointsFromJson(json);
+  factory _$MediaFocalPointsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MediaFocalPointsImplFromJson(json);
 
   @override
   final double x;
@@ -126,10 +126,10 @@ class _$_MediaFocalPoints implements _MediaFocalPoints {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MediaFocalPoints &&
+            other is _$MediaFocalPointsImpl &&
             (identical(other.x, x) || other.x == x) &&
             (identical(other.y, y) || other.y == y));
   }
@@ -141,12 +141,13 @@ class _$_MediaFocalPoints implements _MediaFocalPoints {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MediaFocalPointsCopyWith<_$_MediaFocalPoints> get copyWith =>
-      __$$_MediaFocalPointsCopyWithImpl<_$_MediaFocalPoints>(this, _$identity);
+  _$$MediaFocalPointsImplCopyWith<_$MediaFocalPointsImpl> get copyWith =>
+      __$$MediaFocalPointsImplCopyWithImpl<_$MediaFocalPointsImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MediaFocalPointsToJson(
+    return _$$MediaFocalPointsImplToJson(
       this,
     );
   }
@@ -154,10 +155,11 @@ class _$_MediaFocalPoints implements _MediaFocalPoints {
 
 abstract class _MediaFocalPoints implements MediaFocalPoints {
   const factory _MediaFocalPoints(
-      {required final double x, required final double y}) = _$_MediaFocalPoints;
+      {required final double x,
+      required final double y}) = _$MediaFocalPointsImpl;
 
   factory _MediaFocalPoints.fromJson(Map<String, dynamic> json) =
-      _$_MediaFocalPoints.fromJson;
+      _$MediaFocalPointsImpl.fromJson;
 
   @override
   double get x;
@@ -165,6 +167,6 @@ abstract class _MediaFocalPoints implements MediaFocalPoints {
   double get y;
   @override
   @JsonKey(ignore: true)
-  _$$_MediaFocalPointsCopyWith<_$_MediaFocalPoints> get copyWith =>
+  _$$MediaFocalPointsImplCopyWith<_$MediaFocalPointsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

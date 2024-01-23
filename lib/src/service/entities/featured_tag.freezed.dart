@@ -101,11 +101,11 @@ class _$FeaturedTagCopyWithImpl<$Res, $Val extends FeaturedTag>
 }
 
 /// @nodoc
-abstract class _$$_FeaturedTagCopyWith<$Res>
+abstract class _$$FeaturedTagImplCopyWith<$Res>
     implements $FeaturedTagCopyWith<$Res> {
-  factory _$$_FeaturedTagCopyWith(
-          _$_FeaturedTag value, $Res Function(_$_FeaturedTag) then) =
-      __$$_FeaturedTagCopyWithImpl<$Res>;
+  factory _$$FeaturedTagImplCopyWith(
+          _$FeaturedTagImpl value, $Res Function(_$FeaturedTagImpl) then) =
+      __$$FeaturedTagImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -117,11 +117,11 @@ abstract class _$$_FeaturedTagCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_FeaturedTagCopyWithImpl<$Res>
-    extends _$FeaturedTagCopyWithImpl<$Res, _$_FeaturedTag>
-    implements _$$_FeaturedTagCopyWith<$Res> {
-  __$$_FeaturedTagCopyWithImpl(
-      _$_FeaturedTag _value, $Res Function(_$_FeaturedTag) _then)
+class __$$FeaturedTagImplCopyWithImpl<$Res>
+    extends _$FeaturedTagCopyWithImpl<$Res, _$FeaturedTagImpl>
+    implements _$$FeaturedTagImplCopyWith<$Res> {
+  __$$FeaturedTagImplCopyWithImpl(
+      _$FeaturedTagImpl _value, $Res Function(_$FeaturedTagImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -133,7 +133,7 @@ class __$$_FeaturedTagCopyWithImpl<$Res>
     Object? statusesCount = freezed,
     Object? lastStatusAt = freezed,
   }) {
-    return _then(_$_FeaturedTag(
+    return _then(_$FeaturedTagImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -161,16 +161,16 @@ class __$$_FeaturedTagCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(includeIfNull: false)
-class _$_FeaturedTag implements _FeaturedTag {
-  const _$_FeaturedTag(
+class _$FeaturedTagImpl implements _FeaturedTag {
+  const _$FeaturedTagImpl(
       {required this.id,
       required this.name,
       this.url,
       @IntConverter() this.statusesCount,
       this.lastStatusAt});
 
-  factory _$_FeaturedTag.fromJson(Map<String, dynamic> json) =>
-      _$$_FeaturedTagFromJson(json);
+  factory _$FeaturedTagImpl.fromJson(Map<String, dynamic> json) =>
+      _$$FeaturedTagImplFromJson(json);
 
   /// The internal ID of the featured tag in the database.
   @override
@@ -199,10 +199,10 @@ class _$_FeaturedTag implements _FeaturedTag {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_FeaturedTag &&
+            other is _$FeaturedTagImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.url, url) || other.url == url) &&
@@ -220,12 +220,12 @@ class _$_FeaturedTag implements _FeaturedTag {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_FeaturedTagCopyWith<_$_FeaturedTag> get copyWith =>
-      __$$_FeaturedTagCopyWithImpl<_$_FeaturedTag>(this, _$identity);
+  _$$FeaturedTagImplCopyWith<_$FeaturedTagImpl> get copyWith =>
+      __$$FeaturedTagImplCopyWithImpl<_$FeaturedTagImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_FeaturedTagToJson(
+    return _$$FeaturedTagImplToJson(
       this,
     );
   }
@@ -237,10 +237,10 @@ abstract class _FeaturedTag implements FeaturedTag {
       required final String name,
       final String? url,
       @IntConverter() final int? statusesCount,
-      final DateTime? lastStatusAt}) = _$_FeaturedTag;
+      final DateTime? lastStatusAt}) = _$FeaturedTagImpl;
 
   factory _FeaturedTag.fromJson(Map<String, dynamic> json) =
-      _$_FeaturedTag.fromJson;
+      _$FeaturedTagImpl.fromJson;
 
   @override
 
@@ -265,6 +265,6 @@ abstract class _FeaturedTag implements FeaturedTag {
   DateTime? get lastStatusAt;
   @override
   @JsonKey(ignore: true)
-  _$$_FeaturedTagCopyWith<_$_FeaturedTag> get copyWith =>
+  _$$FeaturedTagImplCopyWith<_$FeaturedTagImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

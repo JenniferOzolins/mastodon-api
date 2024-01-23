@@ -353,9 +353,10 @@ class _$StatusCopyWithImpl<$Res, $Val extends Status>
 }
 
 /// @nodoc
-abstract class _$$_StatusCopyWith<$Res> implements $StatusCopyWith<$Res> {
-  factory _$$_StatusCopyWith(_$_Status value, $Res Function(_$_Status) then) =
-      __$$_StatusCopyWithImpl<$Res>;
+abstract class _$$StatusImplCopyWith<$Res> implements $StatusCopyWith<$Res> {
+  factory _$$StatusImplCopyWith(
+          _$StatusImpl value, $Res Function(_$StatusImpl) then) =
+      __$$StatusImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -398,10 +399,11 @@ abstract class _$$_StatusCopyWith<$Res> implements $StatusCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_StatusCopyWithImpl<$Res>
-    extends _$StatusCopyWithImpl<$Res, _$_Status>
-    implements _$$_StatusCopyWith<$Res> {
-  __$$_StatusCopyWithImpl(_$_Status _value, $Res Function(_$_Status) _then)
+class __$$StatusImplCopyWithImpl<$Res>
+    extends _$StatusCopyWithImpl<$Res, _$StatusImpl>
+    implements _$$StatusImplCopyWith<$Res> {
+  __$$StatusImplCopyWithImpl(
+      _$StatusImpl _value, $Res Function(_$StatusImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -435,7 +437,7 @@ class __$$_StatusCopyWithImpl<$Res>
     Object? tags = null,
     Object? createdAt = null,
   }) {
-    return _then(_$_Status(
+    return _then(_$StatusImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -551,8 +553,8 @@ class __$$_StatusCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(includeIfNull: false)
-class _$_Status implements _Status {
-  const _$_Status(
+class _$StatusImpl implements _Status {
+  const _$StatusImpl(
       {required this.id,
       this.url,
       required this.uri,
@@ -584,8 +586,8 @@ class _$_Status implements _Status {
         _emojis = emojis,
         _tags = tags;
 
-  factory _$_Status.fromJson(Map<String, dynamic> json) =>
-      _$$_StatusFromJson(json);
+  factory _$StatusImpl.fromJson(Map<String, dynamic> json) =>
+      _$$StatusImplFromJson(json);
 
   /// ID of the status in the database.
   @override
@@ -730,10 +732,10 @@ class _$_Status implements _Status {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Status &&
+            other is _$StatusImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.url, url) || other.url == url) &&
             (identical(other.uri, uri) || other.uri == uri) &&
@@ -816,12 +818,12 @@ class _$_Status implements _Status {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_StatusCopyWith<_$_Status> get copyWith =>
-      __$$_StatusCopyWithImpl<_$_Status>(this, _$identity);
+  _$$StatusImplCopyWith<_$StatusImpl> get copyWith =>
+      __$$StatusImplCopyWithImpl<_$StatusImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_StatusToJson(
+    return _$$StatusImplToJson(
       this,
     );
   }
@@ -855,9 +857,9 @@ abstract class _Status implements Status {
       required final List<MediaAttachment> mediaAttachments,
       required final List<Emoji> emojis,
       required final List<Tag> tags,
-      required final DateTime createdAt}) = _$_Status;
+      required final DateTime createdAt}) = _$StatusImpl;
 
-  factory _Status.fromJson(Map<String, dynamic> json) = _$_Status.fromJson;
+  factory _Status.fromJson(Map<String, dynamic> json) = _$StatusImpl.fromJson;
 
   @override
 
@@ -976,6 +978,6 @@ abstract class _Status implements Status {
   DateTime get createdAt;
   @override
   @JsonKey(ignore: true)
-  _$$_StatusCopyWith<_$_Status> get copyWith =>
+  _$$StatusImplCopyWith<_$StatusImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -135,11 +135,12 @@ class _$InstanceConfigurationCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_InstanceConfigurationCopyWith<$Res>
+abstract class _$$InstanceConfigurationImplCopyWith<$Res>
     implements $InstanceConfigurationCopyWith<$Res> {
-  factory _$$_InstanceConfigurationCopyWith(_$_InstanceConfiguration value,
-          $Res Function(_$_InstanceConfiguration) then) =
-      __$$_InstanceConfigurationCopyWithImpl<$Res>;
+  factory _$$InstanceConfigurationImplCopyWith(
+          _$InstanceConfigurationImpl value,
+          $Res Function(_$InstanceConfigurationImpl) then) =
+      __$$InstanceConfigurationImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -159,11 +160,12 @@ abstract class _$$_InstanceConfigurationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_InstanceConfigurationCopyWithImpl<$Res>
-    extends _$InstanceConfigurationCopyWithImpl<$Res, _$_InstanceConfiguration>
-    implements _$$_InstanceConfigurationCopyWith<$Res> {
-  __$$_InstanceConfigurationCopyWithImpl(_$_InstanceConfiguration _value,
-      $Res Function(_$_InstanceConfiguration) _then)
+class __$$InstanceConfigurationImplCopyWithImpl<$Res>
+    extends _$InstanceConfigurationCopyWithImpl<$Res,
+        _$InstanceConfigurationImpl>
+    implements _$$InstanceConfigurationImplCopyWith<$Res> {
+  __$$InstanceConfigurationImplCopyWithImpl(_$InstanceConfigurationImpl _value,
+      $Res Function(_$InstanceConfigurationImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -174,7 +176,7 @@ class __$$_InstanceConfigurationCopyWithImpl<$Res>
     Object? media = null,
     Object? polls = null,
   }) {
-    return _then(_$_InstanceConfiguration(
+    return _then(_$InstanceConfigurationImpl(
       accounts: null == accounts
           ? _value.accounts
           : accounts // ignore: cast_nullable_to_non_nullable
@@ -198,15 +200,15 @@ class __$$_InstanceConfigurationCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(includeIfNull: false)
-class _$_InstanceConfiguration implements _InstanceConfiguration {
-  const _$_InstanceConfiguration(
+class _$InstanceConfigurationImpl implements _InstanceConfiguration {
+  const _$InstanceConfigurationImpl(
       {required this.accounts,
       required this.statuses,
       @JsonKey(name: 'media_attachments') required this.media,
       required this.polls});
 
-  factory _$_InstanceConfiguration.fromJson(Map<String, dynamic> json) =>
-      _$$_InstanceConfigurationFromJson(json);
+  factory _$InstanceConfigurationImpl.fromJson(Map<String, dynamic> json) =>
+      _$$InstanceConfigurationImplFromJson(json);
 
   /// Limits related to accounts.
   @override
@@ -231,10 +233,10 @@ class _$_InstanceConfiguration implements _InstanceConfiguration {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_InstanceConfiguration &&
+            other is _$InstanceConfigurationImpl &&
             (identical(other.accounts, accounts) ||
                 other.accounts == accounts) &&
             (identical(other.statuses, statuses) ||
@@ -251,13 +253,13 @@ class _$_InstanceConfiguration implements _InstanceConfiguration {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_InstanceConfigurationCopyWith<_$_InstanceConfiguration> get copyWith =>
-      __$$_InstanceConfigurationCopyWithImpl<_$_InstanceConfiguration>(
-          this, _$identity);
+  _$$InstanceConfigurationImplCopyWith<_$InstanceConfigurationImpl>
+      get copyWith => __$$InstanceConfigurationImplCopyWithImpl<
+          _$InstanceConfigurationImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_InstanceConfigurationToJson(
+    return _$$InstanceConfigurationImplToJson(
       this,
     );
   }
@@ -268,12 +270,12 @@ abstract class _InstanceConfiguration implements InstanceConfiguration {
           {required final InstanceAccountsConfiguration accounts,
           required final InstanceStatusesConfiguration statuses,
           @JsonKey(name: 'media_attachments')
-              required final InstanceMediaConfiguration media,
+          required final InstanceMediaConfiguration media,
           required final InstancePollsConfiguration polls}) =
-      _$_InstanceConfiguration;
+      _$InstanceConfigurationImpl;
 
   factory _InstanceConfiguration.fromJson(Map<String, dynamic> json) =
-      _$_InstanceConfiguration.fromJson;
+      _$InstanceConfigurationImpl.fromJson;
 
   @override
 
@@ -294,6 +296,6 @@ abstract class _InstanceConfiguration implements InstanceConfiguration {
   InstancePollsConfiguration get polls;
   @override
   @JsonKey(ignore: true)
-  _$$_InstanceConfigurationCopyWith<_$_InstanceConfiguration> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$InstanceConfigurationImplCopyWith<_$InstanceConfigurationImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

@@ -8,12 +8,12 @@ part of 'announcement_status.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_AnnouncementStatus _$$_AnnouncementStatusFromJson(Map json) =>
+_$AnnouncementStatusImpl _$$AnnouncementStatusImplFromJson(Map json) =>
     $checkedCreate(
-      r'_$_AnnouncementStatus',
+      r'_$AnnouncementStatusImpl',
       json,
       ($checkedConvert) {
-        final val = _$_AnnouncementStatus(
+        final val = _$AnnouncementStatusImpl(
           id: $checkedConvert('id', (v) => v as String),
           url: $checkedConvert('url', (v) => v as String),
         );
@@ -21,8 +21,8 @@ _$_AnnouncementStatus _$$_AnnouncementStatusFromJson(Map json) =>
       },
     );
 
-Map<String, dynamic> _$$_AnnouncementStatusToJson(
-        _$_AnnouncementStatus instance) =>
+Map<String, dynamic> _$$AnnouncementStatusImplToJson(
+        _$AnnouncementStatusImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'url': instance.url,

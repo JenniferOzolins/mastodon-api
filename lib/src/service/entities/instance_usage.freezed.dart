@@ -73,11 +73,11 @@ class _$InstanceUsageCopyWithImpl<$Res, $Val extends InstanceUsage>
 }
 
 /// @nodoc
-abstract class _$$_InstanceUsageCopyWith<$Res>
+abstract class _$$InstanceUsageImplCopyWith<$Res>
     implements $InstanceUsageCopyWith<$Res> {
-  factory _$$_InstanceUsageCopyWith(
-          _$_InstanceUsage value, $Res Function(_$_InstanceUsage) then) =
-      __$$_InstanceUsageCopyWithImpl<$Res>;
+  factory _$$InstanceUsageImplCopyWith(
+          _$InstanceUsageImpl value, $Res Function(_$InstanceUsageImpl) then) =
+      __$$InstanceUsageImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({InstanceUsageUsers users});
@@ -87,11 +87,11 @@ abstract class _$$_InstanceUsageCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_InstanceUsageCopyWithImpl<$Res>
-    extends _$InstanceUsageCopyWithImpl<$Res, _$_InstanceUsage>
-    implements _$$_InstanceUsageCopyWith<$Res> {
-  __$$_InstanceUsageCopyWithImpl(
-      _$_InstanceUsage _value, $Res Function(_$_InstanceUsage) _then)
+class __$$InstanceUsageImplCopyWithImpl<$Res>
+    extends _$InstanceUsageCopyWithImpl<$Res, _$InstanceUsageImpl>
+    implements _$$InstanceUsageImplCopyWith<$Res> {
+  __$$InstanceUsageImplCopyWithImpl(
+      _$InstanceUsageImpl _value, $Res Function(_$InstanceUsageImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -99,7 +99,7 @@ class __$$_InstanceUsageCopyWithImpl<$Res>
   $Res call({
     Object? users = null,
   }) {
-    return _then(_$_InstanceUsage(
+    return _then(_$InstanceUsageImpl(
       users: null == users
           ? _value.users
           : users // ignore: cast_nullable_to_non_nullable
@@ -111,11 +111,11 @@ class __$$_InstanceUsageCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(includeIfNull: false)
-class _$_InstanceUsage implements _InstanceUsage {
-  const _$_InstanceUsage({required this.users});
+class _$InstanceUsageImpl implements _InstanceUsage {
+  const _$InstanceUsageImpl({required this.users});
 
-  factory _$_InstanceUsage.fromJson(Map<String, dynamic> json) =>
-      _$$_InstanceUsageFromJson(json);
+  factory _$InstanceUsageImpl.fromJson(Map<String, dynamic> json) =>
+      _$$InstanceUsageImplFromJson(json);
 
   /// Usage data related to users on this instance.
   @override
@@ -127,10 +127,10 @@ class _$_InstanceUsage implements _InstanceUsage {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_InstanceUsage &&
+            other is _$InstanceUsageImpl &&
             (identical(other.users, users) || other.users == users));
   }
 
@@ -141,12 +141,12 @@ class _$_InstanceUsage implements _InstanceUsage {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_InstanceUsageCopyWith<_$_InstanceUsage> get copyWith =>
-      __$$_InstanceUsageCopyWithImpl<_$_InstanceUsage>(this, _$identity);
+  _$$InstanceUsageImplCopyWith<_$InstanceUsageImpl> get copyWith =>
+      __$$InstanceUsageImplCopyWithImpl<_$InstanceUsageImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_InstanceUsageToJson(
+    return _$$InstanceUsageImplToJson(
       this,
     );
   }
@@ -154,10 +154,10 @@ class _$_InstanceUsage implements _InstanceUsage {
 
 abstract class _InstanceUsage implements InstanceUsage {
   const factory _InstanceUsage({required final InstanceUsageUsers users}) =
-      _$_InstanceUsage;
+      _$InstanceUsageImpl;
 
   factory _InstanceUsage.fromJson(Map<String, dynamic> json) =
-      _$_InstanceUsage.fromJson;
+      _$InstanceUsageImpl.fromJson;
 
   @override
 
@@ -165,6 +165,6 @@ abstract class _InstanceUsage implements InstanceUsage {
   InstanceUsageUsers get users;
   @override
   @JsonKey(ignore: true)
-  _$$_InstanceUsageCopyWith<_$_InstanceUsage> get copyWith =>
+  _$$InstanceUsageImplCopyWith<_$InstanceUsageImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

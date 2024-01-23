@@ -74,11 +74,11 @@ class _$StatusSnapshotCopyWithImpl<$Res, $Val extends StatusSnapshot>
 }
 
 /// @nodoc
-abstract class _$$_StatusSnapshotCopyWith<$Res>
+abstract class _$$StatusSnapshotImplCopyWith<$Res>
     implements $StatusSnapshotCopyWith<$Res> {
-  factory _$$_StatusSnapshotCopyWith(
-          _$_StatusSnapshot value, $Res Function(_$_StatusSnapshot) then) =
-      __$$_StatusSnapshotCopyWithImpl<$Res>;
+  factory _$$StatusSnapshotImplCopyWith(_$StatusSnapshotImpl value,
+          $Res Function(_$StatusSnapshotImpl) then) =
+      __$$StatusSnapshotImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({@JsonKey(name: 'home') PositionMarker marker});
@@ -88,11 +88,11 @@ abstract class _$$_StatusSnapshotCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_StatusSnapshotCopyWithImpl<$Res>
-    extends _$StatusSnapshotCopyWithImpl<$Res, _$_StatusSnapshot>
-    implements _$$_StatusSnapshotCopyWith<$Res> {
-  __$$_StatusSnapshotCopyWithImpl(
-      _$_StatusSnapshot _value, $Res Function(_$_StatusSnapshot) _then)
+class __$$StatusSnapshotImplCopyWithImpl<$Res>
+    extends _$StatusSnapshotCopyWithImpl<$Res, _$StatusSnapshotImpl>
+    implements _$$StatusSnapshotImplCopyWith<$Res> {
+  __$$StatusSnapshotImplCopyWithImpl(
+      _$StatusSnapshotImpl _value, $Res Function(_$StatusSnapshotImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -100,7 +100,7 @@ class __$$_StatusSnapshotCopyWithImpl<$Res>
   $Res call({
     Object? marker = null,
   }) {
-    return _then(_$_StatusSnapshot(
+    return _then(_$StatusSnapshotImpl(
       marker: null == marker
           ? _value.marker
           : marker // ignore: cast_nullable_to_non_nullable
@@ -111,11 +111,11 @@ class __$$_StatusSnapshotCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_StatusSnapshot implements _StatusSnapshot {
-  const _$_StatusSnapshot({@JsonKey(name: 'home') required this.marker});
+class _$StatusSnapshotImpl implements _StatusSnapshot {
+  const _$StatusSnapshotImpl({@JsonKey(name: 'home') required this.marker});
 
-  factory _$_StatusSnapshot.fromJson(Map<String, dynamic> json) =>
-      _$$_StatusSnapshotFromJson(json);
+  factory _$StatusSnapshotImpl.fromJson(Map<String, dynamic> json) =>
+      _$$StatusSnapshotImplFromJson(json);
 
   /// Snapshot for home timeline.
   @override
@@ -128,10 +128,10 @@ class _$_StatusSnapshot implements _StatusSnapshot {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_StatusSnapshot &&
+            other is _$StatusSnapshotImpl &&
             (identical(other.marker, marker) || other.marker == marker));
   }
 
@@ -142,12 +142,13 @@ class _$_StatusSnapshot implements _StatusSnapshot {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_StatusSnapshotCopyWith<_$_StatusSnapshot> get copyWith =>
-      __$$_StatusSnapshotCopyWithImpl<_$_StatusSnapshot>(this, _$identity);
+  _$$StatusSnapshotImplCopyWith<_$StatusSnapshotImpl> get copyWith =>
+      __$$StatusSnapshotImplCopyWithImpl<_$StatusSnapshotImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_StatusSnapshotToJson(
+    return _$$StatusSnapshotImplToJson(
       this,
     );
   }
@@ -156,10 +157,10 @@ class _$_StatusSnapshot implements _StatusSnapshot {
 abstract class _StatusSnapshot implements StatusSnapshot {
   const factory _StatusSnapshot(
           {@JsonKey(name: 'home') required final PositionMarker marker}) =
-      _$_StatusSnapshot;
+      _$StatusSnapshotImpl;
 
   factory _StatusSnapshot.fromJson(Map<String, dynamic> json) =
-      _$_StatusSnapshot.fromJson;
+      _$StatusSnapshotImpl.fromJson;
 
   @override
 
@@ -168,6 +169,6 @@ abstract class _StatusSnapshot implements StatusSnapshot {
   PositionMarker get marker;
   @override
   @JsonKey(ignore: true)
-  _$$_StatusSnapshotCopyWith<_$_StatusSnapshot> get copyWith =>
+  _$$StatusSnapshotImplCopyWith<_$StatusSnapshotImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

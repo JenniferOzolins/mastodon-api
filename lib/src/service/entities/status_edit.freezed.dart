@@ -158,11 +158,11 @@ class _$StatusEditCopyWithImpl<$Res, $Val extends StatusEdit>
 }
 
 /// @nodoc
-abstract class _$$_StatusEditCopyWith<$Res>
+abstract class _$$StatusEditImplCopyWith<$Res>
     implements $StatusEditCopyWith<$Res> {
-  factory _$$_StatusEditCopyWith(
-          _$_StatusEdit value, $Res Function(_$_StatusEdit) then) =
-      __$$_StatusEditCopyWithImpl<$Res>;
+  factory _$$StatusEditImplCopyWith(
+          _$StatusEditImpl value, $Res Function(_$StatusEditImpl) then) =
+      __$$StatusEditImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -182,11 +182,11 @@ abstract class _$$_StatusEditCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_StatusEditCopyWithImpl<$Res>
-    extends _$StatusEditCopyWithImpl<$Res, _$_StatusEdit>
-    implements _$$_StatusEditCopyWith<$Res> {
-  __$$_StatusEditCopyWithImpl(
-      _$_StatusEdit _value, $Res Function(_$_StatusEdit) _then)
+class __$$StatusEditImplCopyWithImpl<$Res>
+    extends _$StatusEditCopyWithImpl<$Res, _$StatusEditImpl>
+    implements _$$StatusEditImplCopyWith<$Res> {
+  __$$StatusEditImplCopyWithImpl(
+      _$StatusEditImpl _value, $Res Function(_$StatusEditImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -201,7 +201,7 @@ class __$$_StatusEditCopyWithImpl<$Res>
     Object? isSensitive = null,
     Object? createdAt = null,
   }) {
-    return _then(_$_StatusEdit(
+    return _then(_$StatusEditImpl(
       content: null == content
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
@@ -241,8 +241,8 @@ class __$$_StatusEditCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(includeIfNull: false)
-class _$_StatusEdit implements _StatusEdit {
-  const _$_StatusEdit(
+class _$StatusEditImpl implements _StatusEdit {
+  const _$StatusEditImpl(
       {required this.content,
       required this.spoilerText,
       required this.account,
@@ -254,8 +254,8 @@ class _$_StatusEdit implements _StatusEdit {
       : _mediaAttachments = mediaAttachments,
         _emojis = emojis;
 
-  factory _$_StatusEdit.fromJson(Map<String, dynamic> json) =>
-      _$$_StatusEditFromJson(json);
+  factory _$StatusEditImpl.fromJson(Map<String, dynamic> json) =>
+      _$$StatusEditImplFromJson(json);
 
   /// The content of the status at this revision.
   @override
@@ -320,10 +320,10 @@ class _$_StatusEdit implements _StatusEdit {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_StatusEdit &&
+            other is _$StatusEditImpl &&
             (identical(other.content, content) || other.content == content) &&
             (identical(other.spoilerText, spoilerText) ||
                 other.spoilerText == spoilerText) &&
@@ -354,12 +354,12 @@ class _$_StatusEdit implements _StatusEdit {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_StatusEditCopyWith<_$_StatusEdit> get copyWith =>
-      __$$_StatusEditCopyWithImpl<_$_StatusEdit>(this, _$identity);
+  _$$StatusEditImplCopyWith<_$StatusEditImpl> get copyWith =>
+      __$$StatusEditImplCopyWithImpl<_$StatusEditImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_StatusEditToJson(
+    return _$$StatusEditImplToJson(
       this,
     );
   }
@@ -374,10 +374,10 @@ abstract class _StatusEdit implements StatusEdit {
       required final List<MediaAttachment> mediaAttachments,
       required final List<Emoji> emojis,
       @JsonKey(name: 'sensitive') required final bool isSensitive,
-      required final DateTime createdAt}) = _$_StatusEdit;
+      required final DateTime createdAt}) = _$StatusEditImpl;
 
   factory _StatusEdit.fromJson(Map<String, dynamic> json) =
-      _$_StatusEdit.fromJson;
+      _$StatusEditImpl.fromJson;
 
   @override
 
@@ -420,6 +420,6 @@ abstract class _StatusEdit implements StatusEdit {
   DateTime get createdAt;
   @override
   @JsonKey(ignore: true)
-  _$$_StatusEditCopyWith<_$_StatusEdit> get copyWith =>
+  _$$StatusEditImplCopyWith<_$StatusEditImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

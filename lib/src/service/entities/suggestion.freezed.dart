@@ -81,11 +81,11 @@ class _$SuggestionCopyWithImpl<$Res, $Val extends Suggestion>
 }
 
 /// @nodoc
-abstract class _$$_SuggestionCopyWith<$Res>
+abstract class _$$SuggestionImplCopyWith<$Res>
     implements $SuggestionCopyWith<$Res> {
-  factory _$$_SuggestionCopyWith(
-          _$_Suggestion value, $Res Function(_$_Suggestion) then) =
-      __$$_SuggestionCopyWithImpl<$Res>;
+  factory _$$SuggestionImplCopyWith(
+          _$SuggestionImpl value, $Res Function(_$SuggestionImpl) then) =
+      __$$SuggestionImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({SuggestedReason source, Account account});
@@ -95,11 +95,11 @@ abstract class _$$_SuggestionCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_SuggestionCopyWithImpl<$Res>
-    extends _$SuggestionCopyWithImpl<$Res, _$_Suggestion>
-    implements _$$_SuggestionCopyWith<$Res> {
-  __$$_SuggestionCopyWithImpl(
-      _$_Suggestion _value, $Res Function(_$_Suggestion) _then)
+class __$$SuggestionImplCopyWithImpl<$Res>
+    extends _$SuggestionCopyWithImpl<$Res, _$SuggestionImpl>
+    implements _$$SuggestionImplCopyWith<$Res> {
+  __$$SuggestionImplCopyWithImpl(
+      _$SuggestionImpl _value, $Res Function(_$SuggestionImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -108,7 +108,7 @@ class __$$_SuggestionCopyWithImpl<$Res>
     Object? source = null,
     Object? account = null,
   }) {
-    return _then(_$_Suggestion(
+    return _then(_$SuggestionImpl(
       source: null == source
           ? _value.source
           : source // ignore: cast_nullable_to_non_nullable
@@ -124,11 +124,11 @@ class __$$_SuggestionCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(includeIfNull: false)
-class _$_Suggestion implements _Suggestion {
-  const _$_Suggestion({required this.source, required this.account});
+class _$SuggestionImpl implements _Suggestion {
+  const _$SuggestionImpl({required this.source, required this.account});
 
-  factory _$_Suggestion.fromJson(Map<String, dynamic> json) =>
-      _$$_SuggestionFromJson(json);
+  factory _$SuggestionImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SuggestionImplFromJson(json);
 
   /// The reason this account is being suggested.
   @override
@@ -144,10 +144,10 @@ class _$_Suggestion implements _Suggestion {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Suggestion &&
+            other is _$SuggestionImpl &&
             (identical(other.source, source) || other.source == source) &&
             (identical(other.account, account) || other.account == account));
   }
@@ -159,12 +159,12 @@ class _$_Suggestion implements _Suggestion {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SuggestionCopyWith<_$_Suggestion> get copyWith =>
-      __$$_SuggestionCopyWithImpl<_$_Suggestion>(this, _$identity);
+  _$$SuggestionImplCopyWith<_$SuggestionImpl> get copyWith =>
+      __$$SuggestionImplCopyWithImpl<_$SuggestionImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SuggestionToJson(
+    return _$$SuggestionImplToJson(
       this,
     );
   }
@@ -173,10 +173,10 @@ class _$_Suggestion implements _Suggestion {
 abstract class _Suggestion implements Suggestion {
   const factory _Suggestion(
       {required final SuggestedReason source,
-      required final Account account}) = _$_Suggestion;
+      required final Account account}) = _$SuggestionImpl;
 
   factory _Suggestion.fromJson(Map<String, dynamic> json) =
-      _$_Suggestion.fromJson;
+      _$SuggestionImpl.fromJson;
 
   @override
 
@@ -188,6 +188,6 @@ abstract class _Suggestion implements Suggestion {
   Account get account;
   @override
   @JsonKey(ignore: true)
-  _$$_SuggestionCopyWith<_$_Suggestion> get copyWith =>
+  _$$SuggestionImplCopyWith<_$SuggestionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

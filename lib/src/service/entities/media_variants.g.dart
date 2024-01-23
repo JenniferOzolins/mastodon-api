@@ -8,11 +8,11 @@ part of 'media_variants.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MediaVariants _$$_MediaVariantsFromJson(Map json) => $checkedCreate(
-      r'_$_MediaVariants',
+_$MediaVariantsImpl _$$MediaVariantsImplFromJson(Map json) => $checkedCreate(
+      r'_$MediaVariantsImpl',
       json,
       ($checkedConvert) {
-        final val = _$_MediaVariants(
+        final val = _$MediaVariantsImpl(
           width: $checkedConvert('width', (v) => v as int),
           height: $checkedConvert('height', (v) => v as int),
           size: $checkedConvert('size', (v) => v as String?),
@@ -30,7 +30,7 @@ _$_MediaVariants _$$_MediaVariantsFromJson(Map json) => $checkedCreate(
       },
     );
 
-Map<String, dynamic> _$$_MediaVariantsToJson(_$_MediaVariants instance) =>
+Map<String, dynamic> _$$MediaVariantsImplToJson(_$MediaVariantsImpl instance) =>
     <String, dynamic>{
       'width': instance.width,
       'height': instance.height,

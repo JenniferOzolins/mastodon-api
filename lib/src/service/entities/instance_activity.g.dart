@@ -8,11 +8,12 @@ part of 'instance_activity.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_InstanceActivity _$$_InstanceActivityFromJson(Map json) => $checkedCreate(
-      r'_$_InstanceActivity',
+_$InstanceActivityImpl _$$InstanceActivityImplFromJson(Map json) =>
+    $checkedCreate(
+      r'_$InstanceActivityImpl',
       json,
       ($checkedConvert) {
-        final val = _$_InstanceActivity(
+        final val = _$InstanceActivityImpl(
           week: $checkedConvert('week',
               (v) => const UnixTimestampConverter().fromJson(v as String)),
           statusCount: $checkedConvert(
@@ -31,7 +32,8 @@ _$_InstanceActivity _$$_InstanceActivityFromJson(Map json) => $checkedCreate(
       },
     );
 
-Map<String, dynamic> _$$_InstanceActivityToJson(_$_InstanceActivity instance) =>
+Map<String, dynamic> _$$InstanceActivityImplToJson(
+        _$InstanceActivityImpl instance) =>
     <String, dynamic>{
       'week': const UnixTimestampConverter().toJson(instance.week),
       'statuses': const IntConverter().toJson(instance.statusCount),

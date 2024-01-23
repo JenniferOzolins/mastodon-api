@@ -8,11 +8,11 @@ part of 'poll.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Poll _$$_PollFromJson(Map json) => $checkedCreate(
-      r'_$_Poll',
+_$PollImpl _$$PollImplFromJson(Map json) => $checkedCreate(
+      r'_$PollImpl',
       json,
       ($checkedConvert) {
-        final val = _$_Poll(
+        final val = _$PollImpl(
           id: $checkedConvert('id', (v) => v as String),
           votesCount: $checkedConvert('votes_count', (v) => v as int),
           votersCount: $checkedConvert('voters_count', (v) => v as int?),
@@ -49,7 +49,8 @@ _$_Poll _$$_PollFromJson(Map json) => $checkedCreate(
       },
     );
 
-Map<String, dynamic> _$$_PollToJson(_$_Poll instance) => <String, dynamic>{
+Map<String, dynamic> _$$PollImplToJson(_$PollImpl instance) =>
+    <String, dynamic>{
       'id': instance.id,
       'votes_count': instance.votesCount,
       'voters_count': instance.votersCount,

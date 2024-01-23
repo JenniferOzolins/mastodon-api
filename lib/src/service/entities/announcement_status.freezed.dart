@@ -71,22 +71,22 @@ class _$AnnouncementStatusCopyWithImpl<$Res, $Val extends AnnouncementStatus>
 }
 
 /// @nodoc
-abstract class _$$_AnnouncementStatusCopyWith<$Res>
+abstract class _$$AnnouncementStatusImplCopyWith<$Res>
     implements $AnnouncementStatusCopyWith<$Res> {
-  factory _$$_AnnouncementStatusCopyWith(_$_AnnouncementStatus value,
-          $Res Function(_$_AnnouncementStatus) then) =
-      __$$_AnnouncementStatusCopyWithImpl<$Res>;
+  factory _$$AnnouncementStatusImplCopyWith(_$AnnouncementStatusImpl value,
+          $Res Function(_$AnnouncementStatusImpl) then) =
+      __$$AnnouncementStatusImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String id, String url});
 }
 
 /// @nodoc
-class __$$_AnnouncementStatusCopyWithImpl<$Res>
-    extends _$AnnouncementStatusCopyWithImpl<$Res, _$_AnnouncementStatus>
-    implements _$$_AnnouncementStatusCopyWith<$Res> {
-  __$$_AnnouncementStatusCopyWithImpl(
-      _$_AnnouncementStatus _value, $Res Function(_$_AnnouncementStatus) _then)
+class __$$AnnouncementStatusImplCopyWithImpl<$Res>
+    extends _$AnnouncementStatusCopyWithImpl<$Res, _$AnnouncementStatusImpl>
+    implements _$$AnnouncementStatusImplCopyWith<$Res> {
+  __$$AnnouncementStatusImplCopyWithImpl(_$AnnouncementStatusImpl _value,
+      $Res Function(_$AnnouncementStatusImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -95,7 +95,7 @@ class __$$_AnnouncementStatusCopyWithImpl<$Res>
     Object? id = null,
     Object? url = null,
   }) {
-    return _then(_$_AnnouncementStatus(
+    return _then(_$AnnouncementStatusImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -111,11 +111,11 @@ class __$$_AnnouncementStatusCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(includeIfNull: false)
-class _$_AnnouncementStatus implements _AnnouncementStatus {
-  const _$_AnnouncementStatus({required this.id, required this.url});
+class _$AnnouncementStatusImpl implements _AnnouncementStatus {
+  const _$AnnouncementStatusImpl({required this.id, required this.url});
 
-  factory _$_AnnouncementStatus.fromJson(Map<String, dynamic> json) =>
-      _$$_AnnouncementStatusFromJson(json);
+  factory _$AnnouncementStatusImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AnnouncementStatusImplFromJson(json);
 
   /// The ID of an attached Status in the database.
   @override
@@ -131,10 +131,10 @@ class _$_AnnouncementStatus implements _AnnouncementStatus {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AnnouncementStatus &&
+            other is _$AnnouncementStatusImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.url, url) || other.url == url));
   }
@@ -146,13 +146,13 @@ class _$_AnnouncementStatus implements _AnnouncementStatus {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AnnouncementStatusCopyWith<_$_AnnouncementStatus> get copyWith =>
-      __$$_AnnouncementStatusCopyWithImpl<_$_AnnouncementStatus>(
+  _$$AnnouncementStatusImplCopyWith<_$AnnouncementStatusImpl> get copyWith =>
+      __$$AnnouncementStatusImplCopyWithImpl<_$AnnouncementStatusImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AnnouncementStatusToJson(
+    return _$$AnnouncementStatusImplToJson(
       this,
     );
   }
@@ -161,10 +161,10 @@ class _$_AnnouncementStatus implements _AnnouncementStatus {
 abstract class _AnnouncementStatus implements AnnouncementStatus {
   const factory _AnnouncementStatus(
       {required final String id,
-      required final String url}) = _$_AnnouncementStatus;
+      required final String url}) = _$AnnouncementStatusImpl;
 
   factory _AnnouncementStatus.fromJson(Map<String, dynamic> json) =
-      _$_AnnouncementStatus.fromJson;
+      _$AnnouncementStatusImpl.fromJson;
 
   @override
 
@@ -176,6 +176,6 @@ abstract class _AnnouncementStatus implements AnnouncementStatus {
   String get url;
   @override
   @JsonKey(ignore: true)
-  _$$_AnnouncementStatusCopyWith<_$_AnnouncementStatus> get copyWith =>
+  _$$AnnouncementStatusImplCopyWith<_$AnnouncementStatusImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

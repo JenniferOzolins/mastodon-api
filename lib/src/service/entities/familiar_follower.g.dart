@@ -8,11 +8,12 @@ part of 'familiar_follower.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_FamiliarFollower _$$_FamiliarFollowerFromJson(Map json) => $checkedCreate(
-      r'_$_FamiliarFollower',
+_$FamiliarFollowerImpl _$$FamiliarFollowerImplFromJson(Map json) =>
+    $checkedCreate(
+      r'_$FamiliarFollowerImpl',
       json,
       ($checkedConvert) {
-        final val = _$_FamiliarFollower(
+        final val = _$FamiliarFollowerImpl(
           accountId: $checkedConvert('id', (v) => v as String),
           accounts: $checkedConvert(
               'accounts',
@@ -26,7 +27,8 @@ _$_FamiliarFollower _$$_FamiliarFollowerFromJson(Map json) => $checkedCreate(
       fieldKeyMap: const {'accountId': 'id'},
     );
 
-Map<String, dynamic> _$$_FamiliarFollowerToJson(_$_FamiliarFollower instance) =>
+Map<String, dynamic> _$$FamiliarFollowerImplToJson(
+        _$FamiliarFollowerImpl instance) =>
     <String, dynamic>{
       'id': instance.accountId,
       'accounts': instance.accounts.map((e) => e.toJson()).toList(),

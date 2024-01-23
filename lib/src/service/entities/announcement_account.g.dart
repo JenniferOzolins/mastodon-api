@@ -8,12 +8,12 @@ part of 'announcement_account.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_AnnouncementAccount _$$_AnnouncementAccountFromJson(Map json) =>
+_$AnnouncementAccountImpl _$$AnnouncementAccountImplFromJson(Map json) =>
     $checkedCreate(
-      r'_$_AnnouncementAccount',
+      r'_$AnnouncementAccountImpl',
       json,
       ($checkedConvert) {
-        final val = _$_AnnouncementAccount(
+        final val = _$AnnouncementAccountImpl(
           id: $checkedConvert('id', (v) => v as String),
           username: $checkedConvert('username', (v) => v as String),
           url: $checkedConvert('url', (v) => v as String),
@@ -24,8 +24,8 @@ _$_AnnouncementAccount _$$_AnnouncementAccountFromJson(Map json) =>
       fieldKeyMap: const {'webFingerAccountUri': 'acct'},
     );
 
-Map<String, dynamic> _$$_AnnouncementAccountToJson(
-        _$_AnnouncementAccount instance) =>
+Map<String, dynamic> _$$AnnouncementAccountImplToJson(
+        _$AnnouncementAccountImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'username': instance.username,

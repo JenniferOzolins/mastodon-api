@@ -8,11 +8,11 @@ part of 'suggestion.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Suggestion _$$_SuggestionFromJson(Map json) => $checkedCreate(
-      r'_$_Suggestion',
+_$SuggestionImpl _$$SuggestionImplFromJson(Map json) => $checkedCreate(
+      r'_$SuggestionImpl',
       json,
       ($checkedConvert) {
-        final val = _$_Suggestion(
+        final val = _$SuggestionImpl(
           source: $checkedConvert(
               'source', (v) => $enumDecode(_$SuggestedReasonEnumMap, v)),
           account: $checkedConvert('account',
@@ -22,7 +22,7 @@ _$_Suggestion _$$_SuggestionFromJson(Map json) => $checkedCreate(
       },
     );
 
-Map<String, dynamic> _$$_SuggestionToJson(_$_Suggestion instance) =>
+Map<String, dynamic> _$$SuggestionImplToJson(_$SuggestionImpl instance) =>
     <String, dynamic>{
       'source': _$SuggestedReasonEnumMap[instance.source]!,
       'account': instance.account.toJson(),

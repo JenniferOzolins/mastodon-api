@@ -8,11 +8,11 @@ part of 'blocked_domain.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_BlockedDomain _$$_BlockedDomainFromJson(Map json) => $checkedCreate(
-      r'_$_BlockedDomain',
+_$BlockedDomainImpl _$$BlockedDomainImplFromJson(Map json) => $checkedCreate(
+      r'_$BlockedDomainImpl',
       json,
       ($checkedConvert) {
-        final val = _$_BlockedDomain(
+        final val = _$BlockedDomainImpl(
           name: $checkedConvert('domain', (v) => v as String),
           sha256digest: $checkedConvert('digest', (v) => v as String),
           severity: $checkedConvert(
@@ -28,7 +28,7 @@ _$_BlockedDomain _$$_BlockedDomainFromJson(Map json) => $checkedCreate(
       },
     );
 
-Map<String, dynamic> _$$_BlockedDomainToJson(_$_BlockedDomain instance) =>
+Map<String, dynamic> _$$BlockedDomainImplToJson(_$BlockedDomainImpl instance) =>
     <String, dynamic>{
       'domain': instance.name,
       'digest': instance.sha256digest,

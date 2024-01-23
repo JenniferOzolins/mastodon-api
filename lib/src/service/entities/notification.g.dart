@@ -8,11 +8,11 @@ part of 'notification.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Notification _$$_NotificationFromJson(Map json) => $checkedCreate(
-      r'_$_Notification',
+_$NotificationImpl _$$NotificationImplFromJson(Map json) => $checkedCreate(
+      r'_$NotificationImpl',
       json,
       ($checkedConvert) {
-        final val = _$_Notification(
+        final val = _$NotificationImpl(
           id: $checkedConvert('id', (v) => v as String),
           type: $checkedConvert(
               'type', (v) => $enumDecode(_$NotificationTypeEnumMap, v)),
@@ -36,7 +36,7 @@ _$_Notification _$$_NotificationFromJson(Map json) => $checkedCreate(
       fieldKeyMap: const {'createdAt': 'created_at'},
     );
 
-Map<String, dynamic> _$$_NotificationToJson(_$_Notification instance) {
+Map<String, dynamic> _$$NotificationImplToJson(_$NotificationImpl instance) {
   final val = <String, dynamic>{
     'id': instance.id,
     'type': _$NotificationTypeEnumMap[instance.type]!,

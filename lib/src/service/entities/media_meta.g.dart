@@ -8,11 +8,11 @@ part of 'media_meta.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MediaMeta _$$_MediaMetaFromJson(Map json) => $checkedCreate(
-      r'_$_MediaMeta',
+_$MediaMetaImpl _$$MediaMetaImplFromJson(Map json) => $checkedCreate(
+      r'_$MediaMetaImpl',
       json,
       ($checkedConvert) {
-        final val = _$_MediaMeta(
+        final val = _$MediaMetaImpl(
           focus: $checkedConvert(
               'focus',
               (v) => v == null
@@ -32,7 +32,7 @@ _$_MediaMeta _$$_MediaMetaFromJson(Map json) => $checkedCreate(
       },
     );
 
-Map<String, dynamic> _$$_MediaMetaToJson(_$_MediaMeta instance) =>
+Map<String, dynamic> _$$MediaMetaImplToJson(_$MediaMetaImpl instance) =>
     <String, dynamic>{
       'focus': instance.focus?.toJson(),
       'original': instance.original.toJson(),

@@ -140,11 +140,11 @@ class _$MediaAttachmentCopyWithImpl<$Res, $Val extends MediaAttachment>
 }
 
 /// @nodoc
-abstract class _$$_MediaAttachmentCopyWith<$Res>
+abstract class _$$MediaAttachmentImplCopyWith<$Res>
     implements $MediaAttachmentCopyWith<$Res> {
-  factory _$$_MediaAttachmentCopyWith(
-          _$_MediaAttachment value, $Res Function(_$_MediaAttachment) then) =
-      __$$_MediaAttachmentCopyWithImpl<$Res>;
+  factory _$$MediaAttachmentImplCopyWith(_$MediaAttachmentImpl value,
+          $Res Function(_$MediaAttachmentImpl) then) =
+      __$$MediaAttachmentImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -162,11 +162,11 @@ abstract class _$$_MediaAttachmentCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MediaAttachmentCopyWithImpl<$Res>
-    extends _$MediaAttachmentCopyWithImpl<$Res, _$_MediaAttachment>
-    implements _$$_MediaAttachmentCopyWith<$Res> {
-  __$$_MediaAttachmentCopyWithImpl(
-      _$_MediaAttachment _value, $Res Function(_$_MediaAttachment) _then)
+class __$$MediaAttachmentImplCopyWithImpl<$Res>
+    extends _$MediaAttachmentCopyWithImpl<$Res, _$MediaAttachmentImpl>
+    implements _$$MediaAttachmentImplCopyWith<$Res> {
+  __$$MediaAttachmentImplCopyWithImpl(
+      _$MediaAttachmentImpl _value, $Res Function(_$MediaAttachmentImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -181,7 +181,7 @@ class __$$_MediaAttachmentCopyWithImpl<$Res>
     Object? description = freezed,
     Object? blurHash = freezed,
   }) {
-    return _then(_$_MediaAttachment(
+    return _then(_$MediaAttachmentImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -220,8 +220,8 @@ class __$$_MediaAttachmentCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MediaAttachment implements _MediaAttachment {
-  const _$_MediaAttachment(
+class _$MediaAttachmentImpl implements _MediaAttachment {
+  const _$MediaAttachmentImpl(
       {required this.id,
       required this.type,
       this.url,
@@ -231,8 +231,8 @@ class _$_MediaAttachment implements _MediaAttachment {
       this.description,
       @JsonKey(name: 'blurhash') this.blurHash});
 
-  factory _$_MediaAttachment.fromJson(Map<String, dynamic> json) =>
-      _$$_MediaAttachmentFromJson(json);
+  factory _$MediaAttachmentImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MediaAttachmentImplFromJson(json);
 
   /// The ID of the attachment in the database.
   @override
@@ -275,10 +275,10 @@ class _$_MediaAttachment implements _MediaAttachment {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MediaAttachment &&
+            other is _$MediaAttachmentImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.url, url) || other.url == url) &&
@@ -301,12 +301,13 @@ class _$_MediaAttachment implements _MediaAttachment {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MediaAttachmentCopyWith<_$_MediaAttachment> get copyWith =>
-      __$$_MediaAttachmentCopyWithImpl<_$_MediaAttachment>(this, _$identity);
+  _$$MediaAttachmentImplCopyWith<_$MediaAttachmentImpl> get copyWith =>
+      __$$MediaAttachmentImplCopyWithImpl<_$MediaAttachmentImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MediaAttachmentToJson(
+    return _$$MediaAttachmentImplToJson(
       this,
     );
   }
@@ -314,17 +315,18 @@ class _$_MediaAttachment implements _MediaAttachment {
 
 abstract class _MediaAttachment implements MediaAttachment {
   const factory _MediaAttachment(
-      {required final String id,
-      required final MediaAttachmentType type,
-      final String? url,
-      required final String? previewUrl,
-      final String? remoteUrl,
-      required final MediaMeta meta,
-      final String? description,
-      @JsonKey(name: 'blurhash') final String? blurHash}) = _$_MediaAttachment;
+          {required final String id,
+          required final MediaAttachmentType type,
+          final String? url,
+          required final String? previewUrl,
+          final String? remoteUrl,
+          required final MediaMeta meta,
+          final String? description,
+          @JsonKey(name: 'blurhash') final String? blurHash}) =
+      _$MediaAttachmentImpl;
 
   factory _MediaAttachment.fromJson(Map<String, dynamic> json) =
-      _$_MediaAttachment.fromJson;
+      _$MediaAttachmentImpl.fromJson;
 
   @override
 
@@ -363,6 +365,6 @@ abstract class _MediaAttachment implements MediaAttachment {
   String? get blurHash;
   @override
   @JsonKey(ignore: true)
-  _$$_MediaAttachmentCopyWith<_$_MediaAttachment> get copyWith =>
+  _$$MediaAttachmentImplCopyWith<_$MediaAttachmentImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

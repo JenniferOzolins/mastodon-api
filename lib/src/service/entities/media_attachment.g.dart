@@ -8,11 +8,12 @@ part of 'media_attachment.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MediaAttachment _$$_MediaAttachmentFromJson(Map json) => $checkedCreate(
-      r'_$_MediaAttachment',
+_$MediaAttachmentImpl _$$MediaAttachmentImplFromJson(Map json) =>
+    $checkedCreate(
+      r'_$MediaAttachmentImpl',
       json,
       ($checkedConvert) {
-        final val = _$_MediaAttachment(
+        final val = _$MediaAttachmentImpl(
           id: $checkedConvert('id', (v) => v as String),
           type: $checkedConvert(
               'type', (v) => $enumDecode(_$MediaAttachmentTypeEnumMap, v)),
@@ -33,7 +34,8 @@ _$_MediaAttachment _$$_MediaAttachmentFromJson(Map json) => $checkedCreate(
       },
     );
 
-Map<String, dynamic> _$$_MediaAttachmentToJson(_$_MediaAttachment instance) =>
+Map<String, dynamic> _$$MediaAttachmentImplToJson(
+        _$MediaAttachmentImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'type': _$MediaAttachmentTypeEnumMap[instance.type]!,

@@ -103,11 +103,11 @@ class _$ScheduledStatusCopyWithImpl<$Res, $Val extends ScheduledStatus>
 }
 
 /// @nodoc
-abstract class _$$_ScheduledStatusCopyWith<$Res>
+abstract class _$$ScheduledStatusImplCopyWith<$Res>
     implements $ScheduledStatusCopyWith<$Res> {
-  factory _$$_ScheduledStatusCopyWith(
-          _$_ScheduledStatus value, $Res Function(_$_ScheduledStatus) then) =
-      __$$_ScheduledStatusCopyWithImpl<$Res>;
+  factory _$$ScheduledStatusImplCopyWith(_$ScheduledStatusImpl value,
+          $Res Function(_$ScheduledStatusImpl) then) =
+      __$$ScheduledStatusImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -121,11 +121,11 @@ abstract class _$$_ScheduledStatusCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ScheduledStatusCopyWithImpl<$Res>
-    extends _$ScheduledStatusCopyWithImpl<$Res, _$_ScheduledStatus>
-    implements _$$_ScheduledStatusCopyWith<$Res> {
-  __$$_ScheduledStatusCopyWithImpl(
-      _$_ScheduledStatus _value, $Res Function(_$_ScheduledStatus) _then)
+class __$$ScheduledStatusImplCopyWithImpl<$Res>
+    extends _$ScheduledStatusCopyWithImpl<$Res, _$ScheduledStatusImpl>
+    implements _$$ScheduledStatusImplCopyWith<$Res> {
+  __$$ScheduledStatusImplCopyWithImpl(
+      _$ScheduledStatusImpl _value, $Res Function(_$ScheduledStatusImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -136,7 +136,7 @@ class __$$_ScheduledStatusCopyWithImpl<$Res>
     Object? mediaAttachments = null,
     Object? scheduledAt = null,
   }) {
-    return _then(_$_ScheduledStatus(
+    return _then(_$ScheduledStatusImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -160,16 +160,16 @@ class __$$_ScheduledStatusCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(includeIfNull: false)
-class _$_ScheduledStatus implements _ScheduledStatus {
-  const _$_ScheduledStatus(
+class _$ScheduledStatusImpl implements _ScheduledStatus {
+  const _$ScheduledStatusImpl(
       {required this.id,
       required this.params,
       required final List<MediaAttachment> mediaAttachments,
       required this.scheduledAt})
       : _mediaAttachments = mediaAttachments;
 
-  factory _$_ScheduledStatus.fromJson(Map<String, dynamic> json) =>
-      _$$_ScheduledStatusFromJson(json);
+  factory _$ScheduledStatusImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ScheduledStatusImplFromJson(json);
 
   /// ID of the scheduled status in the database.
   @override
@@ -202,10 +202,10 @@ class _$_ScheduledStatus implements _ScheduledStatus {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ScheduledStatus &&
+            other is _$ScheduledStatusImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.params, params) || other.params == params) &&
             const DeepCollectionEquality()
@@ -222,12 +222,13 @@ class _$_ScheduledStatus implements _ScheduledStatus {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ScheduledStatusCopyWith<_$_ScheduledStatus> get copyWith =>
-      __$$_ScheduledStatusCopyWithImpl<_$_ScheduledStatus>(this, _$identity);
+  _$$ScheduledStatusImplCopyWith<_$ScheduledStatusImpl> get copyWith =>
+      __$$ScheduledStatusImplCopyWithImpl<_$ScheduledStatusImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ScheduledStatusToJson(
+    return _$$ScheduledStatusImplToJson(
       this,
     );
   }
@@ -238,10 +239,10 @@ abstract class _ScheduledStatus implements ScheduledStatus {
       {required final String id,
       required final ScheduledStatusParams params,
       required final List<MediaAttachment> mediaAttachments,
-      required final DateTime scheduledAt}) = _$_ScheduledStatus;
+      required final DateTime scheduledAt}) = _$ScheduledStatusImpl;
 
   factory _ScheduledStatus.fromJson(Map<String, dynamic> json) =
-      _$_ScheduledStatus.fromJson;
+      _$ScheduledStatusImpl.fromJson;
 
   @override
 
@@ -262,6 +263,6 @@ abstract class _ScheduledStatus implements ScheduledStatus {
   DateTime get scheduledAt;
   @override
   @JsonKey(ignore: true)
-  _$$_ScheduledStatusCopyWith<_$_ScheduledStatus> get copyWith =>
+  _$$ScheduledStatusImplCopyWith<_$ScheduledStatusImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

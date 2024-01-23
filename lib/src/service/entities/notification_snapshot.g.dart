@@ -8,12 +8,12 @@ part of 'notification_snapshot.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_NotificationSnapshot _$$_NotificationSnapshotFromJson(Map json) =>
+_$NotificationSnapshotImpl _$$NotificationSnapshotImplFromJson(Map json) =>
     $checkedCreate(
-      r'_$_NotificationSnapshot',
+      r'_$NotificationSnapshotImpl',
       json,
       ($checkedConvert) {
-        final val = _$_NotificationSnapshot(
+        final val = _$NotificationSnapshotImpl(
           marker: $checkedConvert(
               'notifications',
               (v) =>
@@ -24,8 +24,8 @@ _$_NotificationSnapshot _$$_NotificationSnapshotFromJson(Map json) =>
       fieldKeyMap: const {'marker': 'notifications'},
     );
 
-Map<String, dynamic> _$$_NotificationSnapshotToJson(
-        _$_NotificationSnapshot instance) =>
+Map<String, dynamic> _$$NotificationSnapshotImplToJson(
+        _$NotificationSnapshotImpl instance) =>
     <String, dynamic>{
       'notifications': instance.marker.toJson(),
     };

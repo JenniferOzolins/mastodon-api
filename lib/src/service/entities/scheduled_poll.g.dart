@@ -8,11 +8,11 @@ part of 'scheduled_poll.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ScheduledPoll _$$_ScheduledPollFromJson(Map json) => $checkedCreate(
-      r'_$_ScheduledPoll',
+_$ScheduledPollImpl _$$ScheduledPollImplFromJson(Map json) => $checkedCreate(
+      r'_$ScheduledPollImpl',
       json,
       ($checkedConvert) {
-        final val = _$_ScheduledPoll(
+        final val = _$ScheduledPollImpl(
           options: $checkedConvert('options',
               (v) => (v as List<dynamic>).map((e) => e as String).toList()),
           isMultiple: $checkedConvert('multiple', (v) => v as bool?),
@@ -29,7 +29,7 @@ _$_ScheduledPoll _$$_ScheduledPollFromJson(Map json) => $checkedCreate(
       },
     );
 
-Map<String, dynamic> _$$_ScheduledPollToJson(_$_ScheduledPoll instance) {
+Map<String, dynamic> _$$ScheduledPollImplToJson(_$ScheduledPollImpl instance) {
   final val = <String, dynamic>{
     'options': instance.options,
   };

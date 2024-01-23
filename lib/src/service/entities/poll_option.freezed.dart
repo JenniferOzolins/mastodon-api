@@ -71,22 +71,22 @@ class _$PollOptionCopyWithImpl<$Res, $Val extends PollOption>
 }
 
 /// @nodoc
-abstract class _$$_PollOptionCopyWith<$Res>
+abstract class _$$PollOptionImplCopyWith<$Res>
     implements $PollOptionCopyWith<$Res> {
-  factory _$$_PollOptionCopyWith(
-          _$_PollOption value, $Res Function(_$_PollOption) then) =
-      __$$_PollOptionCopyWithImpl<$Res>;
+  factory _$$PollOptionImplCopyWith(
+          _$PollOptionImpl value, $Res Function(_$PollOptionImpl) then) =
+      __$$PollOptionImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String title, int votesCount});
 }
 
 /// @nodoc
-class __$$_PollOptionCopyWithImpl<$Res>
-    extends _$PollOptionCopyWithImpl<$Res, _$_PollOption>
-    implements _$$_PollOptionCopyWith<$Res> {
-  __$$_PollOptionCopyWithImpl(
-      _$_PollOption _value, $Res Function(_$_PollOption) _then)
+class __$$PollOptionImplCopyWithImpl<$Res>
+    extends _$PollOptionCopyWithImpl<$Res, _$PollOptionImpl>
+    implements _$$PollOptionImplCopyWith<$Res> {
+  __$$PollOptionImplCopyWithImpl(
+      _$PollOptionImpl _value, $Res Function(_$PollOptionImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -95,7 +95,7 @@ class __$$_PollOptionCopyWithImpl<$Res>
     Object? title = null,
     Object? votesCount = null,
   }) {
-    return _then(_$_PollOption(
+    return _then(_$PollOptionImpl(
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -110,11 +110,11 @@ class __$$_PollOptionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_PollOption implements _PollOption {
-  const _$_PollOption({required this.title, required this.votesCount});
+class _$PollOptionImpl implements _PollOption {
+  const _$PollOptionImpl({required this.title, required this.votesCount});
 
-  factory _$_PollOption.fromJson(Map<String, dynamic> json) =>
-      _$$_PollOptionFromJson(json);
+  factory _$PollOptionImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PollOptionImplFromJson(json);
 
   /// The title of this option.
   @override
@@ -130,10 +130,10 @@ class _$_PollOption implements _PollOption {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PollOption &&
+            other is _$PollOptionImpl &&
             (identical(other.title, title) || other.title == title) &&
             (identical(other.votesCount, votesCount) ||
                 other.votesCount == votesCount));
@@ -146,12 +146,12 @@ class _$_PollOption implements _PollOption {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PollOptionCopyWith<_$_PollOption> get copyWith =>
-      __$$_PollOptionCopyWithImpl<_$_PollOption>(this, _$identity);
+  _$$PollOptionImplCopyWith<_$PollOptionImpl> get copyWith =>
+      __$$PollOptionImplCopyWithImpl<_$PollOptionImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PollOptionToJson(
+    return _$$PollOptionImplToJson(
       this,
     );
   }
@@ -160,10 +160,10 @@ class _$_PollOption implements _PollOption {
 abstract class _PollOption implements PollOption {
   const factory _PollOption(
       {required final String title,
-      required final int votesCount}) = _$_PollOption;
+      required final int votesCount}) = _$PollOptionImpl;
 
   factory _PollOption.fromJson(Map<String, dynamic> json) =
-      _$_PollOption.fromJson;
+      _$PollOptionImpl.fromJson;
 
   @override
 
@@ -175,6 +175,6 @@ abstract class _PollOption implements PollOption {
   int get votesCount;
   @override
   @JsonKey(ignore: true)
-  _$$_PollOptionCopyWith<_$_PollOption> get copyWith =>
+  _$$PollOptionImplCopyWith<_$PollOptionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

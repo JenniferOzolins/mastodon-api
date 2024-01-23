@@ -8,11 +8,11 @@ part of 'position_marker.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_PositionMarker _$$_PositionMarkerFromJson(Map json) => $checkedCreate(
-      r'_$_PositionMarker',
+_$PositionMarkerImpl _$$PositionMarkerImplFromJson(Map json) => $checkedCreate(
+      r'_$PositionMarkerImpl',
       json,
       ($checkedConvert) {
-        final val = _$_PositionMarker(
+        final val = _$PositionMarkerImpl(
           lastReadId: $checkedConvert('last_read_id', (v) => v as String),
           version: $checkedConvert('version', (v) => v as int),
           updatedAt:
@@ -26,7 +26,8 @@ _$_PositionMarker _$$_PositionMarkerFromJson(Map json) => $checkedCreate(
       },
     );
 
-Map<String, dynamic> _$$_PositionMarkerToJson(_$_PositionMarker instance) =>
+Map<String, dynamic> _$$PositionMarkerImplToJson(
+        _$PositionMarkerImpl instance) =>
     <String, dynamic>{
       'last_read_id': instance.lastReadId,
       'version': instance.version,

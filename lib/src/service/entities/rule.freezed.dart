@@ -69,18 +69,20 @@ class _$RuleCopyWithImpl<$Res, $Val extends Rule>
 }
 
 /// @nodoc
-abstract class _$$_RuleCopyWith<$Res> implements $RuleCopyWith<$Res> {
-  factory _$$_RuleCopyWith(_$_Rule value, $Res Function(_$_Rule) then) =
-      __$$_RuleCopyWithImpl<$Res>;
+abstract class _$$RuleImplCopyWith<$Res> implements $RuleCopyWith<$Res> {
+  factory _$$RuleImplCopyWith(
+          _$RuleImpl value, $Res Function(_$RuleImpl) then) =
+      __$$RuleImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String id, String text});
 }
 
 /// @nodoc
-class __$$_RuleCopyWithImpl<$Res> extends _$RuleCopyWithImpl<$Res, _$_Rule>
-    implements _$$_RuleCopyWith<$Res> {
-  __$$_RuleCopyWithImpl(_$_Rule _value, $Res Function(_$_Rule) _then)
+class __$$RuleImplCopyWithImpl<$Res>
+    extends _$RuleCopyWithImpl<$Res, _$RuleImpl>
+    implements _$$RuleImplCopyWith<$Res> {
+  __$$RuleImplCopyWithImpl(_$RuleImpl _value, $Res Function(_$RuleImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -89,7 +91,7 @@ class __$$_RuleCopyWithImpl<$Res> extends _$RuleCopyWithImpl<$Res, _$_Rule>
     Object? id = null,
     Object? text = null,
   }) {
-    return _then(_$_Rule(
+    return _then(_$RuleImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -104,10 +106,11 @@ class __$$_RuleCopyWithImpl<$Res> extends _$RuleCopyWithImpl<$Res, _$_Rule>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Rule implements _Rule {
-  const _$_Rule({required this.id, required this.text});
+class _$RuleImpl implements _Rule {
+  const _$RuleImpl({required this.id, required this.text});
 
-  factory _$_Rule.fromJson(Map<String, dynamic> json) => _$$_RuleFromJson(json);
+  factory _$RuleImpl.fromJson(Map<String, dynamic> json) =>
+      _$$RuleImplFromJson(json);
 
   /// An identifier for the rule.
   @override
@@ -123,10 +126,10 @@ class _$_Rule implements _Rule {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Rule &&
+            other is _$RuleImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.text, text) || other.text == text));
   }
@@ -138,12 +141,12 @@ class _$_Rule implements _Rule {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_RuleCopyWith<_$_Rule> get copyWith =>
-      __$$_RuleCopyWithImpl<_$_Rule>(this, _$identity);
+  _$$RuleImplCopyWith<_$RuleImpl> get copyWith =>
+      __$$RuleImplCopyWithImpl<_$RuleImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_RuleToJson(
+    return _$$RuleImplToJson(
       this,
     );
   }
@@ -151,9 +154,9 @@ class _$_Rule implements _Rule {
 
 abstract class _Rule implements Rule {
   const factory _Rule({required final String id, required final String text}) =
-      _$_Rule;
+      _$RuleImpl;
 
-  factory _Rule.fromJson(Map<String, dynamic> json) = _$_Rule.fromJson;
+  factory _Rule.fromJson(Map<String, dynamic> json) = _$RuleImpl.fromJson;
 
   @override
 
@@ -165,5 +168,6 @@ abstract class _Rule implements Rule {
   String get text;
   @override
   @JsonKey(ignore: true)
-  _$$_RuleCopyWith<_$_Rule> get copyWith => throw _privateConstructorUsedError;
+  _$$RuleImplCopyWith<_$RuleImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

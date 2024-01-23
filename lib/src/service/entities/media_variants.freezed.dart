@@ -106,11 +106,11 @@ class _$MediaVariantsCopyWithImpl<$Res, $Val extends MediaVariants>
 }
 
 /// @nodoc
-abstract class _$$_MediaVariantsCopyWith<$Res>
+abstract class _$$MediaVariantsImplCopyWith<$Res>
     implements $MediaVariantsCopyWith<$Res> {
-  factory _$$_MediaVariantsCopyWith(
-          _$_MediaVariants value, $Res Function(_$_MediaVariants) then) =
-      __$$_MediaVariantsCopyWithImpl<$Res>;
+  factory _$$MediaVariantsImplCopyWith(
+          _$MediaVariantsImpl value, $Res Function(_$MediaVariantsImpl) then) =
+      __$$MediaVariantsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -124,11 +124,11 @@ abstract class _$$_MediaVariantsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MediaVariantsCopyWithImpl<$Res>
-    extends _$MediaVariantsCopyWithImpl<$Res, _$_MediaVariants>
-    implements _$$_MediaVariantsCopyWith<$Res> {
-  __$$_MediaVariantsCopyWithImpl(
-      _$_MediaVariants _value, $Res Function(_$_MediaVariants) _then)
+class __$$MediaVariantsImplCopyWithImpl<$Res>
+    extends _$MediaVariantsCopyWithImpl<$Res, _$MediaVariantsImpl>
+    implements _$$MediaVariantsImplCopyWith<$Res> {
+  __$$MediaVariantsImplCopyWithImpl(
+      _$MediaVariantsImpl _value, $Res Function(_$MediaVariantsImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -142,7 +142,7 @@ class __$$_MediaVariantsCopyWithImpl<$Res>
     Object? durationInSeconds = freezed,
     Object? bitrate = freezed,
   }) {
-    return _then(_$_MediaVariants(
+    return _then(_$MediaVariantsImpl(
       width: null == width
           ? _value.width
           : width // ignore: cast_nullable_to_non_nullable
@@ -177,8 +177,8 @@ class __$$_MediaVariantsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MediaVariants implements _MediaVariants {
-  const _$_MediaVariants(
+class _$MediaVariantsImpl implements _MediaVariants {
+  const _$MediaVariantsImpl(
       {required this.width,
       required this.height,
       this.size,
@@ -187,8 +187,8 @@ class _$_MediaVariants implements _MediaVariants {
       @JsonKey(name: 'duration') this.durationInSeconds,
       this.bitrate});
 
-  factory _$_MediaVariants.fromJson(Map<String, dynamic> json) =>
-      _$$_MediaVariantsFromJson(json);
+  factory _$MediaVariantsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MediaVariantsImplFromJson(json);
 
   @override
   final int width;
@@ -212,10 +212,10 @@ class _$_MediaVariants implements _MediaVariants {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MediaVariants &&
+            other is _$MediaVariantsImpl &&
             (identical(other.width, width) || other.width == width) &&
             (identical(other.height, height) || other.height == height) &&
             (identical(other.size, size) || other.size == size) &&
@@ -235,12 +235,12 @@ class _$_MediaVariants implements _MediaVariants {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MediaVariantsCopyWith<_$_MediaVariants> get copyWith =>
-      __$$_MediaVariantsCopyWithImpl<_$_MediaVariants>(this, _$identity);
+  _$$MediaVariantsImplCopyWith<_$MediaVariantsImpl> get copyWith =>
+      __$$MediaVariantsImplCopyWithImpl<_$MediaVariantsImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MediaVariantsToJson(
+    return _$$MediaVariantsImplToJson(
       this,
     );
   }
@@ -254,10 +254,10 @@ abstract class _MediaVariants implements MediaVariants {
       final double? aspect,
       final String? frameRate,
       @JsonKey(name: 'duration') final double? durationInSeconds,
-      final int? bitrate}) = _$_MediaVariants;
+      final int? bitrate}) = _$MediaVariantsImpl;
 
   factory _MediaVariants.fromJson(Map<String, dynamic> json) =
-      _$_MediaVariants.fromJson;
+      _$MediaVariantsImpl.fromJson;
 
   @override
   int get width;
@@ -276,6 +276,6 @@ abstract class _MediaVariants implements MediaVariants {
   int? get bitrate;
   @override
   @JsonKey(ignore: true)
-  _$$_MediaVariantsCopyWith<_$_MediaVariants> get copyWith =>
+  _$$MediaVariantsImplCopyWith<_$MediaVariantsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

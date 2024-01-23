@@ -68,25 +68,25 @@ class _$InstanceTranslationConfigurationCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_InstanceTranslationConfigurationCopyWith<$Res>
+abstract class _$$InstanceTranslationConfigurationImplCopyWith<$Res>
     implements $InstanceTranslationConfigurationCopyWith<$Res> {
-  factory _$$_InstanceTranslationConfigurationCopyWith(
-          _$_InstanceTranslationConfiguration value,
-          $Res Function(_$_InstanceTranslationConfiguration) then) =
-      __$$_InstanceTranslationConfigurationCopyWithImpl<$Res>;
+  factory _$$InstanceTranslationConfigurationImplCopyWith(
+          _$InstanceTranslationConfigurationImpl value,
+          $Res Function(_$InstanceTranslationConfigurationImpl) then) =
+      __$$InstanceTranslationConfigurationImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({@JsonKey(name: 'enabled') bool isEnabled});
 }
 
 /// @nodoc
-class __$$_InstanceTranslationConfigurationCopyWithImpl<$Res>
+class __$$InstanceTranslationConfigurationImplCopyWithImpl<$Res>
     extends _$InstanceTranslationConfigurationCopyWithImpl<$Res,
-        _$_InstanceTranslationConfiguration>
-    implements _$$_InstanceTranslationConfigurationCopyWith<$Res> {
-  __$$_InstanceTranslationConfigurationCopyWithImpl(
-      _$_InstanceTranslationConfiguration _value,
-      $Res Function(_$_InstanceTranslationConfiguration) _then)
+        _$InstanceTranslationConfigurationImpl>
+    implements _$$InstanceTranslationConfigurationImplCopyWith<$Res> {
+  __$$InstanceTranslationConfigurationImplCopyWithImpl(
+      _$InstanceTranslationConfigurationImpl _value,
+      $Res Function(_$InstanceTranslationConfigurationImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -94,7 +94,7 @@ class __$$_InstanceTranslationConfigurationCopyWithImpl<$Res>
   $Res call({
     Object? isEnabled = null,
   }) {
-    return _then(_$_InstanceTranslationConfiguration(
+    return _then(_$InstanceTranslationConfigurationImpl(
       isEnabled: null == isEnabled
           ? _value.isEnabled
           : isEnabled // ignore: cast_nullable_to_non_nullable
@@ -106,14 +106,14 @@ class __$$_InstanceTranslationConfigurationCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(includeIfNull: false)
-class _$_InstanceTranslationConfiguration
+class _$InstanceTranslationConfigurationImpl
     implements _InstanceTranslationConfiguration {
-  const _$_InstanceTranslationConfiguration(
+  const _$InstanceTranslationConfigurationImpl(
       {@JsonKey(name: 'enabled') required this.isEnabled});
 
-  factory _$_InstanceTranslationConfiguration.fromJson(
+  factory _$InstanceTranslationConfigurationImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_InstanceTranslationConfigurationFromJson(json);
+      _$$InstanceTranslationConfigurationImplFromJson(json);
 
   /// The Web Sockets URL for connecting to the streaming API.
   @override
@@ -126,10 +126,10 @@ class _$_InstanceTranslationConfiguration
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_InstanceTranslationConfiguration &&
+            other is _$InstanceTranslationConfigurationImpl &&
             (identical(other.isEnabled, isEnabled) ||
                 other.isEnabled == isEnabled));
   }
@@ -141,14 +141,14 @@ class _$_InstanceTranslationConfiguration
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_InstanceTranslationConfigurationCopyWith<
-          _$_InstanceTranslationConfiguration>
-      get copyWith => __$$_InstanceTranslationConfigurationCopyWithImpl<
-          _$_InstanceTranslationConfiguration>(this, _$identity);
+  _$$InstanceTranslationConfigurationImplCopyWith<
+          _$InstanceTranslationConfigurationImpl>
+      get copyWith => __$$InstanceTranslationConfigurationImplCopyWithImpl<
+          _$InstanceTranslationConfigurationImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_InstanceTranslationConfigurationToJson(
+    return _$$InstanceTranslationConfigurationImplToJson(
       this,
     );
   }
@@ -158,10 +158,11 @@ abstract class _InstanceTranslationConfiguration
     implements InstanceTranslationConfiguration {
   const factory _InstanceTranslationConfiguration(
           {@JsonKey(name: 'enabled') required final bool isEnabled}) =
-      _$_InstanceTranslationConfiguration;
+      _$InstanceTranslationConfigurationImpl;
 
   factory _InstanceTranslationConfiguration.fromJson(
-      Map<String, dynamic> json) = _$_InstanceTranslationConfiguration.fromJson;
+          Map<String, dynamic> json) =
+      _$InstanceTranslationConfigurationImpl.fromJson;
 
   @override
 
@@ -170,7 +171,7 @@ abstract class _InstanceTranslationConfiguration
   bool get isEnabled;
   @override
   @JsonKey(ignore: true)
-  _$$_InstanceTranslationConfigurationCopyWith<
-          _$_InstanceTranslationConfiguration>
+  _$$InstanceTranslationConfigurationImplCopyWith<
+          _$InstanceTranslationConfigurationImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

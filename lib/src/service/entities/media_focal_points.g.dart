@@ -8,11 +8,12 @@ part of 'media_focal_points.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MediaFocalPoints _$$_MediaFocalPointsFromJson(Map json) => $checkedCreate(
-      r'_$_MediaFocalPoints',
+_$MediaFocalPointsImpl _$$MediaFocalPointsImplFromJson(Map json) =>
+    $checkedCreate(
+      r'_$MediaFocalPointsImpl',
       json,
       ($checkedConvert) {
-        final val = _$_MediaFocalPoints(
+        final val = _$MediaFocalPointsImpl(
           x: $checkedConvert('x', (v) => (v as num).toDouble()),
           y: $checkedConvert('y', (v) => (v as num).toDouble()),
         );
@@ -20,7 +21,8 @@ _$_MediaFocalPoints _$$_MediaFocalPointsFromJson(Map json) => $checkedCreate(
       },
     );
 
-Map<String, dynamic> _$$_MediaFocalPointsToJson(_$_MediaFocalPoints instance) =>
+Map<String, dynamic> _$$MediaFocalPointsImplToJson(
+        _$MediaFocalPointsImpl instance) =>
     <String, dynamic>{
       'x': instance.x,
       'y': instance.y,

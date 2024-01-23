@@ -8,11 +8,12 @@ part of 'scheduled_status.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ScheduledStatus _$$_ScheduledStatusFromJson(Map json) => $checkedCreate(
-      r'_$_ScheduledStatus',
+_$ScheduledStatusImpl _$$ScheduledStatusImplFromJson(Map json) =>
+    $checkedCreate(
+      r'_$ScheduledStatusImpl',
       json,
       ($checkedConvert) {
-        final val = _$_ScheduledStatus(
+        final val = _$ScheduledStatusImpl(
           id: $checkedConvert('id', (v) => v as String),
           params: $checkedConvert(
               'params',
@@ -35,7 +36,8 @@ _$_ScheduledStatus _$$_ScheduledStatusFromJson(Map json) => $checkedCreate(
       },
     );
 
-Map<String, dynamic> _$$_ScheduledStatusToJson(_$_ScheduledStatus instance) =>
+Map<String, dynamic> _$$ScheduledStatusImplToJson(
+        _$ScheduledStatusImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'params': instance.params.toJson(),

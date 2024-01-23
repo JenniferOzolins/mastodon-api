@@ -184,11 +184,11 @@ class _$PreviewCardCopyWithImpl<$Res, $Val extends PreviewCard>
 }
 
 /// @nodoc
-abstract class _$$_PreviewCardCopyWith<$Res>
+abstract class _$$PreviewCardImplCopyWith<$Res>
     implements $PreviewCardCopyWith<$Res> {
-  factory _$$_PreviewCardCopyWith(
-          _$_PreviewCard value, $Res Function(_$_PreviewCard) then) =
-      __$$_PreviewCardCopyWithImpl<$Res>;
+  factory _$$PreviewCardImplCopyWith(
+          _$PreviewCardImpl value, $Res Function(_$PreviewCardImpl) then) =
+      __$$PreviewCardImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -209,11 +209,11 @@ abstract class _$$_PreviewCardCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_PreviewCardCopyWithImpl<$Res>
-    extends _$PreviewCardCopyWithImpl<$Res, _$_PreviewCard>
-    implements _$$_PreviewCardCopyWith<$Res> {
-  __$$_PreviewCardCopyWithImpl(
-      _$_PreviewCard _value, $Res Function(_$_PreviewCard) _then)
+class __$$PreviewCardImplCopyWithImpl<$Res>
+    extends _$PreviewCardCopyWithImpl<$Res, _$PreviewCardImpl>
+    implements _$$PreviewCardImplCopyWith<$Res> {
+  __$$PreviewCardImplCopyWithImpl(
+      _$PreviewCardImpl _value, $Res Function(_$PreviewCardImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -234,7 +234,7 @@ class __$$_PreviewCardCopyWithImpl<$Res>
     Object? embedUrl = null,
     Object? blurHash = freezed,
   }) {
-    return _then(_$_PreviewCard(
+    return _then(_$PreviewCardImpl(
       url: null == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
@@ -297,8 +297,8 @@ class __$$_PreviewCardCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_PreviewCard implements _PreviewCard {
-  const _$_PreviewCard(
+class _$PreviewCardImpl implements _PreviewCard {
+  const _$PreviewCardImpl(
       {required this.url,
       required this.title,
       required this.description,
@@ -314,8 +314,8 @@ class _$_PreviewCard implements _PreviewCard {
       required this.embedUrl,
       @JsonKey(name: 'blurhash') this.blurHash});
 
-  factory _$_PreviewCard.fromJson(Map<String, dynamic> json) =>
-      _$$_PreviewCardFromJson(json);
+  factory _$PreviewCardImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PreviewCardImplFromJson(json);
 
   /// Location of linked resource.
   @override
@@ -382,10 +382,10 @@ class _$_PreviewCard implements _PreviewCard {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PreviewCard &&
+            other is _$PreviewCardImpl &&
             (identical(other.url, url) || other.url == url) &&
             (identical(other.title, title) || other.title == title) &&
             (identical(other.description, description) ||
@@ -432,12 +432,12 @@ class _$_PreviewCard implements _PreviewCard {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PreviewCardCopyWith<_$_PreviewCard> get copyWith =>
-      __$$_PreviewCardCopyWithImpl<_$_PreviewCard>(this, _$identity);
+  _$$PreviewCardImplCopyWith<_$PreviewCardImpl> get copyWith =>
+      __$$PreviewCardImplCopyWithImpl<_$PreviewCardImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PreviewCardToJson(
+    return _$$PreviewCardImplToJson(
       this,
     );
   }
@@ -458,10 +458,10 @@ abstract class _PreviewCard implements PreviewCard {
       required final int height,
       @JsonKey(name: 'image') final String? imageUrl,
       required final String embedUrl,
-      @JsonKey(name: 'blurhash') final String? blurHash}) = _$_PreviewCard;
+      @JsonKey(name: 'blurhash') final String? blurHash}) = _$PreviewCardImpl;
 
   factory _PreviewCard.fromJson(Map<String, dynamic> json) =
-      _$_PreviewCard.fromJson;
+      _$PreviewCardImpl.fromJson;
 
   @override
 
@@ -524,6 +524,6 @@ abstract class _PreviewCard implements PreviewCard {
   String? get blurHash;
   @override
   @JsonKey(ignore: true)
-  _$$_PreviewCardCopyWith<_$_PreviewCard> get copyWith =>
+  _$$PreviewCardImplCopyWith<_$PreviewCardImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

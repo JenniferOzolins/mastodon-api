@@ -133,11 +133,11 @@ class _$OEmbedMetadataCopyWithImpl<$Res, $Val extends OEmbedMetadata>
 }
 
 /// @nodoc
-abstract class _$$_OEmbedMetadataCopyWith<$Res>
+abstract class _$$OEmbedMetadataImplCopyWith<$Res>
     implements $OEmbedMetadataCopyWith<$Res> {
-  factory _$$_OEmbedMetadataCopyWith(
-          _$_OEmbedMetadata value, $Res Function(_$_OEmbedMetadata) then) =
-      __$$_OEmbedMetadataCopyWithImpl<$Res>;
+  factory _$$OEmbedMetadataImplCopyWith(_$OEmbedMetadataImpl value,
+          $Res Function(_$OEmbedMetadataImpl) then) =
+      __$$OEmbedMetadataImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -155,11 +155,11 @@ abstract class _$$_OEmbedMetadataCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_OEmbedMetadataCopyWithImpl<$Res>
-    extends _$OEmbedMetadataCopyWithImpl<$Res, _$_OEmbedMetadata>
-    implements _$$_OEmbedMetadataCopyWith<$Res> {
-  __$$_OEmbedMetadataCopyWithImpl(
-      _$_OEmbedMetadata _value, $Res Function(_$_OEmbedMetadata) _then)
+class __$$OEmbedMetadataImplCopyWithImpl<$Res>
+    extends _$OEmbedMetadataCopyWithImpl<$Res, _$OEmbedMetadataImpl>
+    implements _$$OEmbedMetadataImplCopyWith<$Res> {
+  __$$OEmbedMetadataImplCopyWithImpl(
+      _$OEmbedMetadataImpl _value, $Res Function(_$OEmbedMetadataImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -177,7 +177,7 @@ class __$$_OEmbedMetadataCopyWithImpl<$Res>
     Object? width = null,
     Object? height = freezed,
   }) {
-    return _then(_$_OEmbedMetadata(
+    return _then(_$OEmbedMetadataImpl(
       type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -229,8 +229,8 @@ class __$$_OEmbedMetadataCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(includeIfNull: false)
-class _$_OEmbedMetadata implements _OEmbedMetadata {
-  const _$_OEmbedMetadata(
+class _$OEmbedMetadataImpl implements _OEmbedMetadata {
+  const _$OEmbedMetadataImpl(
       {required this.type,
       required this.version,
       this.title,
@@ -243,8 +243,8 @@ class _$_OEmbedMetadata implements _OEmbedMetadata {
       required this.width,
       this.height});
 
-  factory _$_OEmbedMetadata.fromJson(Map<String, dynamic> json) =>
-      _$$_OEmbedMetadataFromJson(json);
+  factory _$OEmbedMetadataImpl.fromJson(Map<String, dynamic> json) =>
+      _$$OEmbedMetadataImplFromJson(json);
 
   @override
   final String type;
@@ -275,10 +275,10 @@ class _$_OEmbedMetadata implements _OEmbedMetadata {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_OEmbedMetadata &&
+            other is _$OEmbedMetadataImpl &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.version, version) || other.version == version) &&
             (identical(other.title, title) || other.title == title) &&
@@ -305,12 +305,13 @@ class _$_OEmbedMetadata implements _OEmbedMetadata {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_OEmbedMetadataCopyWith<_$_OEmbedMetadata> get copyWith =>
-      __$$_OEmbedMetadataCopyWithImpl<_$_OEmbedMetadata>(this, _$identity);
+  _$$OEmbedMetadataImplCopyWith<_$OEmbedMetadataImpl> get copyWith =>
+      __$$OEmbedMetadataImplCopyWithImpl<_$OEmbedMetadataImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_OEmbedMetadataToJson(
+    return _$$OEmbedMetadataImplToJson(
       this,
     );
   }
@@ -328,10 +329,10 @@ abstract class _OEmbedMetadata implements OEmbedMetadata {
       required final int cacheAge,
       required final String html,
       required final int width,
-      final int? height}) = _$_OEmbedMetadata;
+      final int? height}) = _$OEmbedMetadataImpl;
 
   factory _OEmbedMetadata.fromJson(Map<String, dynamic> json) =
-      _$_OEmbedMetadata.fromJson;
+      _$OEmbedMetadataImpl.fromJson;
 
   @override
   String get type;
@@ -357,6 +358,6 @@ abstract class _OEmbedMetadata implements OEmbedMetadata {
   int? get height;
   @override
   @JsonKey(ignore: true)
-  _$$_OEmbedMetadataCopyWith<_$_OEmbedMetadata> get copyWith =>
+  _$$OEmbedMetadataImplCopyWith<_$OEmbedMetadataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

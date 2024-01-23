@@ -8,11 +8,12 @@ part of 'thumbnail_version.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ThumbnailVersion _$$_ThumbnailVersionFromJson(Map json) => $checkedCreate(
-      r'_$_ThumbnailVersion',
+_$ThumbnailVersionImpl _$$ThumbnailVersionImplFromJson(Map json) =>
+    $checkedCreate(
+      r'_$ThumbnailVersionImpl',
       json,
       ($checkedConvert) {
-        final val = _$_ThumbnailVersion(
+        final val = _$ThumbnailVersionImpl(
           v1: $checkedConvert('@1x', (v) => v as String),
           v2: $checkedConvert('@2x', (v) => v as String),
         );
@@ -21,7 +22,8 @@ _$_ThumbnailVersion _$$_ThumbnailVersionFromJson(Map json) => $checkedCreate(
       fieldKeyMap: const {'v1': '@1x', 'v2': '@2x'},
     );
 
-Map<String, dynamic> _$$_ThumbnailVersionToJson(_$_ThumbnailVersion instance) =>
+Map<String, dynamic> _$$ThumbnailVersionImplToJson(
+        _$ThumbnailVersionImpl instance) =>
     <String, dynamic>{
       '@1x': instance.v1,
       '@2x': instance.v2,

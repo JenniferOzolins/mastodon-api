@@ -95,11 +95,11 @@ class _$ScheduledPollCopyWithImpl<$Res, $Val extends ScheduledPoll>
 }
 
 /// @nodoc
-abstract class _$$_ScheduledPollCopyWith<$Res>
+abstract class _$$ScheduledPollImplCopyWith<$Res>
     implements $ScheduledPollCopyWith<$Res> {
-  factory _$$_ScheduledPollCopyWith(
-          _$_ScheduledPoll value, $Res Function(_$_ScheduledPoll) then) =
-      __$$_ScheduledPollCopyWithImpl<$Res>;
+  factory _$$ScheduledPollImplCopyWith(
+          _$ScheduledPollImpl value, $Res Function(_$ScheduledPollImpl) then) =
+      __$$ScheduledPollImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -110,11 +110,11 @@ abstract class _$$_ScheduledPollCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ScheduledPollCopyWithImpl<$Res>
-    extends _$ScheduledPollCopyWithImpl<$Res, _$_ScheduledPoll>
-    implements _$$_ScheduledPollCopyWith<$Res> {
-  __$$_ScheduledPollCopyWithImpl(
-      _$_ScheduledPoll _value, $Res Function(_$_ScheduledPoll) _then)
+class __$$ScheduledPollImplCopyWithImpl<$Res>
+    extends _$ScheduledPollCopyWithImpl<$Res, _$ScheduledPollImpl>
+    implements _$$ScheduledPollImplCopyWith<$Res> {
+  __$$ScheduledPollImplCopyWithImpl(
+      _$ScheduledPollImpl _value, $Res Function(_$ScheduledPollImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -125,7 +125,7 @@ class __$$_ScheduledPollCopyWithImpl<$Res>
     Object? isHideTotals = freezed,
     Object? expiresInSeconds = null,
   }) {
-    return _then(_$_ScheduledPoll(
+    return _then(_$ScheduledPollImpl(
       options: null == options
           ? _value._options
           : options // ignore: cast_nullable_to_non_nullable
@@ -149,20 +149,18 @@ class __$$_ScheduledPollCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(includeIfNull: false)
-class _$_ScheduledPoll implements _ScheduledPoll {
-  const _$_ScheduledPoll(
+class _$ScheduledPollImpl implements _ScheduledPoll {
+  const _$ScheduledPollImpl(
       {required final List<String> options,
-      @JsonKey(name: 'multiple')
-          this.isMultiple,
-      @JsonKey(name: 'hide_totals')
-          this.isHideTotals,
+      @JsonKey(name: 'multiple') this.isMultiple,
+      @JsonKey(name: 'hide_totals') this.isHideTotals,
       @IntConverter()
       @JsonKey(name: 'expires_in')
-          required this.expiresInSeconds})
+      required this.expiresInSeconds})
       : _options = options;
 
-  factory _$_ScheduledPoll.fromJson(Map<String, dynamic> json) =>
-      _$$_ScheduledPollFromJson(json);
+  factory _$ScheduledPollImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ScheduledPollImplFromJson(json);
 
   /// The poll options to be used.
   final List<String> _options;
@@ -197,10 +195,10 @@ class _$_ScheduledPoll implements _ScheduledPoll {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ScheduledPoll &&
+            other is _$ScheduledPollImpl &&
             const DeepCollectionEquality().equals(other._options, _options) &&
             (identical(other.isMultiple, isMultiple) ||
                 other.isMultiple == isMultiple) &&
@@ -222,12 +220,12 @@ class _$_ScheduledPoll implements _ScheduledPoll {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ScheduledPollCopyWith<_$_ScheduledPoll> get copyWith =>
-      __$$_ScheduledPollCopyWithImpl<_$_ScheduledPoll>(this, _$identity);
+  _$$ScheduledPollImplCopyWith<_$ScheduledPollImpl> get copyWith =>
+      __$$ScheduledPollImplCopyWithImpl<_$ScheduledPollImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ScheduledPollToJson(
+    return _$$ScheduledPollImplToJson(
       this,
     );
   }
@@ -236,16 +234,14 @@ class _$_ScheduledPoll implements _ScheduledPoll {
 abstract class _ScheduledPoll implements ScheduledPoll {
   const factory _ScheduledPoll(
       {required final List<String> options,
-      @JsonKey(name: 'multiple')
-          final bool? isMultiple,
-      @JsonKey(name: 'hide_totals')
-          final bool? isHideTotals,
+      @JsonKey(name: 'multiple') final bool? isMultiple,
+      @JsonKey(name: 'hide_totals') final bool? isHideTotals,
       @IntConverter()
       @JsonKey(name: 'expires_in')
-          required final int expiresInSeconds}) = _$_ScheduledPoll;
+      required final int expiresInSeconds}) = _$ScheduledPollImpl;
 
   factory _ScheduledPoll.fromJson(Map<String, dynamic> json) =
-      _$_ScheduledPoll.fromJson;
+      _$ScheduledPollImpl.fromJson;
 
   @override
 
@@ -269,6 +265,6 @@ abstract class _ScheduledPoll implements ScheduledPoll {
   int get expiresInSeconds;
   @override
   @JsonKey(ignore: true)
-  _$$_ScheduledPollCopyWith<_$_ScheduledPoll> get copyWith =>
+  _$$ScheduledPollImplCopyWith<_$ScheduledPollImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

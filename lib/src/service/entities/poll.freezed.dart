@@ -153,9 +153,10 @@ class _$PollCopyWithImpl<$Res, $Val extends Poll>
 }
 
 /// @nodoc
-abstract class _$$_PollCopyWith<$Res> implements $PollCopyWith<$Res> {
-  factory _$$_PollCopyWith(_$_Poll value, $Res Function(_$_Poll) then) =
-      __$$_PollCopyWithImpl<$Res>;
+abstract class _$$PollImplCopyWith<$Res> implements $PollCopyWith<$Res> {
+  factory _$$PollImplCopyWith(
+          _$PollImpl value, $Res Function(_$PollImpl) then) =
+      __$$PollImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -172,9 +173,10 @@ abstract class _$$_PollCopyWith<$Res> implements $PollCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_PollCopyWithImpl<$Res> extends _$PollCopyWithImpl<$Res, _$_Poll>
-    implements _$$_PollCopyWith<$Res> {
-  __$$_PollCopyWithImpl(_$_Poll _value, $Res Function(_$_Poll) _then)
+class __$$PollImplCopyWithImpl<$Res>
+    extends _$PollCopyWithImpl<$Res, _$PollImpl>
+    implements _$$PollImplCopyWith<$Res> {
+  __$$PollImplCopyWithImpl(_$PollImpl _value, $Res Function(_$PollImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -191,7 +193,7 @@ class __$$_PollCopyWithImpl<$Res> extends _$PollCopyWithImpl<$Res, _$_Poll>
     Object? emojis = null,
     Object? expiresAt = freezed,
   }) {
-    return _then(_$_Poll(
+    return _then(_$PollImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -238,8 +240,8 @@ class __$$_PollCopyWithImpl<$Res> extends _$PollCopyWithImpl<$Res, _$_Poll>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Poll implements _Poll {
-  const _$_Poll(
+class _$PollImpl implements _Poll {
+  const _$PollImpl(
       {required this.id,
       required this.votesCount,
       this.votersCount,
@@ -254,7 +256,8 @@ class _$_Poll implements _Poll {
         _ownVotes = ownVotes,
         _emojis = emojis;
 
-  factory _$_Poll.fromJson(Map<String, dynamic> json) => _$$_PollFromJson(json);
+  factory _$PollImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PollImplFromJson(json);
 
   /// The ID of the poll in the database.
   @override
@@ -338,10 +341,10 @@ class _$_Poll implements _Poll {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Poll &&
+            other is _$PollImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.votesCount, votesCount) ||
                 other.votesCount == votesCount) &&
@@ -377,12 +380,12 @@ class _$_Poll implements _Poll {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PollCopyWith<_$_Poll> get copyWith =>
-      __$$_PollCopyWithImpl<_$_Poll>(this, _$identity);
+  _$$PollImplCopyWith<_$PollImpl> get copyWith =>
+      __$$PollImplCopyWithImpl<_$PollImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PollToJson(
+    return _$$PollImplToJson(
       this,
     );
   }
@@ -399,9 +402,9 @@ abstract class _Poll implements Poll {
       required final List<PollOption> options,
       final List<int>? ownVotes,
       required final List<Emoji> emojis,
-      final DateTime? expiresAt}) = _$_Poll;
+      final DateTime? expiresAt}) = _$PollImpl;
 
-  factory _Poll.fromJson(Map<String, dynamic> json) = _$_Poll.fromJson;
+  factory _Poll.fromJson(Map<String, dynamic> json) = _$PollImpl.fromJson;
 
   @override
 
@@ -455,5 +458,6 @@ abstract class _Poll implements Poll {
   DateTime? get expiresAt;
   @override
   @JsonKey(ignore: true)
-  _$$_PollCopyWith<_$_Poll> get copyWith => throw _privateConstructorUsedError;
+  _$$PollImplCopyWith<_$PollImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

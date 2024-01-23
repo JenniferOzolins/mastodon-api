@@ -75,11 +75,11 @@ class _$NotificationSnapshotCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_NotificationSnapshotCopyWith<$Res>
+abstract class _$$NotificationSnapshotImplCopyWith<$Res>
     implements $NotificationSnapshotCopyWith<$Res> {
-  factory _$$_NotificationSnapshotCopyWith(_$_NotificationSnapshot value,
-          $Res Function(_$_NotificationSnapshot) then) =
-      __$$_NotificationSnapshotCopyWithImpl<$Res>;
+  factory _$$NotificationSnapshotImplCopyWith(_$NotificationSnapshotImpl value,
+          $Res Function(_$NotificationSnapshotImpl) then) =
+      __$$NotificationSnapshotImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({@JsonKey(name: 'notifications') PositionMarker marker});
@@ -89,11 +89,11 @@ abstract class _$$_NotificationSnapshotCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_NotificationSnapshotCopyWithImpl<$Res>
-    extends _$NotificationSnapshotCopyWithImpl<$Res, _$_NotificationSnapshot>
-    implements _$$_NotificationSnapshotCopyWith<$Res> {
-  __$$_NotificationSnapshotCopyWithImpl(_$_NotificationSnapshot _value,
-      $Res Function(_$_NotificationSnapshot) _then)
+class __$$NotificationSnapshotImplCopyWithImpl<$Res>
+    extends _$NotificationSnapshotCopyWithImpl<$Res, _$NotificationSnapshotImpl>
+    implements _$$NotificationSnapshotImplCopyWith<$Res> {
+  __$$NotificationSnapshotImplCopyWithImpl(_$NotificationSnapshotImpl _value,
+      $Res Function(_$NotificationSnapshotImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -101,7 +101,7 @@ class __$$_NotificationSnapshotCopyWithImpl<$Res>
   $Res call({
     Object? marker = null,
   }) {
-    return _then(_$_NotificationSnapshot(
+    return _then(_$NotificationSnapshotImpl(
       marker: null == marker
           ? _value.marker
           : marker // ignore: cast_nullable_to_non_nullable
@@ -112,12 +112,12 @@ class __$$_NotificationSnapshotCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_NotificationSnapshot implements _NotificationSnapshot {
-  const _$_NotificationSnapshot(
+class _$NotificationSnapshotImpl implements _NotificationSnapshot {
+  const _$NotificationSnapshotImpl(
       {@JsonKey(name: 'notifications') required this.marker});
 
-  factory _$_NotificationSnapshot.fromJson(Map<String, dynamic> json) =>
-      _$$_NotificationSnapshotFromJson(json);
+  factory _$NotificationSnapshotImpl.fromJson(Map<String, dynamic> json) =>
+      _$$NotificationSnapshotImplFromJson(json);
 
   /// Snapshot for notifications.
   @override
@@ -130,10 +130,10 @@ class _$_NotificationSnapshot implements _NotificationSnapshot {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_NotificationSnapshot &&
+            other is _$NotificationSnapshotImpl &&
             (identical(other.marker, marker) || other.marker == marker));
   }
 
@@ -144,13 +144,14 @@ class _$_NotificationSnapshot implements _NotificationSnapshot {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_NotificationSnapshotCopyWith<_$_NotificationSnapshot> get copyWith =>
-      __$$_NotificationSnapshotCopyWithImpl<_$_NotificationSnapshot>(
-          this, _$identity);
+  _$$NotificationSnapshotImplCopyWith<_$NotificationSnapshotImpl>
+      get copyWith =>
+          __$$NotificationSnapshotImplCopyWithImpl<_$NotificationSnapshotImpl>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_NotificationSnapshotToJson(
+    return _$$NotificationSnapshotImplToJson(
       this,
     );
   }
@@ -159,10 +160,10 @@ class _$_NotificationSnapshot implements _NotificationSnapshot {
 abstract class _NotificationSnapshot implements NotificationSnapshot {
   const factory _NotificationSnapshot(
       {@JsonKey(name: 'notifications')
-          required final PositionMarker marker}) = _$_NotificationSnapshot;
+      required final PositionMarker marker}) = _$NotificationSnapshotImpl;
 
   factory _NotificationSnapshot.fromJson(Map<String, dynamic> json) =
-      _$_NotificationSnapshot.fromJson;
+      _$NotificationSnapshotImpl.fromJson;
 
   @override
 
@@ -171,6 +172,6 @@ abstract class _NotificationSnapshot implements NotificationSnapshot {
   PositionMarker get marker;
   @override
   @JsonKey(ignore: true)
-  _$$_NotificationSnapshotCopyWith<_$_NotificationSnapshot> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$NotificationSnapshotImplCopyWith<_$NotificationSnapshotImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

@@ -8,11 +8,11 @@ part of 'thumbnail.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Thumbnail _$$_ThumbnailFromJson(Map json) => $checkedCreate(
-      r'_$_Thumbnail',
+_$ThumbnailImpl _$$ThumbnailImplFromJson(Map json) => $checkedCreate(
+      r'_$ThumbnailImpl',
       json,
       ($checkedConvert) {
-        final val = _$_Thumbnail(
+        final val = _$ThumbnailImpl(
           url: $checkedConvert('url', (v) => v as String),
           blurHash: $checkedConvert('blurhash', (v) => v as String),
           version: $checkedConvert(
@@ -25,7 +25,7 @@ _$_Thumbnail _$$_ThumbnailFromJson(Map json) => $checkedCreate(
       fieldKeyMap: const {'blurHash': 'blurhash', 'version': 'versions'},
     );
 
-Map<String, dynamic> _$$_ThumbnailToJson(_$_Thumbnail instance) =>
+Map<String, dynamic> _$$ThumbnailImplToJson(_$ThumbnailImpl instance) =>
     <String, dynamic>{
       'url': instance.url,
       'blurhash': instance.blurHash,

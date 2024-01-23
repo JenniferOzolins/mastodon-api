@@ -8,11 +8,11 @@ part of 'emoji.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Emoji _$$_EmojiFromJson(Map json) => $checkedCreate(
-      r'_$_Emoji',
+_$EmojiImpl _$$EmojiImplFromJson(Map json) => $checkedCreate(
+      r'_$EmojiImpl',
       json,
       ($checkedConvert) {
-        final val = _$_Emoji(
+        final val = _$EmojiImpl(
           code: $checkedConvert('shortcode', (v) => v as String),
           url: $checkedConvert('url', (v) => v as String),
           staticUrl: $checkedConvert('static_url', (v) => v as String?),
@@ -29,7 +29,7 @@ _$_Emoji _$$_EmojiFromJson(Map json) => $checkedCreate(
       },
     );
 
-Map<String, dynamic> _$$_EmojiToJson(_$_Emoji instance) {
+Map<String, dynamic> _$$EmojiImplToJson(_$EmojiImpl instance) {
   final val = <String, dynamic>{
     'shortcode': instance.code,
     'url': instance.url,

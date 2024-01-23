@@ -93,11 +93,11 @@ class _$AnnouncementAccountCopyWithImpl<$Res, $Val extends AnnouncementAccount>
 }
 
 /// @nodoc
-abstract class _$$_AnnouncementAccountCopyWith<$Res>
+abstract class _$$AnnouncementAccountImplCopyWith<$Res>
     implements $AnnouncementAccountCopyWith<$Res> {
-  factory _$$_AnnouncementAccountCopyWith(_$_AnnouncementAccount value,
-          $Res Function(_$_AnnouncementAccount) then) =
-      __$$_AnnouncementAccountCopyWithImpl<$Res>;
+  factory _$$AnnouncementAccountImplCopyWith(_$AnnouncementAccountImpl value,
+          $Res Function(_$AnnouncementAccountImpl) then) =
+      __$$AnnouncementAccountImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -108,11 +108,11 @@ abstract class _$$_AnnouncementAccountCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_AnnouncementAccountCopyWithImpl<$Res>
-    extends _$AnnouncementAccountCopyWithImpl<$Res, _$_AnnouncementAccount>
-    implements _$$_AnnouncementAccountCopyWith<$Res> {
-  __$$_AnnouncementAccountCopyWithImpl(_$_AnnouncementAccount _value,
-      $Res Function(_$_AnnouncementAccount) _then)
+class __$$AnnouncementAccountImplCopyWithImpl<$Res>
+    extends _$AnnouncementAccountCopyWithImpl<$Res, _$AnnouncementAccountImpl>
+    implements _$$AnnouncementAccountImplCopyWith<$Res> {
+  __$$AnnouncementAccountImplCopyWithImpl(_$AnnouncementAccountImpl _value,
+      $Res Function(_$AnnouncementAccountImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -123,7 +123,7 @@ class __$$_AnnouncementAccountCopyWithImpl<$Res>
     Object? url = null,
     Object? webFingerAccountUri = null,
   }) {
-    return _then(_$_AnnouncementAccount(
+    return _then(_$AnnouncementAccountImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -147,15 +147,15 @@ class __$$_AnnouncementAccountCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(includeIfNull: false)
-class _$_AnnouncementAccount implements _AnnouncementAccount {
-  const _$_AnnouncementAccount(
+class _$AnnouncementAccountImpl implements _AnnouncementAccount {
+  const _$AnnouncementAccountImpl(
       {required this.id,
       required this.username,
       required this.url,
       @JsonKey(name: 'acct') required this.webFingerAccountUri});
 
-  factory _$_AnnouncementAccount.fromJson(Map<String, dynamic> json) =>
-      _$$_AnnouncementAccountFromJson(json);
+  factory _$AnnouncementAccountImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AnnouncementAccountImplFromJson(json);
 
   /// The account ID of the mentioned user.
   @override
@@ -181,10 +181,10 @@ class _$_AnnouncementAccount implements _AnnouncementAccount {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AnnouncementAccount &&
+            other is _$AnnouncementAccountImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.username, username) ||
                 other.username == username) &&
@@ -201,13 +201,13 @@ class _$_AnnouncementAccount implements _AnnouncementAccount {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AnnouncementAccountCopyWith<_$_AnnouncementAccount> get copyWith =>
-      __$$_AnnouncementAccountCopyWithImpl<_$_AnnouncementAccount>(
+  _$$AnnouncementAccountImplCopyWith<_$AnnouncementAccountImpl> get copyWith =>
+      __$$AnnouncementAccountImplCopyWithImpl<_$AnnouncementAccountImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AnnouncementAccountToJson(
+    return _$$AnnouncementAccountImplToJson(
       this,
     );
   }
@@ -219,10 +219,10 @@ abstract class _AnnouncementAccount implements AnnouncementAccount {
           required final String username,
           required final String url,
           @JsonKey(name: 'acct') required final String webFingerAccountUri}) =
-      _$_AnnouncementAccount;
+      _$AnnouncementAccountImpl;
 
   factory _AnnouncementAccount.fromJson(Map<String, dynamic> json) =
-      _$_AnnouncementAccount.fromJson;
+      _$AnnouncementAccountImpl.fromJson;
 
   @override
 
@@ -244,6 +244,6 @@ abstract class _AnnouncementAccount implements AnnouncementAccount {
   String get webFingerAccountUri;
   @override
   @JsonKey(ignore: true)
-  _$$_AnnouncementAccountCopyWith<_$_AnnouncementAccount> get copyWith =>
+  _$$AnnouncementAccountImplCopyWith<_$AnnouncementAccountImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

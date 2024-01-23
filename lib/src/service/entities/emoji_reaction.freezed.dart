@@ -103,11 +103,11 @@ class _$EmojiReactionCopyWithImpl<$Res, $Val extends EmojiReaction>
 }
 
 /// @nodoc
-abstract class _$$_EmojiReactionCopyWith<$Res>
+abstract class _$$EmojiReactionImplCopyWith<$Res>
     implements $EmojiReactionCopyWith<$Res> {
-  factory _$$_EmojiReactionCopyWith(
-          _$_EmojiReaction value, $Res Function(_$_EmojiReaction) then) =
-      __$$_EmojiReactionCopyWithImpl<$Res>;
+  factory _$$EmojiReactionImplCopyWith(
+          _$EmojiReactionImpl value, $Res Function(_$EmojiReactionImpl) then) =
+      __$$EmojiReactionImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -119,11 +119,11 @@ abstract class _$$_EmojiReactionCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_EmojiReactionCopyWithImpl<$Res>
-    extends _$EmojiReactionCopyWithImpl<$Res, _$_EmojiReaction>
-    implements _$$_EmojiReactionCopyWith<$Res> {
-  __$$_EmojiReactionCopyWithImpl(
-      _$_EmojiReaction _value, $Res Function(_$_EmojiReaction) _then)
+class __$$EmojiReactionImplCopyWithImpl<$Res>
+    extends _$EmojiReactionCopyWithImpl<$Res, _$EmojiReactionImpl>
+    implements _$$EmojiReactionImplCopyWith<$Res> {
+  __$$EmojiReactionImplCopyWithImpl(
+      _$EmojiReactionImpl _value, $Res Function(_$EmojiReactionImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -135,7 +135,7 @@ class __$$_EmojiReactionCopyWithImpl<$Res>
     Object? url = freezed,
     Object? staticUrl = freezed,
   }) {
-    return _then(_$_EmojiReaction(
+    return _then(_$EmojiReactionImpl(
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -163,16 +163,16 @@ class __$$_EmojiReactionCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(includeIfNull: false)
-class _$_EmojiReaction implements _EmojiReaction {
-  const _$_EmojiReaction(
+class _$EmojiReactionImpl implements _EmojiReaction {
+  const _$EmojiReactionImpl(
       {required this.name,
       required this.count,
       @JsonKey(name: 'me') this.isReacted,
       this.url,
       this.staticUrl});
 
-  factory _$_EmojiReaction.fromJson(Map<String, dynamic> json) =>
-      _$$_EmojiReactionFromJson(json);
+  factory _$EmojiReactionImpl.fromJson(Map<String, dynamic> json) =>
+      _$$EmojiReactionImplFromJson(json);
 
   /// The emoji used for the reaction. Either a unicode emoji,
   /// or a custom emoji’s shortcode.
@@ -203,10 +203,10 @@ class _$_EmojiReaction implements _EmojiReaction {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_EmojiReaction &&
+            other is _$EmojiReactionImpl &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.count, count) || other.count == count) &&
             (identical(other.isReacted, isReacted) ||
@@ -224,12 +224,12 @@ class _$_EmojiReaction implements _EmojiReaction {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_EmojiReactionCopyWith<_$_EmojiReaction> get copyWith =>
-      __$$_EmojiReactionCopyWithImpl<_$_EmojiReaction>(this, _$identity);
+  _$$EmojiReactionImplCopyWith<_$EmojiReactionImpl> get copyWith =>
+      __$$EmojiReactionImplCopyWithImpl<_$EmojiReactionImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EmojiReactionToJson(
+    return _$$EmojiReactionImplToJson(
       this,
     );
   }
@@ -241,10 +241,10 @@ abstract class _EmojiReaction implements EmojiReaction {
       required final int count,
       @JsonKey(name: 'me') final bool? isReacted,
       final String? url,
-      final String? staticUrl}) = _$_EmojiReaction;
+      final String? staticUrl}) = _$EmojiReactionImpl;
 
   factory _EmojiReaction.fromJson(Map<String, dynamic> json) =
-      _$_EmojiReaction.fromJson;
+      _$EmojiReactionImpl.fromJson;
 
   @override
 
@@ -271,6 +271,6 @@ abstract class _EmojiReaction implements EmojiReaction {
   String? get staticUrl;
   @override
   @JsonKey(ignore: true)
-  _$$_EmojiReactionCopyWith<_$_EmojiReaction> get copyWith =>
+  _$$EmojiReactionImplCopyWith<_$EmojiReactionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -72,22 +72,22 @@ class _$FamiliarFollowerCopyWithImpl<$Res, $Val extends FamiliarFollower>
 }
 
 /// @nodoc
-abstract class _$$_FamiliarFollowerCopyWith<$Res>
+abstract class _$$FamiliarFollowerImplCopyWith<$Res>
     implements $FamiliarFollowerCopyWith<$Res> {
-  factory _$$_FamiliarFollowerCopyWith(
-          _$_FamiliarFollower value, $Res Function(_$_FamiliarFollower) then) =
-      __$$_FamiliarFollowerCopyWithImpl<$Res>;
+  factory _$$FamiliarFollowerImplCopyWith(_$FamiliarFollowerImpl value,
+          $Res Function(_$FamiliarFollowerImpl) then) =
+      __$$FamiliarFollowerImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({@JsonKey(name: 'id') String accountId, List<Account> accounts});
 }
 
 /// @nodoc
-class __$$_FamiliarFollowerCopyWithImpl<$Res>
-    extends _$FamiliarFollowerCopyWithImpl<$Res, _$_FamiliarFollower>
-    implements _$$_FamiliarFollowerCopyWith<$Res> {
-  __$$_FamiliarFollowerCopyWithImpl(
-      _$_FamiliarFollower _value, $Res Function(_$_FamiliarFollower) _then)
+class __$$FamiliarFollowerImplCopyWithImpl<$Res>
+    extends _$FamiliarFollowerCopyWithImpl<$Res, _$FamiliarFollowerImpl>
+    implements _$$FamiliarFollowerImplCopyWith<$Res> {
+  __$$FamiliarFollowerImplCopyWithImpl(_$FamiliarFollowerImpl _value,
+      $Res Function(_$FamiliarFollowerImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -96,7 +96,7 @@ class __$$_FamiliarFollowerCopyWithImpl<$Res>
     Object? accountId = null,
     Object? accounts = null,
   }) {
-    return _then(_$_FamiliarFollower(
+    return _then(_$FamiliarFollowerImpl(
       accountId: null == accountId
           ? _value.accountId
           : accountId // ignore: cast_nullable_to_non_nullable
@@ -112,14 +112,14 @@ class __$$_FamiliarFollowerCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(includeIfNull: false)
-class _$_FamiliarFollower implements _FamiliarFollower {
-  const _$_FamiliarFollower(
+class _$FamiliarFollowerImpl implements _FamiliarFollower {
+  const _$FamiliarFollowerImpl(
       {@JsonKey(name: 'id') required this.accountId,
       required final List<Account> accounts})
       : _accounts = accounts;
 
-  factory _$_FamiliarFollower.fromJson(Map<String, dynamic> json) =>
-      _$$_FamiliarFollowerFromJson(json);
+  factory _$FamiliarFollowerImpl.fromJson(Map<String, dynamic> json) =>
+      _$$FamiliarFollowerImplFromJson(json);
 
   /// The ID of the Account in the database.
   @override
@@ -143,10 +143,10 @@ class _$_FamiliarFollower implements _FamiliarFollower {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_FamiliarFollower &&
+            other is _$FamiliarFollowerImpl &&
             (identical(other.accountId, accountId) ||
                 other.accountId == accountId) &&
             const DeepCollectionEquality().equals(other._accounts, _accounts));
@@ -160,12 +160,13 @@ class _$_FamiliarFollower implements _FamiliarFollower {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_FamiliarFollowerCopyWith<_$_FamiliarFollower> get copyWith =>
-      __$$_FamiliarFollowerCopyWithImpl<_$_FamiliarFollower>(this, _$identity);
+  _$$FamiliarFollowerImplCopyWith<_$FamiliarFollowerImpl> get copyWith =>
+      __$$FamiliarFollowerImplCopyWithImpl<_$FamiliarFollowerImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_FamiliarFollowerToJson(
+    return _$$FamiliarFollowerImplToJson(
       this,
     );
   }
@@ -174,10 +175,10 @@ class _$_FamiliarFollower implements _FamiliarFollower {
 abstract class _FamiliarFollower implements FamiliarFollower {
   const factory _FamiliarFollower(
       {@JsonKey(name: 'id') required final String accountId,
-      required final List<Account> accounts}) = _$_FamiliarFollower;
+      required final List<Account> accounts}) = _$FamiliarFollowerImpl;
 
   factory _FamiliarFollower.fromJson(Map<String, dynamic> json) =
-      _$_FamiliarFollower.fromJson;
+      _$FamiliarFollowerImpl.fromJson;
 
   @override
 
@@ -190,6 +191,6 @@ abstract class _FamiliarFollower implements FamiliarFollower {
   List<Account> get accounts;
   @override
   @JsonKey(ignore: true)
-  _$$_FamiliarFollowerCopyWith<_$_FamiliarFollower> get copyWith =>
+  _$$FamiliarFollowerImplCopyWith<_$FamiliarFollowerImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

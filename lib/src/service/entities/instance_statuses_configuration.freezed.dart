@@ -86,12 +86,12 @@ class _$InstanceStatusesConfigurationCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_InstanceStatusesConfigurationCopyWith<$Res>
+abstract class _$$InstanceStatusesConfigurationImplCopyWith<$Res>
     implements $InstanceStatusesConfigurationCopyWith<$Res> {
-  factory _$$_InstanceStatusesConfigurationCopyWith(
-          _$_InstanceStatusesConfiguration value,
-          $Res Function(_$_InstanceStatusesConfiguration) then) =
-      __$$_InstanceStatusesConfigurationCopyWithImpl<$Res>;
+  factory _$$InstanceStatusesConfigurationImplCopyWith(
+          _$InstanceStatusesConfigurationImpl value,
+          $Res Function(_$InstanceStatusesConfigurationImpl) then) =
+      __$$InstanceStatusesConfigurationImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -101,13 +101,13 @@ abstract class _$$_InstanceStatusesConfigurationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_InstanceStatusesConfigurationCopyWithImpl<$Res>
+class __$$InstanceStatusesConfigurationImplCopyWithImpl<$Res>
     extends _$InstanceStatusesConfigurationCopyWithImpl<$Res,
-        _$_InstanceStatusesConfiguration>
-    implements _$$_InstanceStatusesConfigurationCopyWith<$Res> {
-  __$$_InstanceStatusesConfigurationCopyWithImpl(
-      _$_InstanceStatusesConfiguration _value,
-      $Res Function(_$_InstanceStatusesConfiguration) _then)
+        _$InstanceStatusesConfigurationImpl>
+    implements _$$InstanceStatusesConfigurationImplCopyWith<$Res> {
+  __$$InstanceStatusesConfigurationImplCopyWithImpl(
+      _$InstanceStatusesConfigurationImpl _value,
+      $Res Function(_$InstanceStatusesConfigurationImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -117,7 +117,7 @@ class __$$_InstanceStatusesConfigurationCopyWithImpl<$Res>
     Object? maxMediaAttachments = null,
     Object? charactersReservedPerUrl = null,
   }) {
-    return _then(_$_InstanceStatusesConfiguration(
+    return _then(_$InstanceStatusesConfigurationImpl(
       maxCharacters: null == maxCharacters
           ? _value.maxCharacters
           : maxCharacters // ignore: cast_nullable_to_non_nullable
@@ -137,16 +137,16 @@ class __$$_InstanceStatusesConfigurationCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(includeIfNull: false)
-class _$_InstanceStatusesConfiguration
+class _$InstanceStatusesConfigurationImpl
     implements _InstanceStatusesConfiguration {
-  const _$_InstanceStatusesConfiguration(
+  const _$InstanceStatusesConfigurationImpl(
       {required this.maxCharacters,
       required this.maxMediaAttachments,
       required this.charactersReservedPerUrl});
 
-  factory _$_InstanceStatusesConfiguration.fromJson(
+  factory _$InstanceStatusesConfigurationImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_InstanceStatusesConfigurationFromJson(json);
+      _$$InstanceStatusesConfigurationImplFromJson(json);
 
   /// The maximum number of allowed characters per status.
   @override
@@ -166,10 +166,10 @@ class _$_InstanceStatusesConfiguration
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_InstanceStatusesConfiguration &&
+            other is _$InstanceStatusesConfigurationImpl &&
             (identical(other.maxCharacters, maxCharacters) ||
                 other.maxCharacters == maxCharacters) &&
             (identical(other.maxMediaAttachments, maxMediaAttachments) ||
@@ -187,13 +187,14 @@ class _$_InstanceStatusesConfiguration
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_InstanceStatusesConfigurationCopyWith<_$_InstanceStatusesConfiguration>
-      get copyWith => __$$_InstanceStatusesConfigurationCopyWithImpl<
-          _$_InstanceStatusesConfiguration>(this, _$identity);
+  _$$InstanceStatusesConfigurationImplCopyWith<
+          _$InstanceStatusesConfigurationImpl>
+      get copyWith => __$$InstanceStatusesConfigurationImplCopyWithImpl<
+          _$InstanceStatusesConfigurationImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_InstanceStatusesConfigurationToJson(
+    return _$$InstanceStatusesConfigurationImplToJson(
       this,
     );
   }
@@ -205,10 +206,10 @@ abstract class _InstanceStatusesConfiguration
           {required final int maxCharacters,
           required final int maxMediaAttachments,
           required final int charactersReservedPerUrl}) =
-      _$_InstanceStatusesConfiguration;
+      _$InstanceStatusesConfigurationImpl;
 
   factory _InstanceStatusesConfiguration.fromJson(Map<String, dynamic> json) =
-      _$_InstanceStatusesConfiguration.fromJson;
+      _$InstanceStatusesConfigurationImpl.fromJson;
 
   @override
 
@@ -224,6 +225,7 @@ abstract class _InstanceStatusesConfiguration
   int get charactersReservedPerUrl;
   @override
   @JsonKey(ignore: true)
-  _$$_InstanceStatusesConfigurationCopyWith<_$_InstanceStatusesConfiguration>
+  _$$InstanceStatusesConfigurationImplCopyWith<
+          _$InstanceStatusesConfigurationImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

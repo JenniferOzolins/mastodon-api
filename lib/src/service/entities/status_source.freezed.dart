@@ -79,22 +79,22 @@ class _$StatusSourceCopyWithImpl<$Res, $Val extends StatusSource>
 }
 
 /// @nodoc
-abstract class _$$_StatusSourceCopyWith<$Res>
+abstract class _$$StatusSourceImplCopyWith<$Res>
     implements $StatusSourceCopyWith<$Res> {
-  factory _$$_StatusSourceCopyWith(
-          _$_StatusSource value, $Res Function(_$_StatusSource) then) =
-      __$$_StatusSourceCopyWithImpl<$Res>;
+  factory _$$StatusSourceImplCopyWith(
+          _$StatusSourceImpl value, $Res Function(_$StatusSourceImpl) then) =
+      __$$StatusSourceImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String id, String text, String spoilerText});
 }
 
 /// @nodoc
-class __$$_StatusSourceCopyWithImpl<$Res>
-    extends _$StatusSourceCopyWithImpl<$Res, _$_StatusSource>
-    implements _$$_StatusSourceCopyWith<$Res> {
-  __$$_StatusSourceCopyWithImpl(
-      _$_StatusSource _value, $Res Function(_$_StatusSource) _then)
+class __$$StatusSourceImplCopyWithImpl<$Res>
+    extends _$StatusSourceCopyWithImpl<$Res, _$StatusSourceImpl>
+    implements _$$StatusSourceImplCopyWith<$Res> {
+  __$$StatusSourceImplCopyWithImpl(
+      _$StatusSourceImpl _value, $Res Function(_$StatusSourceImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -104,7 +104,7 @@ class __$$_StatusSourceCopyWithImpl<$Res>
     Object? text = null,
     Object? spoilerText = null,
   }) {
-    return _then(_$_StatusSource(
+    return _then(_$StatusSourceImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -123,12 +123,12 @@ class __$$_StatusSourceCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_StatusSource implements _StatusSource {
-  const _$_StatusSource(
+class _$StatusSourceImpl implements _StatusSource {
+  const _$StatusSourceImpl(
       {required this.id, required this.text, required this.spoilerText});
 
-  factory _$_StatusSource.fromJson(Map<String, dynamic> json) =>
-      _$$_StatusSourceFromJson(json);
+  factory _$StatusSourceImpl.fromJson(Map<String, dynamic> json) =>
+      _$$StatusSourceImplFromJson(json);
 
   /// ID of the status in the database.
   @override
@@ -148,10 +148,10 @@ class _$_StatusSource implements _StatusSource {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_StatusSource &&
+            other is _$StatusSourceImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.text, text) || other.text == text) &&
             (identical(other.spoilerText, spoilerText) ||
@@ -165,12 +165,12 @@ class _$_StatusSource implements _StatusSource {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_StatusSourceCopyWith<_$_StatusSource> get copyWith =>
-      __$$_StatusSourceCopyWithImpl<_$_StatusSource>(this, _$identity);
+  _$$StatusSourceImplCopyWith<_$StatusSourceImpl> get copyWith =>
+      __$$StatusSourceImplCopyWithImpl<_$StatusSourceImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_StatusSourceToJson(
+    return _$$StatusSourceImplToJson(
       this,
     );
   }
@@ -180,10 +180,10 @@ abstract class _StatusSource implements StatusSource {
   const factory _StatusSource(
       {required final String id,
       required final String text,
-      required final String spoilerText}) = _$_StatusSource;
+      required final String spoilerText}) = _$StatusSourceImpl;
 
   factory _StatusSource.fromJson(Map<String, dynamic> json) =
-      _$_StatusSource.fromJson;
+      _$StatusSourceImpl.fromJson;
 
   @override
 
@@ -199,6 +199,6 @@ abstract class _StatusSource implements StatusSource {
   String get spoilerText;
   @override
   @JsonKey(ignore: true)
-  _$$_StatusSourceCopyWith<_$_StatusSource> get copyWith =>
+  _$$StatusSourceImplCopyWith<_$StatusSourceImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

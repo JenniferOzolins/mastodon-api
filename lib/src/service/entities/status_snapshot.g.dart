@@ -8,11 +8,11 @@ part of 'status_snapshot.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_StatusSnapshot _$$_StatusSnapshotFromJson(Map json) => $checkedCreate(
-      r'_$_StatusSnapshot',
+_$StatusSnapshotImpl _$$StatusSnapshotImplFromJson(Map json) => $checkedCreate(
+      r'_$StatusSnapshotImpl',
       json,
       ($checkedConvert) {
-        final val = _$_StatusSnapshot(
+        final val = _$StatusSnapshotImpl(
           marker: $checkedConvert(
               'home',
               (v) =>
@@ -23,7 +23,8 @@ _$_StatusSnapshot _$$_StatusSnapshotFromJson(Map json) => $checkedCreate(
       fieldKeyMap: const {'marker': 'home'},
     );
 
-Map<String, dynamic> _$$_StatusSnapshotToJson(_$_StatusSnapshot instance) =>
+Map<String, dynamic> _$$StatusSnapshotImplToJson(
+        _$StatusSnapshotImpl instance) =>
     <String, dynamic>{
       'home': instance.marker.toJson(),
     };

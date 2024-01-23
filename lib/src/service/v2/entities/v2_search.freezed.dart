@@ -79,10 +79,11 @@ class _$V2SearchCopyWithImpl<$Res, $Val extends V2Search>
 }
 
 /// @nodoc
-abstract class _$$_V2SearchCopyWith<$Res> implements $V2SearchCopyWith<$Res> {
-  factory _$$_V2SearchCopyWith(
-          _$_V2Search value, $Res Function(_$_V2Search) then) =
-      __$$_V2SearchCopyWithImpl<$Res>;
+abstract class _$$V2SearchImplCopyWith<$Res>
+    implements $V2SearchCopyWith<$Res> {
+  factory _$$V2SearchImplCopyWith(
+          _$V2SearchImpl value, $Res Function(_$V2SearchImpl) then) =
+      __$$V2SearchImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -90,11 +91,11 @@ abstract class _$$_V2SearchCopyWith<$Res> implements $V2SearchCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_V2SearchCopyWithImpl<$Res>
-    extends _$V2SearchCopyWithImpl<$Res, _$_V2Search>
-    implements _$$_V2SearchCopyWith<$Res> {
-  __$$_V2SearchCopyWithImpl(
-      _$_V2Search _value, $Res Function(_$_V2Search) _then)
+class __$$V2SearchImplCopyWithImpl<$Res>
+    extends _$V2SearchCopyWithImpl<$Res, _$V2SearchImpl>
+    implements _$$V2SearchImplCopyWith<$Res> {
+  __$$V2SearchImplCopyWithImpl(
+      _$V2SearchImpl _value, $Res Function(_$V2SearchImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -104,7 +105,7 @@ class __$$_V2SearchCopyWithImpl<$Res>
     Object? statuses = freezed,
     Object? hashtags = freezed,
   }) {
-    return _then(_$_V2Search(
+    return _then(_$V2SearchImpl(
       accounts: freezed == accounts
           ? _value._accounts
           : accounts // ignore: cast_nullable_to_non_nullable
@@ -124,8 +125,8 @@ class __$$_V2SearchCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(includeIfNull: false)
-class _$_V2Search implements _V2Search {
-  const _$_V2Search(
+class _$V2SearchImpl implements _V2Search {
+  const _$V2SearchImpl(
       {final List<Account>? accounts,
       final List<Status>? statuses,
       final List<Tag>? hashtags})
@@ -133,8 +134,8 @@ class _$_V2Search implements _V2Search {
         _statuses = statuses,
         _hashtags = hashtags;
 
-  factory _$_V2Search.fromJson(Map<String, dynamic> json) =>
-      _$$_V2SearchFromJson(json);
+  factory _$V2SearchImpl.fromJson(Map<String, dynamic> json) =>
+      _$$V2SearchImplFromJson(json);
 
   /// [Account] objects related to search query.
   final List<Account>? _accounts;
@@ -181,10 +182,10 @@ class _$_V2Search implements _V2Search {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_V2Search &&
+            other is _$V2SearchImpl &&
             const DeepCollectionEquality().equals(other._accounts, _accounts) &&
             const DeepCollectionEquality().equals(other._statuses, _statuses) &&
             const DeepCollectionEquality().equals(other._hashtags, _hashtags));
@@ -201,12 +202,12 @@ class _$_V2Search implements _V2Search {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_V2SearchCopyWith<_$_V2Search> get copyWith =>
-      __$$_V2SearchCopyWithImpl<_$_V2Search>(this, _$identity);
+  _$$V2SearchImplCopyWith<_$V2SearchImpl> get copyWith =>
+      __$$V2SearchImplCopyWithImpl<_$V2SearchImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_V2SearchToJson(
+    return _$$V2SearchImplToJson(
       this,
     );
   }
@@ -216,9 +217,10 @@ abstract class _V2Search implements V2Search {
   const factory _V2Search(
       {final List<Account>? accounts,
       final List<Status>? statuses,
-      final List<Tag>? hashtags}) = _$_V2Search;
+      final List<Tag>? hashtags}) = _$V2SearchImpl;
 
-  factory _V2Search.fromJson(Map<String, dynamic> json) = _$_V2Search.fromJson;
+  factory _V2Search.fromJson(Map<String, dynamic> json) =
+      _$V2SearchImpl.fromJson;
 
   @override
 
@@ -234,6 +236,6 @@ abstract class _V2Search implements V2Search {
   List<Tag>? get hashtags;
   @override
   @JsonKey(ignore: true)
-  _$$_V2SearchCopyWith<_$_V2Search> get copyWith =>
+  _$$V2SearchImplCopyWith<_$V2SearchImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

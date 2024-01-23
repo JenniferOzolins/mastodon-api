@@ -8,17 +8,19 @@ import 'serializable.dart';
 /// Represents the visibility of specific status.
 enum Visibility implements Serializable {
   /// Visible to everyone, shown in public timelines.
-  public,
+  public('public'),
 
   /// Visible to public, but not included in public timelines.
-  unlisted,
+  unlisted('unlisted'),
 
   /// Visible to followers only, and to any mentioned users.
-  private,
+  private('private'),
 
   ///  Visible only to mentioned users.
-  direct;
+  direct('direct');
 
   @override
-  String get value => name;
+  final String value;
+
+  const Visibility(this.value);
 }

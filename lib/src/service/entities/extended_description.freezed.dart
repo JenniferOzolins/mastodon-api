@@ -71,22 +71,22 @@ class _$ExtendedDescriptionCopyWithImpl<$Res, $Val extends ExtendedDescription>
 }
 
 /// @nodoc
-abstract class _$$_ExtendedDescriptionCopyWith<$Res>
+abstract class _$$ExtendedDescriptionImplCopyWith<$Res>
     implements $ExtendedDescriptionCopyWith<$Res> {
-  factory _$$_ExtendedDescriptionCopyWith(_$_ExtendedDescription value,
-          $Res Function(_$_ExtendedDescription) then) =
-      __$$_ExtendedDescriptionCopyWithImpl<$Res>;
+  factory _$$ExtendedDescriptionImplCopyWith(_$ExtendedDescriptionImpl value,
+          $Res Function(_$ExtendedDescriptionImpl) then) =
+      __$$ExtendedDescriptionImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String content, DateTime updatedAt});
 }
 
 /// @nodoc
-class __$$_ExtendedDescriptionCopyWithImpl<$Res>
-    extends _$ExtendedDescriptionCopyWithImpl<$Res, _$_ExtendedDescription>
-    implements _$$_ExtendedDescriptionCopyWith<$Res> {
-  __$$_ExtendedDescriptionCopyWithImpl(_$_ExtendedDescription _value,
-      $Res Function(_$_ExtendedDescription) _then)
+class __$$ExtendedDescriptionImplCopyWithImpl<$Res>
+    extends _$ExtendedDescriptionCopyWithImpl<$Res, _$ExtendedDescriptionImpl>
+    implements _$$ExtendedDescriptionImplCopyWith<$Res> {
+  __$$ExtendedDescriptionImplCopyWithImpl(_$ExtendedDescriptionImpl _value,
+      $Res Function(_$ExtendedDescriptionImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -95,7 +95,7 @@ class __$$_ExtendedDescriptionCopyWithImpl<$Res>
     Object? content = null,
     Object? updatedAt = null,
   }) {
-    return _then(_$_ExtendedDescription(
+    return _then(_$ExtendedDescriptionImpl(
       content: null == content
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
@@ -110,12 +110,12 @@ class __$$_ExtendedDescriptionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ExtendedDescription implements _ExtendedDescription {
-  const _$_ExtendedDescription(
+class _$ExtendedDescriptionImpl implements _ExtendedDescription {
+  const _$ExtendedDescriptionImpl(
       {required this.content, required this.updatedAt});
 
-  factory _$_ExtendedDescription.fromJson(Map<String, dynamic> json) =>
-      _$$_ExtendedDescriptionFromJson(json);
+  factory _$ExtendedDescriptionImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ExtendedDescriptionImplFromJson(json);
 
   /// The rendered HTML content of the extended description.
   @override
@@ -131,10 +131,10 @@ class _$_ExtendedDescription implements _ExtendedDescription {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ExtendedDescription &&
+            other is _$ExtendedDescriptionImpl &&
             (identical(other.content, content) || other.content == content) &&
             (identical(other.updatedAt, updatedAt) ||
                 other.updatedAt == updatedAt));
@@ -147,13 +147,13 @@ class _$_ExtendedDescription implements _ExtendedDescription {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ExtendedDescriptionCopyWith<_$_ExtendedDescription> get copyWith =>
-      __$$_ExtendedDescriptionCopyWithImpl<_$_ExtendedDescription>(
+  _$$ExtendedDescriptionImplCopyWith<_$ExtendedDescriptionImpl> get copyWith =>
+      __$$ExtendedDescriptionImplCopyWithImpl<_$ExtendedDescriptionImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ExtendedDescriptionToJson(
+    return _$$ExtendedDescriptionImplToJson(
       this,
     );
   }
@@ -162,10 +162,10 @@ class _$_ExtendedDescription implements _ExtendedDescription {
 abstract class _ExtendedDescription implements ExtendedDescription {
   const factory _ExtendedDescription(
       {required final String content,
-      required final DateTime updatedAt}) = _$_ExtendedDescription;
+      required final DateTime updatedAt}) = _$ExtendedDescriptionImpl;
 
   factory _ExtendedDescription.fromJson(Map<String, dynamic> json) =
-      _$_ExtendedDescription.fromJson;
+      _$ExtendedDescriptionImpl.fromJson;
 
   @override
 
@@ -177,6 +177,6 @@ abstract class _ExtendedDescription implements ExtendedDescription {
   DateTime get updatedAt;
   @override
   @JsonKey(ignore: true)
-  _$$_ExtendedDescriptionCopyWith<_$_ExtendedDescription> get copyWith =>
+  _$$ExtendedDescriptionImplCopyWith<_$ExtendedDescriptionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

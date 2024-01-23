@@ -82,11 +82,11 @@ class _$InstanceContactCopyWithImpl<$Res, $Val extends InstanceContact>
 }
 
 /// @nodoc
-abstract class _$$_InstanceContactCopyWith<$Res>
+abstract class _$$InstanceContactImplCopyWith<$Res>
     implements $InstanceContactCopyWith<$Res> {
-  factory _$$_InstanceContactCopyWith(
-          _$_InstanceContact value, $Res Function(_$_InstanceContact) then) =
-      __$$_InstanceContactCopyWithImpl<$Res>;
+  factory _$$InstanceContactImplCopyWith(_$InstanceContactImpl value,
+          $Res Function(_$InstanceContactImpl) then) =
+      __$$InstanceContactImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String email, Account account});
@@ -96,11 +96,11 @@ abstract class _$$_InstanceContactCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_InstanceContactCopyWithImpl<$Res>
-    extends _$InstanceContactCopyWithImpl<$Res, _$_InstanceContact>
-    implements _$$_InstanceContactCopyWith<$Res> {
-  __$$_InstanceContactCopyWithImpl(
-      _$_InstanceContact _value, $Res Function(_$_InstanceContact) _then)
+class __$$InstanceContactImplCopyWithImpl<$Res>
+    extends _$InstanceContactCopyWithImpl<$Res, _$InstanceContactImpl>
+    implements _$$InstanceContactImplCopyWith<$Res> {
+  __$$InstanceContactImplCopyWithImpl(
+      _$InstanceContactImpl _value, $Res Function(_$InstanceContactImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -109,7 +109,7 @@ class __$$_InstanceContactCopyWithImpl<$Res>
     Object? email = null,
     Object? account = null,
   }) {
-    return _then(_$_InstanceContact(
+    return _then(_$InstanceContactImpl(
       email: null == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
@@ -125,11 +125,11 @@ class __$$_InstanceContactCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(includeIfNull: false)
-class _$_InstanceContact implements _InstanceContact {
-  const _$_InstanceContact({required this.email, required this.account});
+class _$InstanceContactImpl implements _InstanceContact {
+  const _$InstanceContactImpl({required this.email, required this.account});
 
-  factory _$_InstanceContact.fromJson(Map<String, dynamic> json) =>
-      _$$_InstanceContactFromJson(json);
+  factory _$InstanceContactImpl.fromJson(Map<String, dynamic> json) =>
+      _$$InstanceContactImplFromJson(json);
 
   /// An email address that can be messaged regarding inquiries or issues.
   @override
@@ -146,10 +146,10 @@ class _$_InstanceContact implements _InstanceContact {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_InstanceContact &&
+            other is _$InstanceContactImpl &&
             (identical(other.email, email) || other.email == email) &&
             (identical(other.account, account) || other.account == account));
   }
@@ -161,12 +161,13 @@ class _$_InstanceContact implements _InstanceContact {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_InstanceContactCopyWith<_$_InstanceContact> get copyWith =>
-      __$$_InstanceContactCopyWithImpl<_$_InstanceContact>(this, _$identity);
+  _$$InstanceContactImplCopyWith<_$InstanceContactImpl> get copyWith =>
+      __$$InstanceContactImplCopyWithImpl<_$InstanceContactImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_InstanceContactToJson(
+    return _$$InstanceContactImplToJson(
       this,
     );
   }
@@ -175,10 +176,10 @@ class _$_InstanceContact implements _InstanceContact {
 abstract class _InstanceContact implements InstanceContact {
   const factory _InstanceContact(
       {required final String email,
-      required final Account account}) = _$_InstanceContact;
+      required final Account account}) = _$InstanceContactImpl;
 
   factory _InstanceContact.fromJson(Map<String, dynamic> json) =
-      _$_InstanceContact.fromJson;
+      _$InstanceContactImpl.fromJson;
 
   @override
 
@@ -191,6 +192,6 @@ abstract class _InstanceContact implements InstanceContact {
   Account get account;
   @override
   @JsonKey(ignore: true)
-  _$$_InstanceContactCopyWith<_$_InstanceContact> get copyWith =>
+  _$$InstanceContactImplCopyWith<_$InstanceContactImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

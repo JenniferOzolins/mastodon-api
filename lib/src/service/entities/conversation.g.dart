@@ -8,11 +8,11 @@ part of 'conversation.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Conversation _$$_ConversationFromJson(Map json) => $checkedCreate(
-      r'_$_Conversation',
+_$ConversationImpl _$$ConversationImplFromJson(Map json) => $checkedCreate(
+      r'_$ConversationImpl',
       json,
       ($checkedConvert) {
-        final val = _$_Conversation(
+        final val = _$ConversationImpl(
           id: $checkedConvert('id', (v) => v as String),
           isUnread: $checkedConvert('unread', (v) => v as bool),
           accounts: $checkedConvert(
@@ -32,7 +32,7 @@ _$_Conversation _$$_ConversationFromJson(Map json) => $checkedCreate(
       fieldKeyMap: const {'isUnread': 'unread', 'lastStatus': 'last_status'},
     );
 
-Map<String, dynamic> _$$_ConversationToJson(_$_Conversation instance) {
+Map<String, dynamic> _$$ConversationImplToJson(_$ConversationImpl instance) {
   final val = <String, dynamic>{
     'id': instance.id,
     'unread': instance.isUnread,

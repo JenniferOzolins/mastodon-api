@@ -8,11 +8,11 @@ part of 'v2_instance.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_V2Instance _$$_V2InstanceFromJson(Map json) => $checkedCreate(
-      r'_$_V2Instance',
+_$V2InstanceImpl _$$V2InstanceImplFromJson(Map json) => $checkedCreate(
+      r'_$V2InstanceImpl',
       json,
       ($checkedConvert) {
-        final val = _$_V2Instance(
+        final val = _$V2InstanceImpl(
           domain: $checkedConvert('domain', (v) => v as String),
           title: $checkedConvert('title', (v) => v as String),
           description: $checkedConvert('description', (v) => v as String),
@@ -58,7 +58,7 @@ _$_V2Instance _$$_V2InstanceFromJson(Map json) => $checkedCreate(
       fieldKeyMap: const {'sourceUrl': 'source_url'},
     );
 
-Map<String, dynamic> _$$_V2InstanceToJson(_$_V2Instance instance) {
+Map<String, dynamic> _$$V2InstanceImplToJson(_$V2InstanceImpl instance) {
   final val = <String, dynamic>{
     'domain': instance.domain,
     'title': instance.title,

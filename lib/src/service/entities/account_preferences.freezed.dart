@@ -55,15 +55,12 @@ abstract class $AccountPreferencesCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(name: 'posting:default:visibility')
-          Visibility defaultVisibility,
-      @JsonKey(name: 'posting:default:sensitive')
-          bool isDefaultSensitive,
-      @JsonKey(name: 'posting:default:language')
-          Language defaultLanguage,
+      Visibility defaultVisibility,
+      @JsonKey(name: 'posting:default:sensitive') bool isDefaultSensitive,
+      @JsonKey(name: 'posting:default:language') Language defaultLanguage,
       @JsonKey(name: 'reading:expand:media')
-          DisplayMediaSetting expandMediaSetting,
-      @JsonKey(name: 'reading:expand:spoilers')
-          bool hasExpandSpoilers});
+      DisplayMediaSetting expandMediaSetting,
+      @JsonKey(name: 'reading:expand:spoilers') bool hasExpandSpoilers});
 }
 
 /// @nodoc
@@ -111,32 +108,29 @@ class _$AccountPreferencesCopyWithImpl<$Res, $Val extends AccountPreferences>
 }
 
 /// @nodoc
-abstract class _$$_AccountPreferencesCopyWith<$Res>
+abstract class _$$AccountPreferencesImplCopyWith<$Res>
     implements $AccountPreferencesCopyWith<$Res> {
-  factory _$$_AccountPreferencesCopyWith(_$_AccountPreferences value,
-          $Res Function(_$_AccountPreferences) then) =
-      __$$_AccountPreferencesCopyWithImpl<$Res>;
+  factory _$$AccountPreferencesImplCopyWith(_$AccountPreferencesImpl value,
+          $Res Function(_$AccountPreferencesImpl) then) =
+      __$$AccountPreferencesImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {@JsonKey(name: 'posting:default:visibility')
-          Visibility defaultVisibility,
-      @JsonKey(name: 'posting:default:sensitive')
-          bool isDefaultSensitive,
-      @JsonKey(name: 'posting:default:language')
-          Language defaultLanguage,
+      Visibility defaultVisibility,
+      @JsonKey(name: 'posting:default:sensitive') bool isDefaultSensitive,
+      @JsonKey(name: 'posting:default:language') Language defaultLanguage,
       @JsonKey(name: 'reading:expand:media')
-          DisplayMediaSetting expandMediaSetting,
-      @JsonKey(name: 'reading:expand:spoilers')
-          bool hasExpandSpoilers});
+      DisplayMediaSetting expandMediaSetting,
+      @JsonKey(name: 'reading:expand:spoilers') bool hasExpandSpoilers});
 }
 
 /// @nodoc
-class __$$_AccountPreferencesCopyWithImpl<$Res>
-    extends _$AccountPreferencesCopyWithImpl<$Res, _$_AccountPreferences>
-    implements _$$_AccountPreferencesCopyWith<$Res> {
-  __$$_AccountPreferencesCopyWithImpl(
-      _$_AccountPreferences _value, $Res Function(_$_AccountPreferences) _then)
+class __$$AccountPreferencesImplCopyWithImpl<$Res>
+    extends _$AccountPreferencesCopyWithImpl<$Res, _$AccountPreferencesImpl>
+    implements _$$AccountPreferencesImplCopyWith<$Res> {
+  __$$AccountPreferencesImplCopyWithImpl(_$AccountPreferencesImpl _value,
+      $Res Function(_$AccountPreferencesImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -148,7 +142,7 @@ class __$$_AccountPreferencesCopyWithImpl<$Res>
     Object? expandMediaSetting = null,
     Object? hasExpandSpoilers = null,
   }) {
-    return _then(_$_AccountPreferences(
+    return _then(_$AccountPreferencesImpl(
       defaultVisibility: null == defaultVisibility
           ? _value.defaultVisibility
           : defaultVisibility // ignore: cast_nullable_to_non_nullable
@@ -176,21 +170,19 @@ class __$$_AccountPreferencesCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(includeIfNull: false)
-class _$_AccountPreferences implements _AccountPreferences {
-  const _$_AccountPreferences(
+class _$AccountPreferencesImpl implements _AccountPreferences {
+  const _$AccountPreferencesImpl(
       {@JsonKey(name: 'posting:default:visibility')
-          required this.defaultVisibility,
+      required this.defaultVisibility,
       @JsonKey(name: 'posting:default:sensitive')
-          required this.isDefaultSensitive,
-      @JsonKey(name: 'posting:default:language')
-          required this.defaultLanguage,
-      @JsonKey(name: 'reading:expand:media')
-          required this.expandMediaSetting,
+      required this.isDefaultSensitive,
+      @JsonKey(name: 'posting:default:language') required this.defaultLanguage,
+      @JsonKey(name: 'reading:expand:media') required this.expandMediaSetting,
       @JsonKey(name: 'reading:expand:spoilers')
-          required this.hasExpandSpoilers});
+      required this.hasExpandSpoilers});
 
-  factory _$_AccountPreferences.fromJson(Map<String, dynamic> json) =>
-      _$$_AccountPreferencesFromJson(json);
+  factory _$AccountPreferencesImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AccountPreferencesImplFromJson(json);
 
   /// `posting:default:visibility`
   @override
@@ -223,10 +215,10 @@ class _$_AccountPreferences implements _AccountPreferences {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AccountPreferences &&
+            other is _$AccountPreferencesImpl &&
             (identical(other.defaultVisibility, defaultVisibility) ||
                 other.defaultVisibility == defaultVisibility) &&
             (identical(other.isDefaultSensitive, isDefaultSensitive) ||
@@ -252,13 +244,13 @@ class _$_AccountPreferences implements _AccountPreferences {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AccountPreferencesCopyWith<_$_AccountPreferences> get copyWith =>
-      __$$_AccountPreferencesCopyWithImpl<_$_AccountPreferences>(
+  _$$AccountPreferencesImplCopyWith<_$AccountPreferencesImpl> get copyWith =>
+      __$$AccountPreferencesImplCopyWithImpl<_$AccountPreferencesImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AccountPreferencesToJson(
+    return _$$AccountPreferencesImplToJson(
       this,
     );
   }
@@ -267,18 +259,18 @@ class _$_AccountPreferences implements _AccountPreferences {
 abstract class _AccountPreferences implements AccountPreferences {
   const factory _AccountPreferences(
       {@JsonKey(name: 'posting:default:visibility')
-          required final Visibility defaultVisibility,
+      required final Visibility defaultVisibility,
       @JsonKey(name: 'posting:default:sensitive')
-          required final bool isDefaultSensitive,
+      required final bool isDefaultSensitive,
       @JsonKey(name: 'posting:default:language')
-          required final Language defaultLanguage,
+      required final Language defaultLanguage,
       @JsonKey(name: 'reading:expand:media')
-          required final DisplayMediaSetting expandMediaSetting,
+      required final DisplayMediaSetting expandMediaSetting,
       @JsonKey(name: 'reading:expand:spoilers')
-          required final bool hasExpandSpoilers}) = _$_AccountPreferences;
+      required final bool hasExpandSpoilers}) = _$AccountPreferencesImpl;
 
   factory _AccountPreferences.fromJson(Map<String, dynamic> json) =
-      _$_AccountPreferences.fromJson;
+      _$AccountPreferencesImpl.fromJson;
 
   @override
 
@@ -307,6 +299,6 @@ abstract class _AccountPreferences implements AccountPreferences {
   bool get hasExpandSpoilers;
   @override
   @JsonKey(ignore: true)
-  _$$_AccountPreferencesCopyWith<_$_AccountPreferences> get copyWith =>
+  _$$AccountPreferencesImplCopyWith<_$AccountPreferencesImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

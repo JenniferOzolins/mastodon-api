@@ -98,11 +98,11 @@ class _$InstanceActivityCopyWithImpl<$Res, $Val extends InstanceActivity>
 }
 
 /// @nodoc
-abstract class _$$_InstanceActivityCopyWith<$Res>
+abstract class _$$InstanceActivityImplCopyWith<$Res>
     implements $InstanceActivityCopyWith<$Res> {
-  factory _$$_InstanceActivityCopyWith(
-          _$_InstanceActivity value, $Res Function(_$_InstanceActivity) then) =
-      __$$_InstanceActivityCopyWithImpl<$Res>;
+  factory _$$InstanceActivityImplCopyWith(_$InstanceActivityImpl value,
+          $Res Function(_$InstanceActivityImpl) then) =
+      __$$InstanceActivityImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -113,11 +113,11 @@ abstract class _$$_InstanceActivityCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_InstanceActivityCopyWithImpl<$Res>
-    extends _$InstanceActivityCopyWithImpl<$Res, _$_InstanceActivity>
-    implements _$$_InstanceActivityCopyWith<$Res> {
-  __$$_InstanceActivityCopyWithImpl(
-      _$_InstanceActivity _value, $Res Function(_$_InstanceActivity) _then)
+class __$$InstanceActivityImplCopyWithImpl<$Res>
+    extends _$InstanceActivityCopyWithImpl<$Res, _$InstanceActivityImpl>
+    implements _$$InstanceActivityImplCopyWith<$Res> {
+  __$$InstanceActivityImplCopyWithImpl(_$InstanceActivityImpl _value,
+      $Res Function(_$InstanceActivityImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -128,7 +128,7 @@ class __$$_InstanceActivityCopyWithImpl<$Res>
     Object? loginCount = null,
     Object? registrationCount = null,
   }) {
-    return _then(_$_InstanceActivity(
+    return _then(_$InstanceActivityImpl(
       week: null == week
           ? _value.week
           : week // ignore: cast_nullable_to_non_nullable
@@ -152,22 +152,17 @@ class __$$_InstanceActivityCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(includeIfNull: false)
-class _$_InstanceActivity implements _InstanceActivity {
-  const _$_InstanceActivity(
-      {@UnixTimestampConverter()
-          required this.week,
-      @JsonKey(name: 'statuses')
-      @IntConverter()
-          required this.statusCount,
-      @JsonKey(name: 'logins')
-      @IntConverter()
-          required this.loginCount,
+class _$InstanceActivityImpl implements _InstanceActivity {
+  const _$InstanceActivityImpl(
+      {@UnixTimestampConverter() required this.week,
+      @JsonKey(name: 'statuses') @IntConverter() required this.statusCount,
+      @JsonKey(name: 'logins') @IntConverter() required this.loginCount,
       @JsonKey(name: 'registrations')
       @IntConverter()
-          required this.registrationCount});
+      required this.registrationCount});
 
-  factory _$_InstanceActivity.fromJson(Map<String, dynamic> json) =>
-      _$$_InstanceActivityFromJson(json);
+  factory _$InstanceActivityImpl.fromJson(Map<String, dynamic> json) =>
+      _$$InstanceActivityImplFromJson(json);
 
   /// Midnight at the first day of the week.
   @override
@@ -198,10 +193,10 @@ class _$_InstanceActivity implements _InstanceActivity {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_InstanceActivity &&
+            other is _$InstanceActivityImpl &&
             (identical(other.week, week) || other.week == week) &&
             (identical(other.statusCount, statusCount) ||
                 other.statusCount == statusCount) &&
@@ -219,12 +214,13 @@ class _$_InstanceActivity implements _InstanceActivity {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_InstanceActivityCopyWith<_$_InstanceActivity> get copyWith =>
-      __$$_InstanceActivityCopyWithImpl<_$_InstanceActivity>(this, _$identity);
+  _$$InstanceActivityImplCopyWith<_$InstanceActivityImpl> get copyWith =>
+      __$$InstanceActivityImplCopyWithImpl<_$InstanceActivityImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_InstanceActivityToJson(
+    return _$$InstanceActivityImplToJson(
       this,
     );
   }
@@ -232,20 +228,15 @@ class _$_InstanceActivity implements _InstanceActivity {
 
 abstract class _InstanceActivity implements InstanceActivity {
   const factory _InstanceActivity(
-      {@UnixTimestampConverter()
-          required final DateTime week,
-      @JsonKey(name: 'statuses')
-      @IntConverter()
-          required final int statusCount,
-      @JsonKey(name: 'logins')
-      @IntConverter()
-          required final int loginCount,
+      {@UnixTimestampConverter() required final DateTime week,
+      @JsonKey(name: 'statuses') @IntConverter() required final int statusCount,
+      @JsonKey(name: 'logins') @IntConverter() required final int loginCount,
       @JsonKey(name: 'registrations')
       @IntConverter()
-          required final int registrationCount}) = _$_InstanceActivity;
+      required final int registrationCount}) = _$InstanceActivityImpl;
 
   factory _InstanceActivity.fromJson(Map<String, dynamic> json) =
-      _$_InstanceActivity.fromJson;
+      _$InstanceActivityImpl.fromJson;
 
   @override
 
@@ -272,6 +263,6 @@ abstract class _InstanceActivity implements InstanceActivity {
   int get registrationCount;
   @override
   @JsonKey(ignore: true)
-  _$$_InstanceActivityCopyWith<_$_InstanceActivity> get copyWith =>
+  _$$InstanceActivityImplCopyWith<_$InstanceActivityImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

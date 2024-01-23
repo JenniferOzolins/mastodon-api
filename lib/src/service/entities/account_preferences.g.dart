@@ -8,12 +8,12 @@ part of 'account_preferences.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_AccountPreferences _$$_AccountPreferencesFromJson(Map json) =>
+_$AccountPreferencesImpl _$$AccountPreferencesImplFromJson(Map json) =>
     $checkedCreate(
-      r'_$_AccountPreferences',
+      r'_$AccountPreferencesImpl',
       json,
       ($checkedConvert) {
-        final val = _$_AccountPreferences(
+        final val = _$AccountPreferencesImpl(
           defaultVisibility: $checkedConvert('posting:default:visibility',
               (v) => $enumDecode(_$VisibilityEnumMap, v)),
           isDefaultSensitive:
@@ -36,8 +36,8 @@ _$_AccountPreferences _$$_AccountPreferencesFromJson(Map json) =>
       },
     );
 
-Map<String, dynamic> _$$_AccountPreferencesToJson(
-        _$_AccountPreferences instance) =>
+Map<String, dynamic> _$$AccountPreferencesImplToJson(
+        _$AccountPreferencesImpl instance) =>
     <String, dynamic>{
       'posting:default:visibility':
           _$VisibilityEnumMap[instance.defaultVisibility]!,

@@ -79,22 +79,22 @@ class _$PositionMarkerCopyWithImpl<$Res, $Val extends PositionMarker>
 }
 
 /// @nodoc
-abstract class _$$_PositionMarkerCopyWith<$Res>
+abstract class _$$PositionMarkerImplCopyWith<$Res>
     implements $PositionMarkerCopyWith<$Res> {
-  factory _$$_PositionMarkerCopyWith(
-          _$_PositionMarker value, $Res Function(_$_PositionMarker) then) =
-      __$$_PositionMarkerCopyWithImpl<$Res>;
+  factory _$$PositionMarkerImplCopyWith(_$PositionMarkerImpl value,
+          $Res Function(_$PositionMarkerImpl) then) =
+      __$$PositionMarkerImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String lastReadId, int version, DateTime updatedAt});
 }
 
 /// @nodoc
-class __$$_PositionMarkerCopyWithImpl<$Res>
-    extends _$PositionMarkerCopyWithImpl<$Res, _$_PositionMarker>
-    implements _$$_PositionMarkerCopyWith<$Res> {
-  __$$_PositionMarkerCopyWithImpl(
-      _$_PositionMarker _value, $Res Function(_$_PositionMarker) _then)
+class __$$PositionMarkerImplCopyWithImpl<$Res>
+    extends _$PositionMarkerCopyWithImpl<$Res, _$PositionMarkerImpl>
+    implements _$$PositionMarkerImplCopyWith<$Res> {
+  __$$PositionMarkerImplCopyWithImpl(
+      _$PositionMarkerImpl _value, $Res Function(_$PositionMarkerImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -104,7 +104,7 @@ class __$$_PositionMarkerCopyWithImpl<$Res>
     Object? version = null,
     Object? updatedAt = null,
   }) {
-    return _then(_$_PositionMarker(
+    return _then(_$PositionMarkerImpl(
       lastReadId: null == lastReadId
           ? _value.lastReadId
           : lastReadId // ignore: cast_nullable_to_non_nullable
@@ -123,14 +123,14 @@ class __$$_PositionMarkerCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_PositionMarker implements _PositionMarker {
-  const _$_PositionMarker(
+class _$PositionMarkerImpl implements _PositionMarker {
+  const _$PositionMarkerImpl(
       {required this.lastReadId,
       required this.version,
       required this.updatedAt});
 
-  factory _$_PositionMarker.fromJson(Map<String, dynamic> json) =>
-      _$$_PositionMarkerFromJson(json);
+  factory _$PositionMarkerImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PositionMarkerImplFromJson(json);
 
   /// The ID of the most recently viewed entity.
   @override
@@ -150,10 +150,10 @@ class _$_PositionMarker implements _PositionMarker {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PositionMarker &&
+            other is _$PositionMarkerImpl &&
             (identical(other.lastReadId, lastReadId) ||
                 other.lastReadId == lastReadId) &&
             (identical(other.version, version) || other.version == version) &&
@@ -168,12 +168,13 @@ class _$_PositionMarker implements _PositionMarker {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PositionMarkerCopyWith<_$_PositionMarker> get copyWith =>
-      __$$_PositionMarkerCopyWithImpl<_$_PositionMarker>(this, _$identity);
+  _$$PositionMarkerImplCopyWith<_$PositionMarkerImpl> get copyWith =>
+      __$$PositionMarkerImplCopyWithImpl<_$PositionMarkerImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PositionMarkerToJson(
+    return _$$PositionMarkerImplToJson(
       this,
     );
   }
@@ -183,10 +184,10 @@ abstract class _PositionMarker implements PositionMarker {
   const factory _PositionMarker(
       {required final String lastReadId,
       required final int version,
-      required final DateTime updatedAt}) = _$_PositionMarker;
+      required final DateTime updatedAt}) = _$PositionMarkerImpl;
 
   factory _PositionMarker.fromJson(Map<String, dynamic> json) =
-      _$_PositionMarker.fromJson;
+      _$PositionMarkerImpl.fromJson;
 
   @override
 
@@ -202,6 +203,6 @@ abstract class _PositionMarker implements PositionMarker {
   DateTime get updatedAt;
   @override
   @JsonKey(ignore: true)
-  _$$_PositionMarkerCopyWith<_$_PositionMarker> get copyWith =>
+  _$$PositionMarkerImplCopyWith<_$PositionMarkerImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

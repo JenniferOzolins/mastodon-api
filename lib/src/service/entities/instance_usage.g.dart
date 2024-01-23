@@ -8,11 +8,11 @@ part of 'instance_usage.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_InstanceUsage _$$_InstanceUsageFromJson(Map json) => $checkedCreate(
-      r'_$_InstanceUsage',
+_$InstanceUsageImpl _$$InstanceUsageImplFromJson(Map json) => $checkedCreate(
+      r'_$InstanceUsageImpl',
       json,
       ($checkedConvert) {
-        final val = _$_InstanceUsage(
+        final val = _$InstanceUsageImpl(
           users: $checkedConvert(
               'users',
               (v) => InstanceUsageUsers.fromJson(
@@ -22,7 +22,7 @@ _$_InstanceUsage _$$_InstanceUsageFromJson(Map json) => $checkedCreate(
       },
     );
 
-Map<String, dynamic> _$$_InstanceUsageToJson(_$_InstanceUsage instance) =>
+Map<String, dynamic> _$$InstanceUsageImplToJson(_$InstanceUsageImpl instance) =>
     <String, dynamic>{
       'users': instance.users.toJson(),
     };

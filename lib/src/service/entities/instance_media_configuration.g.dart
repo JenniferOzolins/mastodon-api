@@ -8,13 +8,13 @@ part of 'instance_media_configuration.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_InstanceMediaConfiguration _$$_InstanceMediaConfigurationFromJson(
+_$InstanceMediaConfigurationImpl _$$InstanceMediaConfigurationImplFromJson(
         Map json) =>
     $checkedCreate(
-      r'_$_InstanceMediaConfiguration',
+      r'_$InstanceMediaConfigurationImpl',
       json,
       ($checkedConvert) {
-        final val = _$_InstanceMediaConfiguration(
+        final val = _$InstanceMediaConfigurationImpl(
           maxImageSize: $checkedConvert('image_size_limit', (v) => v as int),
           maxImageMatrix:
               $checkedConvert('image_matrix_limit', (v) => v as int),
@@ -41,8 +41,8 @@ _$_InstanceMediaConfiguration _$$_InstanceMediaConfigurationFromJson(
       },
     );
 
-Map<String, dynamic> _$$_InstanceMediaConfigurationToJson(
-        _$_InstanceMediaConfiguration instance) =>
+Map<String, dynamic> _$$InstanceMediaConfigurationImplToJson(
+        _$InstanceMediaConfigurationImpl instance) =>
     <String, dynamic>{
       'image_size_limit': instance.maxImageSize,
       'image_matrix_limit': instance.maxImageMatrix,

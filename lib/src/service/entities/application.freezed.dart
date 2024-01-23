@@ -79,22 +79,22 @@ class _$ApplicationCopyWithImpl<$Res, $Val extends Application>
 }
 
 /// @nodoc
-abstract class _$$_ApplicationCopyWith<$Res>
+abstract class _$$ApplicationImplCopyWith<$Res>
     implements $ApplicationCopyWith<$Res> {
-  factory _$$_ApplicationCopyWith(
-          _$_Application value, $Res Function(_$_Application) then) =
-      __$$_ApplicationCopyWithImpl<$Res>;
+  factory _$$ApplicationImplCopyWith(
+          _$ApplicationImpl value, $Res Function(_$ApplicationImpl) then) =
+      __$$ApplicationImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String name, String? vapidKey, String? website});
 }
 
 /// @nodoc
-class __$$_ApplicationCopyWithImpl<$Res>
-    extends _$ApplicationCopyWithImpl<$Res, _$_Application>
-    implements _$$_ApplicationCopyWith<$Res> {
-  __$$_ApplicationCopyWithImpl(
-      _$_Application _value, $Res Function(_$_Application) _then)
+class __$$ApplicationImplCopyWithImpl<$Res>
+    extends _$ApplicationCopyWithImpl<$Res, _$ApplicationImpl>
+    implements _$$ApplicationImplCopyWith<$Res> {
+  __$$ApplicationImplCopyWithImpl(
+      _$ApplicationImpl _value, $Res Function(_$ApplicationImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -104,7 +104,7 @@ class __$$_ApplicationCopyWithImpl<$Res>
     Object? vapidKey = freezed,
     Object? website = freezed,
   }) {
-    return _then(_$_Application(
+    return _then(_$ApplicationImpl(
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -124,11 +124,11 @@ class __$$_ApplicationCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(includeIfNull: false)
-class _$_Application implements _Application {
-  const _$_Application({required this.name, this.vapidKey, this.website});
+class _$ApplicationImpl implements _Application {
+  const _$ApplicationImpl({required this.name, this.vapidKey, this.website});
 
-  factory _$_Application.fromJson(Map<String, dynamic> json) =>
-      _$$_ApplicationFromJson(json);
+  factory _$ApplicationImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ApplicationImplFromJson(json);
 
   /// The name of your application.
   @override
@@ -148,10 +148,10 @@ class _$_Application implements _Application {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Application &&
+            other is _$ApplicationImpl &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.vapidKey, vapidKey) ||
                 other.vapidKey == vapidKey) &&
@@ -165,12 +165,12 @@ class _$_Application implements _Application {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ApplicationCopyWith<_$_Application> get copyWith =>
-      __$$_ApplicationCopyWithImpl<_$_Application>(this, _$identity);
+  _$$ApplicationImplCopyWith<_$ApplicationImpl> get copyWith =>
+      __$$ApplicationImplCopyWithImpl<_$ApplicationImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ApplicationToJson(
+    return _$$ApplicationImplToJson(
       this,
     );
   }
@@ -180,10 +180,10 @@ abstract class _Application implements Application {
   const factory _Application(
       {required final String name,
       final String? vapidKey,
-      final String? website}) = _$_Application;
+      final String? website}) = _$ApplicationImpl;
 
   factory _Application.fromJson(Map<String, dynamic> json) =
-      _$_Application.fromJson;
+      _$ApplicationImpl.fromJson;
 
   @override
 
@@ -199,6 +199,6 @@ abstract class _Application implements Application {
   String? get website;
   @override
   @JsonKey(ignore: true)
-  _$$_ApplicationCopyWith<_$_Application> get copyWith =>
+  _$$ApplicationImplCopyWith<_$ApplicationImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

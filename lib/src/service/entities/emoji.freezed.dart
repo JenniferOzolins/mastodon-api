@@ -100,9 +100,10 @@ class _$EmojiCopyWithImpl<$Res, $Val extends Emoji>
 }
 
 /// @nodoc
-abstract class _$$_EmojiCopyWith<$Res> implements $EmojiCopyWith<$Res> {
-  factory _$$_EmojiCopyWith(_$_Emoji value, $Res Function(_$_Emoji) then) =
-      __$$_EmojiCopyWithImpl<$Res>;
+abstract class _$$EmojiImplCopyWith<$Res> implements $EmojiCopyWith<$Res> {
+  factory _$$EmojiImplCopyWith(
+          _$EmojiImpl value, $Res Function(_$EmojiImpl) then) =
+      __$$EmojiImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -114,9 +115,11 @@ abstract class _$$_EmojiCopyWith<$Res> implements $EmojiCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_EmojiCopyWithImpl<$Res> extends _$EmojiCopyWithImpl<$Res, _$_Emoji>
-    implements _$$_EmojiCopyWith<$Res> {
-  __$$_EmojiCopyWithImpl(_$_Emoji _value, $Res Function(_$_Emoji) _then)
+class __$$EmojiImplCopyWithImpl<$Res>
+    extends _$EmojiCopyWithImpl<$Res, _$EmojiImpl>
+    implements _$$EmojiImplCopyWith<$Res> {
+  __$$EmojiImplCopyWithImpl(
+      _$EmojiImpl _value, $Res Function(_$EmojiImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -128,7 +131,7 @@ class __$$_EmojiCopyWithImpl<$Res> extends _$EmojiCopyWithImpl<$Res, _$_Emoji>
     Object? isVisibleInPicker = null,
     Object? category = freezed,
   }) {
-    return _then(_$_Emoji(
+    return _then(_$EmojiImpl(
       code: null == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
@@ -156,16 +159,16 @@ class __$$_EmojiCopyWithImpl<$Res> extends _$EmojiCopyWithImpl<$Res, _$_Emoji>
 /// @nodoc
 
 @JsonSerializable(includeIfNull: false)
-class _$_Emoji implements _Emoji {
-  const _$_Emoji(
+class _$EmojiImpl implements _Emoji {
+  const _$EmojiImpl(
       {@JsonKey(name: 'shortcode') required this.code,
       required this.url,
       this.staticUrl,
       @JsonKey(name: 'visible_in_picker') required this.isVisibleInPicker,
       this.category});
 
-  factory _$_Emoji.fromJson(Map<String, dynamic> json) =>
-      _$$_EmojiFromJson(json);
+  factory _$EmojiImpl.fromJson(Map<String, dynamic> json) =>
+      _$$EmojiImplFromJson(json);
 
   /// The name of the custom emoji.
   @override
@@ -195,10 +198,10 @@ class _$_Emoji implements _Emoji {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Emoji &&
+            other is _$EmojiImpl &&
             (identical(other.code, code) || other.code == code) &&
             (identical(other.url, url) || other.url == url) &&
             (identical(other.staticUrl, staticUrl) ||
@@ -217,12 +220,12 @@ class _$_Emoji implements _Emoji {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_EmojiCopyWith<_$_Emoji> get copyWith =>
-      __$$_EmojiCopyWithImpl<_$_Emoji>(this, _$identity);
+  _$$EmojiImplCopyWith<_$EmojiImpl> get copyWith =>
+      __$$EmojiImplCopyWithImpl<_$EmojiImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EmojiToJson(
+    return _$$EmojiImplToJson(
       this,
     );
   }
@@ -234,9 +237,9 @@ abstract class _Emoji implements Emoji {
       required final String url,
       final String? staticUrl,
       @JsonKey(name: 'visible_in_picker') required final bool isVisibleInPicker,
-      final String? category}) = _$_Emoji;
+      final String? category}) = _$EmojiImpl;
 
-  factory _Emoji.fromJson(Map<String, dynamic> json) = _$_Emoji.fromJson;
+  factory _Emoji.fromJson(Map<String, dynamic> json) = _$EmojiImpl.fromJson;
 
   @override
 
@@ -262,6 +265,6 @@ abstract class _Emoji implements Emoji {
   String? get category;
   @override
   @JsonKey(ignore: true)
-  _$$_EmojiCopyWith<_$_Emoji> get copyWith =>
+  _$$EmojiImplCopyWith<_$EmojiImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -8,23 +8,22 @@ part of 'instance_accounts_configuration.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_InstanceAccountsConfiguration _$$_InstanceAccountsConfigurationFromJson(
-        Map json) =>
-    $checkedCreate(
-      r'_$_InstanceAccountsConfiguration',
-      json,
-      ($checkedConvert) {
-        final val = _$_InstanceAccountsConfiguration(
-          maxFeaturedTags:
-              $checkedConvert('max_featured_tags', (v) => v as int),
+_$InstanceAccountsConfigurationImpl
+    _$$InstanceAccountsConfigurationImplFromJson(Map json) => $checkedCreate(
+          r'_$InstanceAccountsConfigurationImpl',
+          json,
+          ($checkedConvert) {
+            final val = _$InstanceAccountsConfigurationImpl(
+              maxFeaturedTags:
+                  $checkedConvert('max_featured_tags', (v) => v as int),
+            );
+            return val;
+          },
+          fieldKeyMap: const {'maxFeaturedTags': 'max_featured_tags'},
         );
-        return val;
-      },
-      fieldKeyMap: const {'maxFeaturedTags': 'max_featured_tags'},
-    );
 
-Map<String, dynamic> _$$_InstanceAccountsConfigurationToJson(
-        _$_InstanceAccountsConfiguration instance) =>
+Map<String, dynamic> _$$InstanceAccountsConfigurationImplToJson(
+        _$InstanceAccountsConfigurationImpl instance) =>
     <String, dynamic>{
       'max_featured_tags': instance.maxFeaturedTags,
     };

@@ -8,11 +8,11 @@ part of 'preview_card.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_PreviewCard _$$_PreviewCardFromJson(Map json) => $checkedCreate(
-      r'_$_PreviewCard',
+_$PreviewCardImpl _$$PreviewCardImplFromJson(Map json) => $checkedCreate(
+      r'_$PreviewCardImpl',
       json,
       ($checkedConvert) {
-        final val = _$_PreviewCard(
+        final val = _$PreviewCardImpl(
           url: $checkedConvert('url', (v) => v as String),
           title: $checkedConvert('title', (v) => v as String),
           description: $checkedConvert('description', (v) => v as String),
@@ -42,7 +42,7 @@ _$_PreviewCard _$$_PreviewCardFromJson(Map json) => $checkedCreate(
       },
     );
 
-Map<String, dynamic> _$$_PreviewCardToJson(_$_PreviewCard instance) =>
+Map<String, dynamic> _$$PreviewCardImplToJson(_$PreviewCardImpl instance) =>
     <String, dynamic>{
       'url': instance.url,
       'title': instance.title,

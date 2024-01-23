@@ -220,11 +220,11 @@ class _$V2InstanceCopyWithImpl<$Res, $Val extends V2Instance>
 }
 
 /// @nodoc
-abstract class _$$_V2InstanceCopyWith<$Res>
+abstract class _$$V2InstanceImplCopyWith<$Res>
     implements $V2InstanceCopyWith<$Res> {
-  factory _$$_V2InstanceCopyWith(
-          _$_V2Instance value, $Res Function(_$_V2Instance) then) =
-      __$$_V2InstanceCopyWithImpl<$Res>;
+  factory _$$V2InstanceImplCopyWith(
+          _$V2InstanceImpl value, $Res Function(_$V2InstanceImpl) then) =
+      __$$V2InstanceImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -254,11 +254,11 @@ abstract class _$$_V2InstanceCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_V2InstanceCopyWithImpl<$Res>
-    extends _$V2InstanceCopyWithImpl<$Res, _$_V2Instance>
-    implements _$$_V2InstanceCopyWith<$Res> {
-  __$$_V2InstanceCopyWithImpl(
-      _$_V2Instance _value, $Res Function(_$_V2Instance) _then)
+class __$$V2InstanceImplCopyWithImpl<$Res>
+    extends _$V2InstanceCopyWithImpl<$Res, _$V2InstanceImpl>
+    implements _$$V2InstanceImplCopyWith<$Res> {
+  __$$V2InstanceImplCopyWithImpl(
+      _$V2InstanceImpl _value, $Res Function(_$V2InstanceImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -277,7 +277,7 @@ class __$$_V2InstanceCopyWithImpl<$Res>
     Object? contact = null,
     Object? rules = freezed,
   }) {
-    return _then(_$_V2Instance(
+    return _then(_$V2InstanceImpl(
       domain: null == domain
           ? _value.domain
           : domain // ignore: cast_nullable_to_non_nullable
@@ -333,8 +333,8 @@ class __$$_V2InstanceCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(includeIfNull: false)
-class _$_V2Instance implements _V2Instance {
-  const _$_V2Instance(
+class _$V2InstanceImpl implements _V2Instance {
+  const _$V2InstanceImpl(
       {required this.domain,
       required this.title,
       required this.description,
@@ -350,8 +350,8 @@ class _$_V2Instance implements _V2Instance {
       : _languages = languages,
         _rules = rules;
 
-  factory _$_V2Instance.fromJson(Map<String, dynamic> json) =>
-      _$$_V2InstanceFromJson(json);
+  factory _$V2InstanceImpl.fromJson(Map<String, dynamic> json) =>
+      _$$V2InstanceImplFromJson(json);
 
   /// The domain name of the instance.
   @override
@@ -424,10 +424,10 @@ class _$_V2Instance implements _V2Instance {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_V2Instance &&
+            other is _$V2InstanceImpl &&
             (identical(other.domain, domain) || other.domain == domain) &&
             (identical(other.title, title) || other.title == title) &&
             (identical(other.description, description) ||
@@ -468,12 +468,12 @@ class _$_V2Instance implements _V2Instance {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_V2InstanceCopyWith<_$_V2Instance> get copyWith =>
-      __$$_V2InstanceCopyWithImpl<_$_V2Instance>(this, _$identity);
+  _$$V2InstanceImplCopyWith<_$V2InstanceImpl> get copyWith =>
+      __$$V2InstanceImplCopyWithImpl<_$V2InstanceImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_V2InstanceToJson(
+    return _$$V2InstanceImplToJson(
       this,
     );
   }
@@ -492,10 +492,10 @@ abstract class _V2Instance implements V2Instance {
       final V2InstanceConfiguration? configuration,
       required final InstanceRegistrations registrations,
       required final InstanceContact contact,
-      final List<Rule>? rules}) = _$_V2Instance;
+      final List<Rule>? rules}) = _$V2InstanceImpl;
 
   factory _V2Instance.fromJson(Map<String, dynamic> json) =
-      _$_V2Instance.fromJson;
+      _$V2InstanceImpl.fromJson;
 
   @override
 
@@ -548,6 +548,6 @@ abstract class _V2Instance implements V2Instance {
   List<Rule>? get rules;
   @override
   @JsonKey(ignore: true)
-  _$$_V2InstanceCopyWith<_$_V2Instance> get copyWith =>
+  _$$V2InstanceImplCopyWith<_$V2InstanceImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

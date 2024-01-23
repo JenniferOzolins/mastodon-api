@@ -117,12 +117,12 @@ class _$InstanceMediaConfigurationCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_InstanceMediaConfigurationCopyWith<$Res>
+abstract class _$$InstanceMediaConfigurationImplCopyWith<$Res>
     implements $InstanceMediaConfigurationCopyWith<$Res> {
-  factory _$$_InstanceMediaConfigurationCopyWith(
-          _$_InstanceMediaConfiguration value,
-          $Res Function(_$_InstanceMediaConfiguration) then) =
-      __$$_InstanceMediaConfigurationCopyWithImpl<$Res>;
+  factory _$$InstanceMediaConfigurationImplCopyWith(
+          _$InstanceMediaConfigurationImpl value,
+          $Res Function(_$InstanceMediaConfigurationImpl) then) =
+      __$$InstanceMediaConfigurationImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -135,13 +135,13 @@ abstract class _$$_InstanceMediaConfigurationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_InstanceMediaConfigurationCopyWithImpl<$Res>
+class __$$InstanceMediaConfigurationImplCopyWithImpl<$Res>
     extends _$InstanceMediaConfigurationCopyWithImpl<$Res,
-        _$_InstanceMediaConfiguration>
-    implements _$$_InstanceMediaConfigurationCopyWith<$Res> {
-  __$$_InstanceMediaConfigurationCopyWithImpl(
-      _$_InstanceMediaConfiguration _value,
-      $Res Function(_$_InstanceMediaConfiguration) _then)
+        _$InstanceMediaConfigurationImpl>
+    implements _$$InstanceMediaConfigurationImplCopyWith<$Res> {
+  __$$InstanceMediaConfigurationImplCopyWithImpl(
+      _$InstanceMediaConfigurationImpl _value,
+      $Res Function(_$InstanceMediaConfigurationImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -154,7 +154,7 @@ class __$$_InstanceMediaConfigurationCopyWithImpl<$Res>
     Object? maxVideoMatrix = null,
     Object? supportedMimeTypes = null,
   }) {
-    return _then(_$_InstanceMediaConfiguration(
+    return _then(_$InstanceMediaConfigurationImpl(
       maxImageSize: null == maxImageSize
           ? _value.maxImageSize
           : maxImageSize // ignore: cast_nullable_to_non_nullable
@@ -186,8 +186,8 @@ class __$$_InstanceMediaConfigurationCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(includeIfNull: false)
-class _$_InstanceMediaConfiguration implements _InstanceMediaConfiguration {
-  const _$_InstanceMediaConfiguration(
+class _$InstanceMediaConfigurationImpl implements _InstanceMediaConfiguration {
+  const _$InstanceMediaConfigurationImpl(
       {@JsonKey(name: 'image_size_limit') required this.maxImageSize,
       @JsonKey(name: 'image_matrix_limit') required this.maxImageMatrix,
       @JsonKey(name: 'video_size_limit') required this.maxVideoSize,
@@ -196,8 +196,9 @@ class _$_InstanceMediaConfiguration implements _InstanceMediaConfiguration {
       required final List<MimeType> supportedMimeTypes})
       : _supportedMimeTypes = supportedMimeTypes;
 
-  factory _$_InstanceMediaConfiguration.fromJson(Map<String, dynamic> json) =>
-      _$$_InstanceMediaConfigurationFromJson(json);
+  factory _$InstanceMediaConfigurationImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$InstanceMediaConfigurationImplFromJson(json);
 
   /// The maximum size of any uploaded image, in bytes.
   @override
@@ -242,10 +243,10 @@ class _$_InstanceMediaConfiguration implements _InstanceMediaConfiguration {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_InstanceMediaConfiguration &&
+            other is _$InstanceMediaConfigurationImpl &&
             (identical(other.maxImageSize, maxImageSize) ||
                 other.maxImageSize == maxImageSize) &&
             (identical(other.maxImageMatrix, maxImageMatrix) ||
@@ -274,13 +275,13 @@ class _$_InstanceMediaConfiguration implements _InstanceMediaConfiguration {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_InstanceMediaConfigurationCopyWith<_$_InstanceMediaConfiguration>
-      get copyWith => __$$_InstanceMediaConfigurationCopyWithImpl<
-          _$_InstanceMediaConfiguration>(this, _$identity);
+  _$$InstanceMediaConfigurationImplCopyWith<_$InstanceMediaConfigurationImpl>
+      get copyWith => __$$InstanceMediaConfigurationImplCopyWithImpl<
+          _$InstanceMediaConfigurationImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_InstanceMediaConfigurationToJson(
+    return _$$InstanceMediaConfigurationImplToJson(
       this,
     );
   }
@@ -289,21 +290,17 @@ class _$_InstanceMediaConfiguration implements _InstanceMediaConfiguration {
 abstract class _InstanceMediaConfiguration
     implements InstanceMediaConfiguration {
   const factory _InstanceMediaConfiguration(
-          {@JsonKey(name: 'image_size_limit')
-              required final int maxImageSize,
-          @JsonKey(name: 'image_matrix_limit')
-              required final int maxImageMatrix,
-          @JsonKey(name: 'video_size_limit')
-              required final int maxVideoSize,
-          @JsonKey(name: 'video_frame_rate_limit')
-              required final int maxVideoRateLimit,
-          @JsonKey(name: 'video_matrix_limit')
-              required final int maxVideoMatrix,
-          required final List<MimeType> supportedMimeTypes}) =
-      _$_InstanceMediaConfiguration;
+      {@JsonKey(name: 'image_size_limit') required final int maxImageSize,
+      @JsonKey(name: 'image_matrix_limit') required final int maxImageMatrix,
+      @JsonKey(name: 'video_size_limit') required final int maxVideoSize,
+      @JsonKey(name: 'video_frame_rate_limit')
+      required final int maxVideoRateLimit,
+      @JsonKey(name: 'video_matrix_limit') required final int maxVideoMatrix,
+      required final List<MimeType>
+          supportedMimeTypes}) = _$InstanceMediaConfigurationImpl;
 
   factory _InstanceMediaConfiguration.fromJson(Map<String, dynamic> json) =
-      _$_InstanceMediaConfiguration.fromJson;
+      _$InstanceMediaConfigurationImpl.fromJson;
 
   @override
 
@@ -336,6 +333,6 @@ abstract class _InstanceMediaConfiguration
   List<MimeType> get supportedMimeTypes;
   @override
   @JsonKey(ignore: true)
-  _$$_InstanceMediaConfigurationCopyWith<_$_InstanceMediaConfiguration>
+  _$$InstanceMediaConfigurationImplCopyWith<_$InstanceMediaConfigurationImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

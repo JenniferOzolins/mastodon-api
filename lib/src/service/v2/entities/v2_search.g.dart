@@ -8,11 +8,11 @@ part of 'v2_search.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_V2Search _$$_V2SearchFromJson(Map json) => $checkedCreate(
-      r'_$_V2Search',
+_$V2SearchImpl _$$V2SearchImplFromJson(Map json) => $checkedCreate(
+      r'_$V2SearchImpl',
       json,
       ($checkedConvert) {
-        final val = _$_V2Search(
+        final val = _$V2SearchImpl(
           accounts: $checkedConvert(
               'accounts',
               (v) => (v as List<dynamic>?)
@@ -36,7 +36,7 @@ _$_V2Search _$$_V2SearchFromJson(Map json) => $checkedCreate(
       },
     );
 
-Map<String, dynamic> _$$_V2SearchToJson(_$_V2Search instance) {
+Map<String, dynamic> _$$V2SearchImplToJson(_$V2SearchImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

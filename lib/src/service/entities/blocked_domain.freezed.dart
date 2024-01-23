@@ -96,11 +96,11 @@ class _$BlockedDomainCopyWithImpl<$Res, $Val extends BlockedDomain>
 }
 
 /// @nodoc
-abstract class _$$_BlockedDomainCopyWith<$Res>
+abstract class _$$BlockedDomainImplCopyWith<$Res>
     implements $BlockedDomainCopyWith<$Res> {
-  factory _$$_BlockedDomainCopyWith(
-          _$_BlockedDomain value, $Res Function(_$_BlockedDomain) then) =
-      __$$_BlockedDomainCopyWithImpl<$Res>;
+  factory _$$BlockedDomainImplCopyWith(
+          _$BlockedDomainImpl value, $Res Function(_$BlockedDomainImpl) then) =
+      __$$BlockedDomainImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -111,11 +111,11 @@ abstract class _$$_BlockedDomainCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_BlockedDomainCopyWithImpl<$Res>
-    extends _$BlockedDomainCopyWithImpl<$Res, _$_BlockedDomain>
-    implements _$$_BlockedDomainCopyWith<$Res> {
-  __$$_BlockedDomainCopyWithImpl(
-      _$_BlockedDomain _value, $Res Function(_$_BlockedDomain) _then)
+class __$$BlockedDomainImplCopyWithImpl<$Res>
+    extends _$BlockedDomainCopyWithImpl<$Res, _$BlockedDomainImpl>
+    implements _$$BlockedDomainImplCopyWith<$Res> {
+  __$$BlockedDomainImplCopyWithImpl(
+      _$BlockedDomainImpl _value, $Res Function(_$BlockedDomainImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -126,7 +126,7 @@ class __$$_BlockedDomainCopyWithImpl<$Res>
     Object? severity = null,
     Object? reason = freezed,
   }) {
-    return _then(_$_BlockedDomain(
+    return _then(_$BlockedDomainImpl(
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -149,15 +149,15 @@ class __$$_BlockedDomainCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_BlockedDomain implements _BlockedDomain {
-  const _$_BlockedDomain(
+class _$BlockedDomainImpl implements _BlockedDomain {
+  const _$BlockedDomainImpl(
       {@JsonKey(name: 'domain') required this.name,
       @JsonKey(name: 'digest') required this.sha256digest,
       required this.severity,
       @JsonKey(name: 'comment') this.reason});
 
-  factory _$_BlockedDomain.fromJson(Map<String, dynamic> json) =>
-      _$$_BlockedDomainFromJson(json);
+  factory _$BlockedDomainImpl.fromJson(Map<String, dynamic> json) =>
+      _$$BlockedDomainImplFromJson(json);
 
   /// The domain which is blocked.
   ///
@@ -186,10 +186,10 @@ class _$_BlockedDomain implements _BlockedDomain {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_BlockedDomain &&
+            other is _$BlockedDomainImpl &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.sha256digest, sha256digest) ||
                 other.sha256digest == sha256digest) &&
@@ -206,12 +206,12 @@ class _$_BlockedDomain implements _BlockedDomain {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_BlockedDomainCopyWith<_$_BlockedDomain> get copyWith =>
-      __$$_BlockedDomainCopyWithImpl<_$_BlockedDomain>(this, _$identity);
+  _$$BlockedDomainImplCopyWith<_$BlockedDomainImpl> get copyWith =>
+      __$$BlockedDomainImplCopyWithImpl<_$BlockedDomainImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_BlockedDomainToJson(
+    return _$$BlockedDomainImplToJson(
       this,
     );
   }
@@ -222,10 +222,10 @@ abstract class _BlockedDomain implements BlockedDomain {
       {@JsonKey(name: 'domain') required final String name,
       @JsonKey(name: 'digest') required final String sha256digest,
       required final BlockSeverity severity,
-      @JsonKey(name: 'comment') final String? reason}) = _$_BlockedDomain;
+      @JsonKey(name: 'comment') final String? reason}) = _$BlockedDomainImpl;
 
   factory _BlockedDomain.fromJson(Map<String, dynamic> json) =
-      _$_BlockedDomain.fromJson;
+      _$BlockedDomainImpl.fromJson;
 
   @override
 
@@ -250,6 +250,6 @@ abstract class _BlockedDomain implements BlockedDomain {
   String? get reason;
   @override
   @JsonKey(ignore: true)
-  _$$_BlockedDomainCopyWith<_$_BlockedDomain> get copyWith =>
+  _$$BlockedDomainImplCopyWith<_$BlockedDomainImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

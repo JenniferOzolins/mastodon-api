@@ -63,22 +63,22 @@ class _$InstanceUsageUsersCopyWithImpl<$Res, $Val extends InstanceUsageUsers>
 }
 
 /// @nodoc
-abstract class _$$_InstanceUsageUsersCopyWith<$Res>
+abstract class _$$InstanceUsageUsersImplCopyWith<$Res>
     implements $InstanceUsageUsersCopyWith<$Res> {
-  factory _$$_InstanceUsageUsersCopyWith(_$_InstanceUsageUsers value,
-          $Res Function(_$_InstanceUsageUsers) then) =
-      __$$_InstanceUsageUsersCopyWithImpl<$Res>;
+  factory _$$InstanceUsageUsersImplCopyWith(_$InstanceUsageUsersImpl value,
+          $Res Function(_$InstanceUsageUsersImpl) then) =
+      __$$InstanceUsageUsersImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int activeMonth});
 }
 
 /// @nodoc
-class __$$_InstanceUsageUsersCopyWithImpl<$Res>
-    extends _$InstanceUsageUsersCopyWithImpl<$Res, _$_InstanceUsageUsers>
-    implements _$$_InstanceUsageUsersCopyWith<$Res> {
-  __$$_InstanceUsageUsersCopyWithImpl(
-      _$_InstanceUsageUsers _value, $Res Function(_$_InstanceUsageUsers) _then)
+class __$$InstanceUsageUsersImplCopyWithImpl<$Res>
+    extends _$InstanceUsageUsersCopyWithImpl<$Res, _$InstanceUsageUsersImpl>
+    implements _$$InstanceUsageUsersImplCopyWith<$Res> {
+  __$$InstanceUsageUsersImplCopyWithImpl(_$InstanceUsageUsersImpl _value,
+      $Res Function(_$InstanceUsageUsersImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -86,7 +86,7 @@ class __$$_InstanceUsageUsersCopyWithImpl<$Res>
   $Res call({
     Object? activeMonth = null,
   }) {
-    return _then(_$_InstanceUsageUsers(
+    return _then(_$InstanceUsageUsersImpl(
       activeMonth: null == activeMonth
           ? _value.activeMonth
           : activeMonth // ignore: cast_nullable_to_non_nullable
@@ -98,11 +98,11 @@ class __$$_InstanceUsageUsersCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(includeIfNull: false)
-class _$_InstanceUsageUsers implements _InstanceUsageUsers {
-  const _$_InstanceUsageUsers({required this.activeMonth});
+class _$InstanceUsageUsersImpl implements _InstanceUsageUsers {
+  const _$InstanceUsageUsersImpl({required this.activeMonth});
 
-  factory _$_InstanceUsageUsers.fromJson(Map<String, dynamic> json) =>
-      _$$_InstanceUsageUsersFromJson(json);
+  factory _$InstanceUsageUsersImpl.fromJson(Map<String, dynamic> json) =>
+      _$$InstanceUsageUsersImplFromJson(json);
 
   /// The number of active users in the past 4 weeks.
   @override
@@ -114,10 +114,10 @@ class _$_InstanceUsageUsers implements _InstanceUsageUsers {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_InstanceUsageUsers &&
+            other is _$InstanceUsageUsersImpl &&
             (identical(other.activeMonth, activeMonth) ||
                 other.activeMonth == activeMonth));
   }
@@ -129,13 +129,13 @@ class _$_InstanceUsageUsers implements _InstanceUsageUsers {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_InstanceUsageUsersCopyWith<_$_InstanceUsageUsers> get copyWith =>
-      __$$_InstanceUsageUsersCopyWithImpl<_$_InstanceUsageUsers>(
+  _$$InstanceUsageUsersImplCopyWith<_$InstanceUsageUsersImpl> get copyWith =>
+      __$$InstanceUsageUsersImplCopyWithImpl<_$InstanceUsageUsersImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_InstanceUsageUsersToJson(
+    return _$$InstanceUsageUsersImplToJson(
       this,
     );
   }
@@ -143,10 +143,10 @@ class _$_InstanceUsageUsers implements _InstanceUsageUsers {
 
 abstract class _InstanceUsageUsers implements InstanceUsageUsers {
   const factory _InstanceUsageUsers({required final int activeMonth}) =
-      _$_InstanceUsageUsers;
+      _$InstanceUsageUsersImpl;
 
   factory _InstanceUsageUsers.fromJson(Map<String, dynamic> json) =
-      _$_InstanceUsageUsers.fromJson;
+      _$InstanceUsageUsersImpl.fromJson;
 
   @override
 
@@ -154,6 +154,6 @@ abstract class _InstanceUsageUsers implements InstanceUsageUsers {
   int get activeMonth;
   @override
   @JsonKey(ignore: true)
-  _$$_InstanceUsageUsersCopyWith<_$_InstanceUsageUsers> get copyWith =>
+  _$$InstanceUsageUsersImplCopyWith<_$InstanceUsageUsersImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

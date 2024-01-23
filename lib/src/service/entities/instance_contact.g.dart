@@ -8,11 +8,12 @@ part of 'instance_contact.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_InstanceContact _$$_InstanceContactFromJson(Map json) => $checkedCreate(
-      r'_$_InstanceContact',
+_$InstanceContactImpl _$$InstanceContactImplFromJson(Map json) =>
+    $checkedCreate(
+      r'_$InstanceContactImpl',
       json,
       ($checkedConvert) {
-        final val = _$_InstanceContact(
+        final val = _$InstanceContactImpl(
           email: $checkedConvert('email', (v) => v as String),
           account: $checkedConvert('account',
               (v) => Account.fromJson(Map<String, Object?>.from(v as Map))),
@@ -21,7 +22,8 @@ _$_InstanceContact _$$_InstanceContactFromJson(Map json) => $checkedCreate(
       },
     );
 
-Map<String, dynamic> _$$_InstanceContactToJson(_$_InstanceContact instance) =>
+Map<String, dynamic> _$$InstanceContactImplToJson(
+        _$InstanceContactImpl instance) =>
     <String, dynamic>{
       'email': instance.email,
       'account': instance.account.toJson(),

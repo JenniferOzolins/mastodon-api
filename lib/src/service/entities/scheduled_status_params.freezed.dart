@@ -154,11 +154,12 @@ class _$ScheduledStatusParamsCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_ScheduledStatusParamsCopyWith<$Res>
+abstract class _$$ScheduledStatusParamsImplCopyWith<$Res>
     implements $ScheduledStatusParamsCopyWith<$Res> {
-  factory _$$_ScheduledStatusParamsCopyWith(_$_ScheduledStatusParams value,
-          $Res Function(_$_ScheduledStatusParams) then) =
-      __$$_ScheduledStatusParamsCopyWithImpl<$Res>;
+  factory _$$ScheduledStatusParamsImplCopyWith(
+          _$ScheduledStatusParamsImpl value,
+          $Res Function(_$ScheduledStatusParamsImpl) then) =
+      __$$ScheduledStatusParamsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -177,11 +178,12 @@ abstract class _$$_ScheduledStatusParamsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ScheduledStatusParamsCopyWithImpl<$Res>
-    extends _$ScheduledStatusParamsCopyWithImpl<$Res, _$_ScheduledStatusParams>
-    implements _$$_ScheduledStatusParamsCopyWith<$Res> {
-  __$$_ScheduledStatusParamsCopyWithImpl(_$_ScheduledStatusParams _value,
-      $Res Function(_$_ScheduledStatusParams) _then)
+class __$$ScheduledStatusParamsImplCopyWithImpl<$Res>
+    extends _$ScheduledStatusParamsCopyWithImpl<$Res,
+        _$ScheduledStatusParamsImpl>
+    implements _$$ScheduledStatusParamsImplCopyWith<$Res> {
+  __$$ScheduledStatusParamsImplCopyWithImpl(_$ScheduledStatusParamsImpl _value,
+      $Res Function(_$ScheduledStatusParamsImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -197,7 +199,7 @@ class __$$_ScheduledStatusParamsCopyWithImpl<$Res>
     Object? idempotency = freezed,
     Object? isSensitive = freezed,
   }) {
-    return _then(_$_ScheduledStatusParams(
+    return _then(_$ScheduledStatusParamsImpl(
       text: null == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
@@ -241,8 +243,8 @@ class __$$_ScheduledStatusParamsCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(includeIfNull: false)
-class _$_ScheduledStatusParams implements _ScheduledStatusParams {
-  const _$_ScheduledStatusParams(
+class _$ScheduledStatusParamsImpl implements _ScheduledStatusParams {
+  const _$ScheduledStatusParamsImpl(
       {required this.text,
       this.spoilerText,
       this.poll,
@@ -254,8 +256,8 @@ class _$_ScheduledStatusParams implements _ScheduledStatusParams {
       @JsonKey(name: 'sensitive') this.isSensitive})
       : _mediaIds = mediaIds;
 
-  factory _$_ScheduledStatusParams.fromJson(Map<String, dynamic> json) =>
-      _$$_ScheduledStatusParamsFromJson(json);
+  factory _$ScheduledStatusParamsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ScheduledStatusParamsImplFromJson(json);
 
   /// Text to be used as status content.
   @override
@@ -310,10 +312,10 @@ class _$_ScheduledStatusParams implements _ScheduledStatusParams {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ScheduledStatusParams &&
+            other is _$ScheduledStatusParamsImpl &&
             (identical(other.text, text) || other.text == text) &&
             (identical(other.spoilerText, spoilerText) ||
                 other.spoilerText == spoilerText) &&
@@ -348,13 +350,13 @@ class _$_ScheduledStatusParams implements _ScheduledStatusParams {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ScheduledStatusParamsCopyWith<_$_ScheduledStatusParams> get copyWith =>
-      __$$_ScheduledStatusParamsCopyWithImpl<_$_ScheduledStatusParams>(
-          this, _$identity);
+  _$$ScheduledStatusParamsImplCopyWith<_$ScheduledStatusParamsImpl>
+      get copyWith => __$$ScheduledStatusParamsImplCopyWithImpl<
+          _$ScheduledStatusParamsImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ScheduledStatusParamsToJson(
+    return _$$ScheduledStatusParamsImplToJson(
       this,
     );
   }
@@ -371,10 +373,10 @@ abstract class _ScheduledStatusParams implements ScheduledStatusParams {
           final Visibility? visibility,
           final String? idempotency,
           @JsonKey(name: 'sensitive') final bool? isSensitive}) =
-      _$_ScheduledStatusParams;
+      _$ScheduledStatusParamsImpl;
 
   factory _ScheduledStatusParams.fromJson(Map<String, dynamic> json) =
-      _$_ScheduledStatusParams.fromJson;
+      _$ScheduledStatusParamsImpl.fromJson;
 
   @override
 
@@ -416,6 +418,6 @@ abstract class _ScheduledStatusParams implements ScheduledStatusParams {
   bool? get isSensitive;
   @override
   @JsonKey(ignore: true)
-  _$$_ScheduledStatusParamsCopyWith<_$_ScheduledStatusParams> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ScheduledStatusParamsImplCopyWith<_$ScheduledStatusParamsImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

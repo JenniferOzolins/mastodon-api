@@ -8,11 +8,11 @@ part of 'account.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Account _$$_AccountFromJson(Map json) => $checkedCreate(
-      r'_$_Account',
+_$AccountImpl _$$AccountImplFromJson(Map json) => $checkedCreate(
+      r'_$AccountImpl',
       json,
       ($checkedConvert) {
-        final val = _$_Account(
+        final val = _$AccountImpl(
           id: $checkedConvert('id', (v) => v as String),
           username: $checkedConvert('username', (v) => v as String),
           displayName: $checkedConvert('display_name', (v) => v as String),
@@ -66,7 +66,7 @@ _$_Account _$$_AccountFromJson(Map json) => $checkedCreate(
       },
     );
 
-Map<String, dynamic> _$$_AccountToJson(_$_Account instance) {
+Map<String, dynamic> _$$AccountImplToJson(_$AccountImpl instance) {
   final val = <String, dynamic>{
     'id': instance.id,
     'username': instance.username,
