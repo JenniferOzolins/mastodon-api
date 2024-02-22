@@ -1479,7 +1479,7 @@ class _AccountsV1Service extends BaseService implements AccountsV1Service {
           '/api/v1/accounts/update_credentials',
           files: [
             MultipartFile.fromBytes(
-              'avatar',
+              'header',
               file.readAsBytesSync(),
               filename: file.path,
             ),
